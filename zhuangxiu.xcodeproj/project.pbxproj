@@ -23,6 +23,23 @@
 		B08BD6202213FD9F007C3D5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD61F2213FD9F007C3D5F /* main.m */; };
 		B08BD62A2213FD9F007C3D5F /* zhuangxiuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6292213FD9F007C3D5F /* zhuangxiuTests.m */; };
 		B08BD6352213FD9F007C3D5F /* zhuangxiuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6342213FD9F007C3D5F /* zhuangxiuUITests.m */; };
+		DAB192582215AC1600239A40 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1924F2215AC1600239A40 /* HttpHelper.m */; };
+		DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192522215AC1600239A40 /* HttpHelpBase.m */; };
+		DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192542215AC1600239A40 /* NHFDownImages.m */; };
+		DAB1925B2215AC1600239A40 /* NHFUpLoadImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192572215AC1600239A40 /* NHFUpLoadImages.m */; };
+		DAB192612215AC4A00239A40 /* JhlvShowAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1925F2215AC4A00239A40 /* JhlvShowAlertController.m */; };
+		DAB192622215AC4A00239A40 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192602215AC4A00239A40 /* CustomView.m */; };
+		DAB192742215AC5400239A40 /* NSDate+JKLunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192682215AC5400239A40 /* NSDate+JKLunarCalendar.m */; };
+		DAB192752215AC5400239A40 /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1926A2215AC5400239A40 /* NSDate+JKExtension.m */; };
+		DAB192762215AC5400239A40 /* NSDate+JKInternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1926B2215AC5400239A40 /* NSDate+JKInternetDateTime.m */; };
+		DAB192772215AC5400239A40 /* NSDate+JKFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1926C2215AC5400239A40 /* NSDate+JKFormatter.m */; };
+		DAB192782215AC5400239A40 /* NSDate+JKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1926D2215AC5400239A40 /* NSDate+JKUtilities.m */; };
+		DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1926E2215AC5400239A40 /* NSDate+JKReporting.m */; };
+		DAB1927A2215AC5400239A40 /* NSDate+JKZeroDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1926F2215AC5400239A40 /* NSDate+JKZeroDate.m */; };
+		DAB1927B2215AC5400239A40 /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192732215AC5400239A40 /* NSDate+JKCupertinoYankee.m */; };
+		DAB1927E2215AC5D00239A40 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1927D2215AC5D00239A40 /* UIView+Extension.m */; };
+		DAB192812215AC8B00239A40 /* AllInterfaceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192802215AC8B00239A40 /* AllInterfaceRequest.m */; };
+		DD598E1972EC8096A0DAD2FC /* libPods-zhuangxiu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 404AB3A286E354D0B49A1D15 /* libPods-zhuangxiu.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		404AB3A286E354D0B49A1D15 /* libPods-zhuangxiu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zhuangxiu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00A1AE4221541E000625235 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B00A1AE5221541E000625235 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B00A1AE72215420500625235 /* BaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavController.h; sourceTree = "<group>"; };
@@ -75,6 +93,44 @@
 		B08BD6302213FD9F007C3D5F /* zhuangxiuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zhuangxiuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08BD6342213FD9F007C3D5F /* zhuangxiuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zhuangxiuUITests.m; sourceTree = "<group>"; };
 		B08BD6362213FD9F007C3D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF85FD24863FC9F17598AAF2 /* Pods-zhuangxiu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhuangxiu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhuangxiu/Pods-zhuangxiu.debug.xcconfig"; sourceTree = "<group>"; };
+		DAB1924C2215A7B900239A40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DAB1924D2215A8C600239A40 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		DAB1924F2215AC1600239A40 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+		DAB192502215AC1600239A40 /* HttpHelpBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpHelpBase.h; sourceTree = "<group>"; };
+		DAB192512215AC1600239A40 /* HttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
+		DAB192522215AC1600239A40 /* HttpHelpBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelpBase.m; sourceTree = "<group>"; };
+		DAB192542215AC1600239A40 /* NHFDownImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHFDownImages.m; sourceTree = "<group>"; };
+		DAB192552215AC1600239A40 /* NHFUpLoadImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHFUpLoadImages.h; sourceTree = "<group>"; };
+		DAB192562215AC1600239A40 /* NHFDownImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHFDownImages.h; sourceTree = "<group>"; };
+		DAB192572215AC1600239A40 /* NHFUpLoadImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHFUpLoadImages.m; sourceTree = "<group>"; };
+		DAB1925D2215AC4A00239A40 /* JhlvShowAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhlvShowAlertController.h; sourceTree = "<group>"; };
+		DAB1925E2215AC4A00239A40 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		DAB1925F2215AC4A00239A40 /* JhlvShowAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JhlvShowAlertController.m; sourceTree = "<group>"; };
+		DAB192602215AC4A00239A40 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		DAB192642215AC5400239A40 /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKZeroDate.h"; sourceTree = "<group>"; };
+		DAB192652215AC5400239A40 /* NSDate+JKReporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKReporting.h"; sourceTree = "<group>"; };
+		DAB192662215AC5400239A40 /* NSDate+JKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKUtilities.h"; sourceTree = "<group>"; };
+		DAB192672215AC5400239A40 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKFormatter.h"; sourceTree = "<group>"; };
+		DAB192682215AC5400239A40 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
+		DAB192692215AC5400239A40 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
+		DAB1926A2215AC5400239A40 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
+		DAB1926B2215AC5400239A40 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
+		DAB1926C2215AC5400239A40 /* NSDate+JKFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKFormatter.m"; sourceTree = "<group>"; };
+		DAB1926D2215AC5400239A40 /* NSDate+JKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKUtilities.m"; sourceTree = "<group>"; };
+		DAB1926E2215AC5400239A40 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
+		DAB1926F2215AC5400239A40 /* NSDate+JKZeroDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKZeroDate.m"; sourceTree = "<group>"; };
+		DAB192702215AC5400239A40 /* NSDate+JKLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKLunarCalendar.h"; sourceTree = "<group>"; };
+		DAB192712215AC5400239A40 /* NSDate+JKInternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKInternetDateTime.h"; sourceTree = "<group>"; };
+		DAB192722215AC5400239A40 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKExtension.h"; sourceTree = "<group>"; };
+		DAB192732215AC5400239A40 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
+		DAB1927C2215AC5D00239A40 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		DAB1927D2215AC5D00239A40 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		DAB1927F2215AC8B00239A40 /* AllInterfaceRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllInterfaceRequest.h; sourceTree = "<group>"; };
+		DAB192802215AC8B00239A40 /* AllInterfaceRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllInterfaceRequest.m; sourceTree = "<group>"; };
+		DAB192822215AD9600239A40 /* UrlSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlSetting.h; sourceTree = "<group>"; };
+		DAB192832215ADA700239A40 /* ViewSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewSetting.h; sourceTree = "<group>"; };
+		F2E37FF899FBD4F29332BA78 /* Pods-zhuangxiu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhuangxiu.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhuangxiu/Pods-zhuangxiu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD598E1972EC8096A0DAD2FC /* libPods-zhuangxiu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +159,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40EB3D9DC5482313E5AC62DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF85FD24863FC9F17598AAF2 /* Pods-zhuangxiu.debug.xcconfig */,
+				F2E37FF899FBD4F29332BA78 /* Pods-zhuangxiu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82275E95E261EBDD99B94865 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				404AB3A286E354D0B49A1D15 /* libPods-zhuangxiu.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B08BD6042213FD9E007C3D5F = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +183,8 @@
 				B08BD6282213FD9F007C3D5F /* zhuangxiuTests */,
 				B08BD6332213FD9F007C3D5F /* zhuangxiuUITests */,
 				B08BD60E2213FD9E007C3D5F /* Products */,
+				40EB3D9DC5482313E5AC62DC /* Pods */,
+				82275E95E261EBDD99B94865 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +201,7 @@
 		B08BD60F2213FD9E007C3D5F /* zhuangxiu */ = {
 			isa = PBXGroup;
 			children = (
-				B08BD6472213FDB7007C3D5F /* Lib */,
+				DAB1924A2215A36100239A40 /* lib */,
 				B08BD6462213FDB4007C3D5F /* User */,
 				B08BD6452213FDB2007C3D5F /* Html */,
 				B08BD6442213FDAF007C3D5F /* Pic */,
@@ -135,6 +211,10 @@
 				B08BD6112213FD9E007C3D5F /* AppDelegate.m */,
 				B08BD6132213FD9E007C3D5F /* ViewController.h */,
 				B08BD6142213FD9E007C3D5F /* ViewController.m */,
+				DAB1924C2215A7B900239A40 /* PrefixHeader.pch */,
+				DAB1924D2215A8C600239A40 /* Setting.h */,
+				DAB192822215AD9600239A40 /* UrlSetting.h */,
+				DAB192832215ADA700239A40 /* ViewSetting.h */,
 				B08BD6162213FD9E007C3D5F /* Main.storyboard */,
 				B08BD6192213FD9F007C3D5F /* Assets.xcassets */,
 				B08BD61B2213FD9F007C3D5F /* LaunchScreen.storyboard */,
@@ -173,6 +253,8 @@
 				B00A1AEB2215428600625235 /* BaseTabBarController.m */,
 				B00A1AED2215429700625235 /* BaseView.h */,
 				B00A1AEE2215429700625235 /* BaseView.m */,
+				DAB1927F2215AC8B00239A40 /* AllInterfaceRequest.h */,
+				DAB192802215AC8B00239A40 /* AllInterfaceRequest.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -213,11 +295,73 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		B08BD6472213FDB7007C3D5F /* Lib */ = {
+		DAB1924A2215A36100239A40 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				DAB1927C2215AC5D00239A40 /* UIView+Extension.h */,
+				DAB1927D2215AC5D00239A40 /* UIView+Extension.m */,
+				DAB192632215AC5400239A40 /* NSDate */,
+				DAB1925C2215AC4A00239A40 /* CustomView */,
+				DAB1924E2215AC1600239A40 /* HttpHelp */,
 			);
-			path = Lib;
+			path = lib;
+			sourceTree = "<group>";
+		};
+		DAB1924E2215AC1600239A40 /* HttpHelp */ = {
+			isa = PBXGroup;
+			children = (
+				DAB1924F2215AC1600239A40 /* HttpHelper.m */,
+				DAB192502215AC1600239A40 /* HttpHelpBase.h */,
+				DAB192512215AC1600239A40 /* HttpHelper.h */,
+				DAB192522215AC1600239A40 /* HttpHelpBase.m */,
+				DAB192532215AC1600239A40 /* NHFUpLoadAndDownImages */,
+			);
+			path = HttpHelp;
+			sourceTree = "<group>";
+		};
+		DAB192532215AC1600239A40 /* NHFUpLoadAndDownImages */ = {
+			isa = PBXGroup;
+			children = (
+				DAB192542215AC1600239A40 /* NHFDownImages.m */,
+				DAB192552215AC1600239A40 /* NHFUpLoadImages.h */,
+				DAB192562215AC1600239A40 /* NHFDownImages.h */,
+				DAB192572215AC1600239A40 /* NHFUpLoadImages.m */,
+			);
+			path = NHFUpLoadAndDownImages;
+			sourceTree = "<group>";
+		};
+		DAB1925C2215AC4A00239A40 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				DAB1925D2215AC4A00239A40 /* JhlvShowAlertController.h */,
+				DAB1925E2215AC4A00239A40 /* CustomView.h */,
+				DAB1925F2215AC4A00239A40 /* JhlvShowAlertController.m */,
+				DAB192602215AC4A00239A40 /* CustomView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		DAB192632215AC5400239A40 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				DAB192642215AC5400239A40 /* NSDate+JKZeroDate.h */,
+				DAB192652215AC5400239A40 /* NSDate+JKReporting.h */,
+				DAB192662215AC5400239A40 /* NSDate+JKUtilities.h */,
+				DAB192672215AC5400239A40 /* NSDate+JKFormatter.h */,
+				DAB192682215AC5400239A40 /* NSDate+JKLunarCalendar.m */,
+				DAB192692215AC5400239A40 /* NSDate+JKCupertinoYankee.h */,
+				DAB1926A2215AC5400239A40 /* NSDate+JKExtension.m */,
+				DAB1926B2215AC5400239A40 /* NSDate+JKInternetDateTime.m */,
+				DAB1926C2215AC5400239A40 /* NSDate+JKFormatter.m */,
+				DAB1926D2215AC5400239A40 /* NSDate+JKUtilities.m */,
+				DAB1926E2215AC5400239A40 /* NSDate+JKReporting.m */,
+				DAB1926F2215AC5400239A40 /* NSDate+JKZeroDate.m */,
+				DAB192702215AC5400239A40 /* NSDate+JKLunarCalendar.h */,
+				DAB192712215AC5400239A40 /* NSDate+JKInternetDateTime.h */,
+				DAB192722215AC5400239A40 /* NSDate+JKExtension.h */,
+				DAB192732215AC5400239A40 /* NSDate+JKCupertinoYankee.m */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +371,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B08BD6392213FD9F007C3D5F /* Build configuration list for PBXNativeTarget "zhuangxiu" */;
 			buildPhases = (
+				77162D62EB9898B80B66FACB /* [CP] Check Pods Manifest.lock */,
 				B08BD6092213FD9E007C3D5F /* Sources */,
 				B08BD60A2213FD9E007C3D5F /* Frameworks */,
 				B08BD60B2213FD9E007C3D5F /* Resources */,
+				720D2314D1E4E0B788106529 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,22 +491,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		720D2314D1E4E0B788106529 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-zhuangxiu/Pods-zhuangxiu-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zhuangxiu/Pods-zhuangxiu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77162D62EB9898B80B66FACB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zhuangxiu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B08BD6092213FD9E007C3D5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB192742215AC5400239A40 /* NSDate+JKLunarCalendar.m in Sources */,
 				B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */,
+				DAB1927E2215AC5D00239A40 /* UIView+Extension.m in Sources */,
 				B00A1AE92215420500625235 /* BaseNavController.m in Sources */,
+				DAB192812215AC8B00239A40 /* AllInterfaceRequest.m in Sources */,
 				B00A1AEF2215429700625235 /* BaseView.m in Sources */,
 				B00A1AE6221541E000625235 /* BaseViewController.m in Sources */,
 				B00A1AF52215433800625235 /* PicViewController.m in Sources */,
+				DAB192612215AC4A00239A40 /* JhlvShowAlertController.m in Sources */,
 				B08BD6202213FD9F007C3D5F /* main.m in Sources */,
 				B00A1AEC2215428600625235 /* BaseTabBarController.m in Sources */,
+				DAB192582215AC1600239A40 /* HttpHelper.m in Sources */,
+				DAB192772215AC5400239A40 /* NSDate+JKFormatter.m in Sources */,
+				DAB1927A2215AC5400239A40 /* NSDate+JKZeroDate.m in Sources */,
 				B00A1AFB2215435E00625235 /* UserViewController.m in Sources */,
+				DAB192762215AC5400239A40 /* NSDate+JKInternetDateTime.m in Sources */,
 				B00A1AF82215435500625235 /* HtmlViewController.m in Sources */,
+				DAB1925B2215AC1600239A40 /* NHFUpLoadImages.m in Sources */,
+				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,
+				DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */,
+				DAB192782215AC5400239A40 /* NSDate+JKUtilities.m in Sources */,
 				B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */,
+				DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */,
 				B00A1AF2221542DE00625235 /* HomeViewController.m in Sources */,
+				DAB1927B2215AC5400239A40 /* NSDate+JKCupertinoYankee.m in Sources */,
+				DAB192752215AC5400239A40 /* NSDate+JKExtension.m in Sources */,
+				DAB192622215AC4A00239A40 /* CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,9 +734,12 @@
 		};
 		B08BD63A2213FD9F007C3D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF85FD24863FC9F17598AAF2 /* Pods-zhuangxiu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -545,9 +753,12 @@
 		};
 		B08BD63B2213FD9F007C3D5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2E37FF899FBD4F29332BA78 /* Pods-zhuangxiu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
