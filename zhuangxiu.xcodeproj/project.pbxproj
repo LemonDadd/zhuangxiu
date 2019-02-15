@@ -39,6 +39,12 @@
 		DAB1927B2215AC5400239A40 /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192732215AC5400239A40 /* NSDate+JKCupertinoYankee.m */; };
 		DAB1927E2215AC5D00239A40 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1927D2215AC5D00239A40 /* UIView+Extension.m */; };
 		DAB192812215AC8B00239A40 /* AllInterfaceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192802215AC8B00239A40 /* AllInterfaceRequest.m */; };
+		DAB1928A2216EE1400239A40 /* PicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192882216EE1400239A40 /* PicTableViewCell.m */; };
+		DAB1928B2216EE1400239A40 /* PicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB192892216EE1400239A40 /* PicTableViewCell.xib */; };
+		DAB1928E2216F1E700239A40 /* PicView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1928D2216F1E700239A40 /* PicView.m */; };
+		DAB192912216F26900239A40 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192902216F26900239A40 /* BaseTableView.m */; };
+		DAB192952216F89E00239A40 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192942216F89E00239A40 /* DetailViewController.m */; };
+		DAB192992216F8BB00239A40 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192982216F8BB00239A40 /* UserListViewController.m */; };
 		DD598E1972EC8096A0DAD2FC /* libPods-zhuangxiu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 404AB3A286E354D0B49A1D15 /* libPods-zhuangxiu.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +136,17 @@
 		DAB192802215AC8B00239A40 /* AllInterfaceRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllInterfaceRequest.m; sourceTree = "<group>"; };
 		DAB192822215AD9600239A40 /* UrlSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlSetting.h; sourceTree = "<group>"; };
 		DAB192832215ADA700239A40 /* ViewSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewSetting.h; sourceTree = "<group>"; };
+		DAB192872216EE1400239A40 /* PicTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicTableViewCell.h; sourceTree = "<group>"; };
+		DAB192882216EE1400239A40 /* PicTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicTableViewCell.m; sourceTree = "<group>"; };
+		DAB192892216EE1400239A40 /* PicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicTableViewCell.xib; sourceTree = "<group>"; };
+		DAB1928C2216F1E700239A40 /* PicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicView.h; sourceTree = "<group>"; };
+		DAB1928D2216F1E700239A40 /* PicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicView.m; sourceTree = "<group>"; };
+		DAB1928F2216F26900239A40 /* BaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
+		DAB192902216F26900239A40 /* BaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
+		DAB192932216F89E00239A40 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DAB192942216F89E00239A40 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DAB192972216F8BB00239A40 /* UserListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
+		DAB192982216F8BB00239A40 /* UserListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
 		F2E37FF899FBD4F29332BA78 /* Pods-zhuangxiu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhuangxiu.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhuangxiu/Pods-zhuangxiu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +219,10 @@
 			isa = PBXGroup;
 			children = (
 				DAB1924A2215A36100239A40 /* lib */,
+				DAB192A42216F9E700239A40 /* Search */,
+				DAB1929F2216F96700239A40 /* Style */,
+				DAB192962216F8A400239A40 /* UserList */,
+				DAB192922216F80400239A40 /* Detail */,
 				B08BD6462213FDB4007C3D5F /* User */,
 				B08BD6452213FDB2007C3D5F /* Html */,
 				B08BD6442213FDAF007C3D5F /* Pic */,
@@ -253,6 +274,8 @@
 				B00A1AEB2215428600625235 /* BaseTabBarController.m */,
 				B00A1AED2215429700625235 /* BaseView.h */,
 				B00A1AEE2215429700625235 /* BaseView.m */,
+				DAB1928F2216F26900239A40 /* BaseTableView.h */,
+				DAB192902216F26900239A40 /* BaseTableView.m */,
 				DAB1927F2215AC8B00239A40 /* AllInterfaceRequest.h */,
 				DAB192802215AC8B00239A40 /* AllInterfaceRequest.m */,
 			);
@@ -273,6 +296,11 @@
 			children = (
 				B00A1AF32215433800625235 /* PicViewController.h */,
 				B00A1AF42215433800625235 /* PicViewController.m */,
+				DAB1928C2216F1E700239A40 /* PicView.h */,
+				DAB1928D2216F1E700239A40 /* PicView.m */,
+				DAB192872216EE1400239A40 /* PicTableViewCell.h */,
+				DAB192882216EE1400239A40 /* PicTableViewCell.m */,
+				DAB192892216EE1400239A40 /* PicTableViewCell.xib */,
 			);
 			path = Pic;
 			sourceTree = "<group>";
@@ -289,6 +317,9 @@
 		B08BD6462213FDB4007C3D5F /* User */ = {
 			isa = PBXGroup;
 			children = (
+				DAB1929D2216F91900239A40 /* Wode */,
+				DAB1929C2216F8F800239A40 /* Yijian */,
+				DAB1929B2216F8F500239A40 /* Guanyu */,
 				B00A1AF92215435E00625235 /* UserViewController.h */,
 				B00A1AFA2215435E00625235 /* UserViewController.m */,
 			);
@@ -362,6 +393,91 @@
 				DAB192732215AC5400239A40 /* NSDate+JKCupertinoYankee.m */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		DAB192922216F80400239A40 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DAB192932216F89E00239A40 /* DetailViewController.h */,
+				DAB192942216F89E00239A40 /* DetailViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		DAB192962216F8A400239A40 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				DAB192972216F8BB00239A40 /* UserListViewController.h */,
+				DAB192982216F8BB00239A40 /* UserListViewController.m */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		DAB1929B2216F8F500239A40 /* Guanyu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guanyu;
+			sourceTree = "<group>";
+		};
+		DAB1929C2216F8F800239A40 /* Yijian */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Yijian;
+			sourceTree = "<group>";
+		};
+		DAB1929D2216F91900239A40 /* Wode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wode;
+			sourceTree = "<group>";
+		};
+		DAB1929F2216F96700239A40 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				DAB192A32216F9BE00239A40 /* Yanse */,
+				DAB192A22216F9BC00239A40 /* Kongjian */,
+				DAB192A12216F9B900239A40 /* Fengge */,
+				DAB192A02216F9B700239A40 /* Jubu */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		DAB192A02216F9B700239A40 /* Jubu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Jubu;
+			sourceTree = "<group>";
+		};
+		DAB192A12216F9B900239A40 /* Fengge */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fengge;
+			sourceTree = "<group>";
+		};
+		DAB192A22216F9BC00239A40 /* Kongjian */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Kongjian;
+			sourceTree = "<group>";
+		};
+		DAB192A32216F9BE00239A40 /* Yanse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Yanse;
+			sourceTree = "<group>";
+		};
+		DAB192A42216F9E700239A40 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +585,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB1928B2216EE1400239A40 /* PicTableViewCell.xib in Resources */,
 				B08BD61D2213FD9F007C3D5F /* LaunchScreen.storyboard in Resources */,
 				B08BD61A2213FD9F007C3D5F /* Assets.xcassets in Resources */,
 				B08BD6182213FD9E007C3D5F /* Main.storyboard in Resources */,
@@ -539,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB1928E2216F1E700239A40 /* PicView.m in Sources */,
 				DAB192742215AC5400239A40 /* NSDate+JKLunarCalendar.m in Sources */,
 				B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */,
 				DAB1927E2215AC5D00239A40 /* UIView+Extension.m in Sources */,
@@ -547,14 +665,18 @@
 				B00A1AEF2215429700625235 /* BaseView.m in Sources */,
 				B00A1AE6221541E000625235 /* BaseViewController.m in Sources */,
 				B00A1AF52215433800625235 /* PicViewController.m in Sources */,
+				DAB192952216F89E00239A40 /* DetailViewController.m in Sources */,
 				DAB192612215AC4A00239A40 /* JhlvShowAlertController.m in Sources */,
 				B08BD6202213FD9F007C3D5F /* main.m in Sources */,
 				B00A1AEC2215428600625235 /* BaseTabBarController.m in Sources */,
+				DAB192992216F8BB00239A40 /* UserListViewController.m in Sources */,
 				DAB192582215AC1600239A40 /* HttpHelper.m in Sources */,
 				DAB192772215AC5400239A40 /* NSDate+JKFormatter.m in Sources */,
 				DAB1927A2215AC5400239A40 /* NSDate+JKZeroDate.m in Sources */,
 				B00A1AFB2215435E00625235 /* UserViewController.m in Sources */,
 				DAB192762215AC5400239A40 /* NSDate+JKInternetDateTime.m in Sources */,
+				DAB1928A2216EE1400239A40 /* PicTableViewCell.m in Sources */,
+				DAB192912216F26900239A40 /* BaseTableView.m in Sources */,
 				B00A1AF82215435500625235 /* HtmlViewController.m in Sources */,
 				DAB1925B2215AC1600239A40 /* NHFUpLoadImages.m in Sources */,
 				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,

@@ -1,30 +1,22 @@
 //
-//  PicViewController.m
+//  DetailViewController.m
 //  zhuangxiu
 //
-//  Created by quanqiuwa on 2019/2/14.
+//  Created by 关云秀 on 2019/2/15.
 //  Copyright © 2019 TestProject. All rights reserved.
 //
 
-#import "PicViewController.h"
-#import "PicView.h"
+#import "DetailViewController.h"
 
-@interface PicViewController ()
-
-@property (nonatomic, strong)PicView *picView;
+@interface DetailViewController ()
 
 @end
 
-@implementation PicViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _picView = [PicView new];
-    [self.view addSubview:_picView];
-    [_picView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
 }
 
 /*

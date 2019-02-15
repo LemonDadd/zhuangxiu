@@ -9,6 +9,10 @@
 #ifndef Setting_h
 #define Setting_h
 
+//默认UITableViewCell
+#define UITableViewCellNone [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""]
+
+
 #define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define kNavBarHeight 44.0
 #define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
