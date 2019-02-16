@@ -15,6 +15,15 @@
 		B00A1AF52215433800625235 /* PicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1AF42215433800625235 /* PicViewController.m */; };
 		B00A1AF82215435500625235 /* HtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1AF72215435500625235 /* HtmlViewController.m */; };
 		B00A1AFB2215435E00625235 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1AFA2215435E00625235 /* UserViewController.m */; };
+		B00A1B5E2217E57500625235 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B5D2217E57500625235 /* SearchViewController.m */; };
+		B00A1B652217E66700625235 /* KongjianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B642217E66700625235 /* KongjianViewController.m */; };
+		B00A1B682217E67000625235 /* FenggeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B672217E67000625235 /* FenggeViewController.m */; };
+		B00A1B6B2217E67900625235 /* YanseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B6A2217E67900625235 /* YanseViewController.m */; };
+		B00A1B6E2217E68100625235 /* JubuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B6D2217E68100625235 /* JubuViewController.m */; };
+		B00A1B742217ED4C00625235 /* MoreDropDownMenuRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B712217ED4C00625235 /* MoreDropDownMenuRowCell.m */; };
+		B00A1B752217ED4C00625235 /* MoreDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B722217ED4C00625235 /* MoreDropDownMenu.m */; };
+		B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B772217ED6000625235 /* NSArray+ZMAdd.m */; };
+		B00A1B882217FFD700625235 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */; };
 		B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6112213FD9E007C3D5F /* AppDelegate.m */; };
 		B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6142213FD9E007C3D5F /* ViewController.m */; };
 		B08BD6182213FD9E007C3D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08BD6162213FD9E007C3D5F /* Main.storyboard */; };
@@ -83,6 +92,24 @@
 		B00A1AF72215435500625235 /* HtmlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HtmlViewController.m; sourceTree = "<group>"; };
 		B00A1AF92215435E00625235 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		B00A1AFA2215435E00625235 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		B00A1B5C2217E57500625235 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		B00A1B5D2217E57500625235 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		B00A1B632217E66700625235 /* KongjianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KongjianViewController.h; sourceTree = "<group>"; };
+		B00A1B642217E66700625235 /* KongjianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KongjianViewController.m; sourceTree = "<group>"; };
+		B00A1B662217E67000625235 /* FenggeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FenggeViewController.h; sourceTree = "<group>"; };
+		B00A1B672217E67000625235 /* FenggeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FenggeViewController.m; sourceTree = "<group>"; };
+		B00A1B692217E67900625235 /* YanseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YanseViewController.h; sourceTree = "<group>"; };
+		B00A1B6A2217E67900625235 /* YanseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YanseViewController.m; sourceTree = "<group>"; };
+		B00A1B6C2217E68100625235 /* JubuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JubuViewController.h; sourceTree = "<group>"; };
+		B00A1B6D2217E68100625235 /* JubuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JubuViewController.m; sourceTree = "<group>"; };
+		B00A1B702217ED4C00625235 /* MoreDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreDropDownMenu.h; sourceTree = "<group>"; };
+		B00A1B712217ED4C00625235 /* MoreDropDownMenuRowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreDropDownMenuRowCell.m; sourceTree = "<group>"; };
+		B00A1B722217ED4C00625235 /* MoreDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreDropDownMenu.m; sourceTree = "<group>"; };
+		B00A1B732217ED4C00625235 /* MoreDropDownMenuRowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreDropDownMenuRowCell.h; sourceTree = "<group>"; };
+		B00A1B772217ED6000625235 /* NSArray+ZMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ZMAdd.m"; sourceTree = "<group>"; };
+		B00A1B782217ED6000625235 /* NSArray+ZMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZMAdd.h"; sourceTree = "<group>"; };
+		B00A1B862217FFD700625235 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 		B08BD60D2213FD9E007C3D5F /* zhuangxiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhuangxiu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08BD6102213FD9E007C3D5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B08BD6112213FD9E007C3D5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -193,6 +220,82 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B00A1B5A2217E55B00625235 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B622217E5E800625235 /* Kongjian */,
+				B00A1B612217E5E500625235 /* Fengge */,
+				B00A1B602217E5E000625235 /* Yanse */,
+				B00A1B5F2217E5DE00625235 /* Jubu */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		B00A1B5B2217E56200625235 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B5C2217E57500625235 /* SearchViewController.h */,
+				B00A1B5D2217E57500625235 /* SearchViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B00A1B5F2217E5DE00625235 /* Jubu */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B6C2217E68100625235 /* JubuViewController.h */,
+				B00A1B6D2217E68100625235 /* JubuViewController.m */,
+			);
+			path = Jubu;
+			sourceTree = "<group>";
+		};
+		B00A1B602217E5E000625235 /* Yanse */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B692217E67900625235 /* YanseViewController.h */,
+				B00A1B6A2217E67900625235 /* YanseViewController.m */,
+			);
+			path = Yanse;
+			sourceTree = "<group>";
+		};
+		B00A1B612217E5E500625235 /* Fengge */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B662217E67000625235 /* FenggeViewController.h */,
+				B00A1B672217E67000625235 /* FenggeViewController.m */,
+			);
+			path = Fengge;
+			sourceTree = "<group>";
+		};
+		B00A1B622217E5E800625235 /* Kongjian */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B632217E66700625235 /* KongjianViewController.h */,
+				B00A1B642217E66700625235 /* KongjianViewController.m */,
+			);
+			path = Kongjian;
+			sourceTree = "<group>";
+		};
+		B00A1B6F2217ED4C00625235 /* MoreDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B702217ED4C00625235 /* MoreDropDownMenu.h */,
+				B00A1B722217ED4C00625235 /* MoreDropDownMenu.m */,
+				B00A1B732217ED4C00625235 /* MoreDropDownMenuRowCell.h */,
+				B00A1B712217ED4C00625235 /* MoreDropDownMenuRowCell.m */,
+			);
+			path = MoreDropDownMenu;
+			sourceTree = "<group>";
+		};
+		B00A1B762217ED6000625235 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				B00A1B772217ED6000625235 /* NSArray+ZMAdd.m */,
+				B00A1B782217ED6000625235 /* NSArray+ZMAdd.h */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
 		B08BD6042213FD9E007C3D5F = {
 			isa = PBXGroup;
 			children = (
@@ -219,8 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				DAB1924A2215A36100239A40 /* lib */,
-				DAB192A42216F9E700239A40 /* Search */,
-				DAB1929F2216F96700239A40 /* Style */,
+				B00A1B5B2217E56200625235 /* Search */,
+				B00A1B5A2217E55B00625235 /* Style */,
 				DAB192962216F8A400239A40 /* UserList */,
 				DAB192922216F80400239A40 /* Detail */,
 				B08BD6462213FDB4007C3D5F /* User */,
@@ -285,8 +388,11 @@
 		B08BD6432213FDAB007C3D5F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B00A1B6F2217ED4C00625235 /* MoreDropDownMenu */,
 				B00A1AF0221542DE00625235 /* HomeViewController.h */,
 				B00A1AF1221542DE00625235 /* HomeViewController.m */,
+				B00A1B862217FFD700625235 /* HomeCollectionViewCell.h */,
+				B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -329,6 +435,7 @@
 		DAB1924A2215A36100239A40 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				B00A1B762217ED6000625235 /* tool */,
 				DAB1927C2215AC5D00239A40 /* UIView+Extension.h */,
 				DAB1927D2215AC5D00239A40 /* UIView+Extension.m */,
 				DAB192632215AC5400239A40 /* NSDate */,
@@ -432,52 +539,6 @@
 			children = (
 			);
 			path = Wode;
-			sourceTree = "<group>";
-		};
-		DAB1929F2216F96700239A40 /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				DAB192A32216F9BE00239A40 /* Yanse */,
-				DAB192A22216F9BC00239A40 /* Kongjian */,
-				DAB192A12216F9B900239A40 /* Fengge */,
-				DAB192A02216F9B700239A40 /* Jubu */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		DAB192A02216F9B700239A40 /* Jubu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Jubu;
-			sourceTree = "<group>";
-		};
-		DAB192A12216F9B900239A40 /* Fengge */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fengge;
-			sourceTree = "<group>";
-		};
-		DAB192A22216F9BC00239A40 /* Kongjian */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Kongjian;
-			sourceTree = "<group>";
-		};
-		DAB192A32216F9BE00239A40 /* Yanse */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Yanse;
-			sourceTree = "<group>";
-		};
-		DAB192A42216F9E700239A40 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,16 +717,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00A1B6E2217E68100625235 /* JubuViewController.m in Sources */,
 				DAB1928E2216F1E700239A40 /* PicView.m in Sources */,
 				DAB192742215AC5400239A40 /* NSDate+JKLunarCalendar.m in Sources */,
+				B00A1B752217ED4C00625235 /* MoreDropDownMenu.m in Sources */,
 				B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */,
 				DAB1927E2215AC5D00239A40 /* UIView+Extension.m in Sources */,
+				B00A1B742217ED4C00625235 /* MoreDropDownMenuRowCell.m in Sources */,
 				B00A1AE92215420500625235 /* BaseNavController.m in Sources */,
 				DAB192812215AC8B00239A40 /* AllInterfaceRequest.m in Sources */,
 				B00A1AEF2215429700625235 /* BaseView.m in Sources */,
 				B00A1AE6221541E000625235 /* BaseViewController.m in Sources */,
 				B00A1AF52215433800625235 /* PicViewController.m in Sources */,
 				DAB192952216F89E00239A40 /* DetailViewController.m in Sources */,
+				B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */,
 				DAB192612215AC4A00239A40 /* JhlvShowAlertController.m in Sources */,
 				B08BD6202213FD9F007C3D5F /* main.m in Sources */,
 				B00A1AEC2215428600625235 /* BaseTabBarController.m in Sources */,
@@ -675,13 +740,18 @@
 				DAB1927A2215AC5400239A40 /* NSDate+JKZeroDate.m in Sources */,
 				B00A1AFB2215435E00625235 /* UserViewController.m in Sources */,
 				DAB192762215AC5400239A40 /* NSDate+JKInternetDateTime.m in Sources */,
+				B00A1B5E2217E57500625235 /* SearchViewController.m in Sources */,
 				DAB1928A2216EE1400239A40 /* PicTableViewCell.m in Sources */,
 				DAB192912216F26900239A40 /* BaseTableView.m in Sources */,
 				B00A1AF82215435500625235 /* HtmlViewController.m in Sources */,
+				B00A1B6B2217E67900625235 /* YanseViewController.m in Sources */,
+				B00A1B882217FFD700625235 /* HomeCollectionViewCell.m in Sources */,
+				B00A1B652217E66700625235 /* KongjianViewController.m in Sources */,
 				DAB1925B2215AC1600239A40 /* NHFUpLoadImages.m in Sources */,
 				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,
 				DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */,
 				DAB192782215AC5400239A40 /* NSDate+JKUtilities.m in Sources */,
+				B00A1B682217E67000625235 /* FenggeViewController.m in Sources */,
 				B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */,
 				DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */,
 				B00A1AF2221542DE00625235 /* HomeViewController.m in Sources */,
@@ -860,6 +930,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
@@ -879,6 +950,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;

@@ -125,4 +125,14 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((_seconds_) * NSEC_PER
 shouldPrevent = NO; \
 }); \
 
+#define KImageHeight 40.f
+#define KImageMargin 20.f
+#define KImageCount  3.f
+#define WEAKSELF __weak typeof(self) weakSelf = self
+#define FIT_WIDTH [UIScreen mainScreen].bounds.size.width/375
+
+#define KSelectBorderColor      [UIColor colorWithRed:253/255.0 green:206/255.0 blue:41/255.0 alpha:1]
+#define KUnSelectBorderColor    [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1]
+#define KButtonColor            [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]
+
 #endif /* Setting_h */
