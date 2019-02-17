@@ -1,8 +1,8 @@
 //
-//  HtmlViewController.h
+//  UserSettingViewController.h
 //  zhuangxiu
 //
-//  Created by quanqiuwa on 2019/2/14.
+//  Created by 关云秀 on 2019/2/17.
 //  Copyright © 2019 TestProject. All rights reserved.
 //
 
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HtmlViewController : BaseViewController
-
-@property (nonatomic, copy)NSString *url;
+@interface UserSettingViewController : BaseViewController
 
 @end
 

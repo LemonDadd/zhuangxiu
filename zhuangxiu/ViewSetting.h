@@ -43,4 +43,13 @@
  */
 #define REDCOLOR 0xf15a24
 
+#define CBlue      [UIColor colorWithHexString:@"#5892ee"]
+#define CGreen     [UIColor colorWithHexString:@"#9ec642"]
+#define CBgColor   [UIColor colorWithHexString:@"#f8f8f8"]
+#define CLineColor [UIColor colorWithHexString:@"#f5f5f5"]
+#define CYellow    [UIColor colorWithHexString:@"#f48200"]
+#define C666       [UIColor colorWithHexString:@"#666666"]
+#define C333       [UIColor colorWithHexString:@"#333333"]
+#define C999       [UIColor colorWithHexString:@"#999999"]
+
 #endif /* ViewSetting_h */

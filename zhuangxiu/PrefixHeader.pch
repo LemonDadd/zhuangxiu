@@ -38,6 +38,7 @@
 #import "BaseTabBarController.h"
 #import "BaseNavController.h"
 #import "BaseViewController.h"
+#import "UIColor+Hex.h"
 
 #endif
 
