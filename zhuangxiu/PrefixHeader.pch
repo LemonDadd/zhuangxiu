@@ -40,6 +40,12 @@
 #import "BaseViewController.h"
 #import "UIColor+Hex.h"
 
+#import "SNDefines.h"
+
+#import "UserInfoClass.h"
+#import "AllRequest.h"
+
+
 #endif
 
 #endif /* PrefixHeader_pch */

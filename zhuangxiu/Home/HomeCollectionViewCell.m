@@ -20,15 +20,23 @@
             make.edges.equalTo(self);
         }];
         
+        _shouc = [UIImageView new];
+        [self addSubview:_shouc];
+        [_shouc mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.image).offset(-10);
+            make.left.equalTo(self.image).offset(10);
+            make.width.height.equalTo(@15);
+        }];
+        
         _count = [UILabel new];
         _count.textAlignment = NSTextAlignmentCenter;
-        _count.font = [UIFont fontByName:@"" fontSize:22];
+        _count.font = [UIFont fontByName:@"" fontSize:12];
         _count.textColor = [UIColor whiteColor];
-        //_title.text = @"【铜器】";
+        _count.text = @"10";
         [self addSubview:_count];
         [_count mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self);
-            make.top.equalTo(self).offset(kHeight(60));
+            make.centerY.equalTo(self.shouc);
+            make.left.equalTo(self.shouc.mas_right).offset(8);
         }];
         
         

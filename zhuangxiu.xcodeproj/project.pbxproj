@@ -24,6 +24,9 @@
 		B00A1B752217ED4C00625235 /* MoreDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B722217ED4C00625235 /* MoreDropDownMenu.m */; };
 		B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B772217ED6000625235 /* NSArray+ZMAdd.m */; };
 		B00A1B882217FFD700625235 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */; };
+		B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC313221A5CBB004266E9 /* AllRequest.m */; };
+		B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC316221A5D55004266E9 /* JsonDeal.m */; };
+		B08BC31C221A5F76004266E9 /* UserInfoClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC31B221A5F76004266E9 /* UserInfoClass.m */; };
 		B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6112213FD9E007C3D5F /* AppDelegate.m */; };
 		B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6142213FD9E007C3D5F /* ViewController.m */; };
 		B08BD6182213FD9E007C3D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08BD6162213FD9E007C3D5F /* Main.storyboard */; };
@@ -140,6 +143,13 @@
 		B00A1B782217ED6000625235 /* NSArray+ZMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZMAdd.h"; sourceTree = "<group>"; };
 		B00A1B862217FFD700625235 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		B08BC312221A5CBB004266E9 /* AllRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllRequest.h; sourceTree = "<group>"; };
+		B08BC313221A5CBB004266E9 /* AllRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllRequest.m; sourceTree = "<group>"; };
+		B08BC316221A5D55004266E9 /* JsonDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonDeal.m; sourceTree = "<group>"; };
+		B08BC317221A5D55004266E9 /* JsonDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonDeal.h; sourceTree = "<group>"; };
+		B08BC31A221A5F76004266E9 /* UserInfoClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoClass.h; sourceTree = "<group>"; };
+		B08BC31B221A5F76004266E9 /* UserInfoClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoClass.m; sourceTree = "<group>"; };
+		B08BC31D221A5FE1004266E9 /* SNDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNDefines.h; sourceTree = "<group>"; };
 		B08BD60D2213FD9E007C3D5F /* zhuangxiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhuangxiu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08BD6102213FD9E007C3D5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B08BD6112213FD9E007C3D5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -402,6 +412,33 @@
 			path = tool;
 			sourceTree = "<group>";
 		};
+		B08BC311221A5CA4004266E9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B08BC312221A5CBB004266E9 /* AllRequest.h */,
+				B08BC313221A5CBB004266E9 /* AllRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B08BC315221A5D55004266E9 /* JsonDeal */ = {
+			isa = PBXGroup;
+			children = (
+				B08BC316221A5D55004266E9 /* JsonDeal.m */,
+				B08BC317221A5D55004266E9 /* JsonDeal.h */,
+			);
+			path = JsonDeal;
+			sourceTree = "<group>";
+		};
+		B08BC319221A5F51004266E9 /* UserInfoClass */ = {
+			isa = PBXGroup;
+			children = (
+				B08BC31A221A5F76004266E9 /* UserInfoClass.h */,
+				B08BC31B221A5F76004266E9 /* UserInfoClass.m */,
+			);
+			path = UserInfoClass;
+			sourceTree = "<group>";
+		};
 		B08BD6042213FD9E007C3D5F = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +464,7 @@
 		B08BD60F2213FD9E007C3D5F /* zhuangxiu */ = {
 			isa = PBXGroup;
 			children = (
+				B08BC311221A5CA4004266E9 /* Request */,
 				DAB1924A2215A36100239A40 /* lib */,
 				B00A1B5B2217E56200625235 /* Search */,
 				B00A1B5A2217E55B00625235 /* Style */,
@@ -442,6 +480,7 @@
 				B08BD6132213FD9E007C3D5F /* ViewController.h */,
 				B08BD6142213FD9E007C3D5F /* ViewController.m */,
 				DAB1924C2215A7B900239A40 /* PrefixHeader.pch */,
+				B08BC31D221A5FE1004266E9 /* SNDefines.h */,
 				DAB1924D2215A8C600239A40 /* Setting.h */,
 				DAB192822215AD9600239A40 /* UrlSetting.h */,
 				DAB192832215ADA700239A40 /* ViewSetting.h */,
@@ -529,9 +568,9 @@
 		B08BD6462213FDB4007C3D5F /* User */ = {
 			isa = PBXGroup;
 			children = (
+				B08BC319221A5F51004266E9 /* UserInfoClass */,
 				DAA08DE32219AAA400E944FE /* UserSetting */,
 				DAB192A52219956E00239A40 /* Shoucang */,
-				DAB1929D2216F91900239A40 /* Wode */,
 				DAB1929C2216F8F800239A40 /* Yijian */,
 				DAB1929B2216F8F500239A40 /* Guanyu */,
 				B00A1AF92215435E00625235 /* UserViewController.h */,
@@ -694,6 +733,7 @@
 		DAB1924A2215A36100239A40 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				B08BC315221A5D55004266E9 /* JsonDeal */,
 				DAA08E482219AFD700E944FE /* UIColor+Hex.h */,
 				DAA08E472219AFD600E944FE /* UIColor+Hex.m */,
 				DAA08E172219AB0300E944FE /* ACActionSheet */,
@@ -713,8 +753,8 @@
 			children = (
 				DAB1924F2215AC1600239A40 /* HttpHelper.m */,
 				DAB192502215AC1600239A40 /* HttpHelpBase.h */,
-				DAB192512215AC1600239A40 /* HttpHelper.h */,
 				DAB192522215AC1600239A40 /* HttpHelpBase.m */,
+				DAB192512215AC1600239A40 /* HttpHelper.h */,
 				DAB192532215AC1600239A40 /* NHFUpLoadAndDownImages */,
 			);
 			path = HttpHelp;
@@ -799,13 +839,6 @@
 				DAA08DDE2219A24400E944FE /* YijianViewController.m */,
 			);
 			path = Yijian;
-			sourceTree = "<group>";
-		};
-		DAB1929D2216F91900239A40 /* Wode */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wode;
 			sourceTree = "<group>";
 		};
 		DAB192A52219956E00239A40 /* Shoucang */ = {
@@ -1054,9 +1087,11 @@
 				DAB192912216F26900239A40 /* BaseTableView.m in Sources */,
 				B00A1AF82215435500625235 /* HtmlViewController.m in Sources */,
 				B00A1B6B2217E67900625235 /* YanseViewController.m in Sources */,
+				B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */,
 				DAA08E3C2219AB2300E944FE /* UserAddressTabViewCell.m in Sources */,
 				DAA08E3D2219AB2300E944FE /* UserNameTabViewCell.m in Sources */,
 				DAA08E1B2219AB0400E944FE /* JJImagePicker.m in Sources */,
+				B08BC31C221A5F76004266E9 /* UserInfoClass.m in Sources */,
 				DAA08E1F2219AB0400E944FE /* UIImage+CropRotate.m in Sources */,
 				DAA08DDC2219A23600E944FE /* GuanyuViewController.m in Sources */,
 				DAA08E262219AB0400E944FE /* TOCropToolbar.m in Sources */,
@@ -1068,6 +1103,7 @@
 				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,
 				DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */,
 				DAB192782215AC5400239A40 /* NSDate+JKUtilities.m in Sources */,
+				B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */,
 				B00A1B682217E67000625235 /* FenggeViewController.m in Sources */,
 				DAA08E282219AB0400E944FE /* ACActionSheet.m in Sources */,
 				B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */,

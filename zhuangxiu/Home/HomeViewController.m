@@ -28,7 +28,7 @@
     // Do any additional setup after loading the view.
     self.cates = @[@"空间",@"风格",@"颜色",@"局部"];
     
-    _menu = [[MoreDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:49.5];
+    _menu = [[MoreDropDownMenu alloc] initWithOrigin:CGPointMake(0, 0) andHeight:49.5];
     _menu.delegate = self;
     _menu.dataSource = self;
     //当下拉菜单收回时的回调，用于网络请求新的数据
@@ -60,6 +60,11 @@
         make.left.right.bottom.equalTo(self.view);
         make.top.equalTo(self.menu);
     }];
+    
+    
+    [AllRequest requestGetHomeListBySkip:0 request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
+        
+    }];
 }
 
 - (void)dismiss{
@@ -83,7 +88,7 @@
 }
 
 - (NSString *)menu:(MoreDropDownMenu *)menu titleForRowAtIndexPath:(MoreIndexPath *)indexPath{
-    return self.cates[indexPath.row];
+    return self.cates[indexPath.column];
 }
 - (NSArray *)menu:(MoreDropDownMenu *)menu arrayForRowAtIndexPath:(MoreIndexPath *)indexPath{
     if (indexPath.column == 0) {

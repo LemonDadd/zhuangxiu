@@ -13,7 +13,7 @@
 + (AFSecurityPolicy*)customSecurityPolicy
 {
     // /先导入证书
-    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"213965965480287" ofType:@"cer"];//证书的路径
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"1213213213123213" ofType:@"cer"];//证书的路径
     NSData *certData = [NSData dataWithContentsOfFile:cerPath];
     
     // AFSSLPinningModeCertificate 使用证书验证模式

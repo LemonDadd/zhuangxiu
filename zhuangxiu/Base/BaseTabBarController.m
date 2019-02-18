@@ -52,9 +52,7 @@
     
     // 设置文字的样式
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = kColorWithHex(BLACKCOLOR);
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] = kColorWithHex(0X804000);
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     
