@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HtmlViewController : BaseViewController
 
 @property (nonatomic, copy)NSString *url;
+@property (nonatomic, assign)BOOL showBottom;
 
 @end
 

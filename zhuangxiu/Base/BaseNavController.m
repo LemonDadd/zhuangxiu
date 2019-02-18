@@ -19,7 +19,7 @@
     // 导航
     UINavigationBar *navBar = [UINavigationBar appearance];
     //navBar.barTintColor = kColorWithHex(MCOLOR);
-    NSDictionary *dict = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    NSDictionary *dict = @{NSForegroundColorAttributeName :[UIColor blackColor]};
     [navBar setTitleTextAttributes:dict];
     
     
