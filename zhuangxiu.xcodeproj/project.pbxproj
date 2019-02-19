@@ -63,6 +63,12 @@
 		DAA08E462219AB3600E944FE /* UserSetTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E442219AB3600E944FE /* UserSetTextViewController.m */; };
 		DAA08E492219AFD700E944FE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E472219AFD600E944FE /* UIColor+Hex.m */; };
 		DAA08E4C221AF6D500E944FE /* HomeCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E4B221AF6D500E944FE /* HomeCollectionViewLayout.m */; };
+		DAA08E51221C349B00E944FE /* shuju.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA08E50221C349B00E944FE /* shuju.plist */; };
+		DAA08E54221C38C700E944FE /* ren.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA08E53221C38C700E944FE /* ren.plist */; };
+		DAA08E56221C3D1A00E944FE /* fenlei.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAA08E55221C3D1A00E944FE /* fenlei.plist */; };
+		DAA08E59221C4AEC00E944FE /* HomeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E58221C4AEC00E944FE /* HomeMode.m */; };
+		DAA08E5D221C4DB400E944FE /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E5C221C4DB400E944FE /* UserModel.m */; };
+		DAA08E60221C4E1400E944FE /* FenleiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E5F221C4E1400E944FE /* FenleiModel.m */; };
 		DAB192582215AC1600239A40 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1924F2215AC1600239A40 /* HttpHelper.m */; };
 		DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192522215AC1600239A40 /* HttpHelpBase.m */; };
 		DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192542215AC1600239A40 /* NHFDownImages.m */; };
@@ -241,6 +247,15 @@
 		DAA08E482219AFD700E944FE /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		DAA08E4A221AF6D500E944FE /* HomeCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewLayout.h; sourceTree = "<group>"; };
 		DAA08E4B221AF6D500E944FE /* HomeCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewLayout.m; sourceTree = "<group>"; };
+		DAA08E50221C349B00E944FE /* shuju.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = shuju.plist; sourceTree = "<group>"; };
+		DAA08E53221C38C700E944FE /* ren.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ren.plist; sourceTree = "<group>"; };
+		DAA08E55221C3D1A00E944FE /* fenlei.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fenlei.plist; sourceTree = "<group>"; };
+		DAA08E57221C4AEC00E944FE /* HomeMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeMode.h; sourceTree = "<group>"; };
+		DAA08E58221C4AEC00E944FE /* HomeMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeMode.m; sourceTree = "<group>"; };
+		DAA08E5B221C4DB400E944FE /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		DAA08E5C221C4DB400E944FE /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		DAA08E5E221C4E1400E944FE /* FenleiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FenleiModel.h; sourceTree = "<group>"; };
+		DAA08E5F221C4E1400E944FE /* FenleiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FenleiModel.m; sourceTree = "<group>"; };
 		DAB1924C2215A7B900239A40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DAB1924D2215A8C600239A40 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		DAB1924F2215AC1600239A40 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
@@ -491,6 +506,7 @@
 				B08BD6192213FD9F007C3D5F /* Assets.xcassets */,
 				B08BD61B2213FD9F007C3D5F /* LaunchScreen.storyboard */,
 				B08BD61E2213FD9F007C3D5F /* Info.plist */,
+				DAA08E4D221C306700E944FE /* New Group */,
 				B08BD61F2213FD9F007C3D5F /* main.m */,
 			);
 			path = zhuangxiu;
@@ -543,6 +559,10 @@
 				B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */,
 				DAA08E4A221AF6D500E944FE /* HomeCollectionViewLayout.h */,
 				DAA08E4B221AF6D500E944FE /* HomeCollectionViewLayout.m */,
+				DAA08E57221C4AEC00E944FE /* HomeMode.h */,
+				DAA08E58221C4AEC00E944FE /* HomeMode.m */,
+				DAA08E5E221C4E1400E944FE /* FenleiModel.h */,
+				DAA08E5F221C4E1400E944FE /* FenleiModel.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -735,6 +755,16 @@
 			path = UserShopTabViewCell;
 			sourceTree = "<group>";
 		};
+		DAA08E4D221C306700E944FE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08E50221C349B00E944FE /* shuju.plist */,
+				DAA08E53221C38C700E944FE /* ren.plist */,
+				DAA08E55221C3D1A00E944FE /* fenlei.plist */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		DAB1924A2215A36100239A40 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,6 +854,8 @@
 			children = (
 				DAB192972216F8BB00239A40 /* UserListViewController.h */,
 				DAB192982216F8BB00239A40 /* UserListViewController.m */,
+				DAA08E5B221C4DB400E944FE /* UserModel.h */,
+				DAA08E5C221C4DB400E944FE /* UserModel.m */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -979,10 +1011,13 @@
 			files = (
 				DAA08E272219AB0400E944FE /* ACActionSheet.bundle in Resources */,
 				DAB1928B2216EE1400239A40 /* PicTableViewCell.xib in Resources */,
+				DAA08E54221C38C700E944FE /* ren.plist in Resources */,
 				B08BD61D2213FD9F007C3D5F /* LaunchScreen.storyboard in Resources */,
 				B08BD61A2213FD9F007C3D5F /* Assets.xcassets in Resources */,
 				DAA08E1D2219AB0400E944FE /* TOCropViewControllerLocalizable.strings in Resources */,
 				B08BD6182213FD9E007C3D5F /* Main.storyboard in Resources */,
+				DAA08E56221C3D1A00E944FE /* fenlei.plist in Resources */,
+				DAA08E51221C349B00E944FE /* shuju.plist in Resources */,
 				DAB192AD221995E700239A40 /* UserTopTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1071,11 +1106,13 @@
 				B00A1AEF2215429700625235 /* BaseView.m in Sources */,
 				B00A1AE6221541E000625235 /* BaseViewController.m in Sources */,
 				DAA08E1C2219AB0400E944FE /* UILabel+JJImagePicker.m in Sources */,
+				DAA08E59221C4AEC00E944FE /* HomeMode.m in Sources */,
 				DAA08DE22219A2EC00E944FE /* ShoucangViewController.m in Sources */,
 				B00A1AF52215433800625235 /* PicViewController.m in Sources */,
 				DAA08E242219AB0400E944FE /* TOCropView.m in Sources */,
 				DAB192952216F89E00239A40 /* DetailViewController.m in Sources */,
 				DAA08E232219AB0400E944FE /* TOCropScrollView.m in Sources */,
+				DAA08E5D221C4DB400E944FE /* UserModel.m in Sources */,
 				B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */,
 				DAB192612215AC4A00239A40 /* JhlvShowAlertController.m in Sources */,
 				B08BD6202213FD9F007C3D5F /* main.m in Sources */,
@@ -1119,6 +1156,7 @@
 				DAB1927B2215AC5400239A40 /* NSDate+JKCupertinoYankee.m in Sources */,
 				DAB192752215AC5400239A40 /* NSDate+JKExtension.m in Sources */,
 				DAA08E402219AB2300E944FE /* UserShopTabViewCell.m in Sources */,
+				DAA08E60221C4E1400E944FE /* FenleiModel.m in Sources */,
 				DAA08E3F2219AB2300E944FE /* UserPhoneTabViewCell.m in Sources */,
 				DAB192622215AC4A00239A40 /* CustomView.m in Sources */,
 				DAA08E222219AB0400E944FE /* TOCropViewController.m in Sources */,
