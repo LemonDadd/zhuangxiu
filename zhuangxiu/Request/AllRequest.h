@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define api @"http://api.homer.app887.com"
+#define getNew @"/api/Articles.action?npc=0&opc=20&type=家居设计/家饰搭配/装修指南/装修风水&uid=387570 "
+
 @interface AllRequest : JsonDeal
 
 + (void)requestGetHomeListBySkip:(NSInteger)skip
@@ -26,7 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
                         request:(void(^)(NSArray *message,
                                          NSString *errorMsg))request;
 
-
++ (void)requestGetNewListBySize:(NSInteger)npc
+                           Skip:(NSInteger)opc
+                           type:(NSString *)type
+                             request:(void(^)(NSArray *message,
+                                              NSString *errorMsg))request;
 
 /**
  登录

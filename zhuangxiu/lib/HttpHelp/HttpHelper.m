@@ -66,7 +66,7 @@
 
 + (void)httpDataRequestByGetMethod:(NSString *)urlString
                    paramDictionary:(NSDictionary *)paramDictionary
-                           request:(void (^)(BOOL, NSString *))requestFun{
+                           request:(void (^)(BOOL finish, NSString* data))requestFun{
      NSMutableDictionary *theDic = [[NSMutableDictionary alloc] initWithDictionary:paramDictionary];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -87,7 +87,7 @@
 + (void)httpDataRequestByGetMethod:(NSString *)urlString
                    paramDictionary:(NSDictionary *)paramDictionary
                     TimeOutSeconds:(NSInteger)timeOutSeconds
-                           request:(void (^)(BOOL, NSString *))requestFun {
+                           request:(void (^)(BOOL finish, NSString* data))requestFun {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];

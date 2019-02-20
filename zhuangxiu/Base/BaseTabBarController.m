@@ -9,7 +9,7 @@
 #import "BaseTabBarController.h"
 #import "HomeViewController.h"
 #import "PicViewController.h"
-#import "HtmlViewController.h"
+#import "NewsViewController.h"
 #import "UserViewController.h"
 #import "BaseNavController.h"
 @interface BaseTabBarController ()
@@ -27,8 +27,8 @@
     PicViewController *pic = [PicViewController new];
     [self addChildVc:pic title:@"动态" image:@"zhdl_icon" selectedImage:@"zhdl_icon_true"];
     
-    HtmlViewController *html = [HtmlViewController new];
-    [self addChildVc:html title:@"服务" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
+    NewsViewController *html = [NewsViewController new];
+    [self addChildVc:html title:@"资讯" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
     
     UserViewController *user = [UserViewController new];
     [self addChildVc:user title:@"我的" image:@"mine_icon" selectedImage:@"mine_icon_true"];

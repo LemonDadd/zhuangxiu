@@ -43,7 +43,7 @@
  */
 + (void)httpDataRequestByGetMethod:(NSString *)urlString
                    paramDictionary:(NSDictionary *)paramDictionary
-                           request:(void (^)(BOOL, NSString *))requestFun;
+                           request:(void (^)(BOOL finish, NSString* data))requestFun;
 
 /**
  *  Get TimeOut
@@ -56,7 +56,7 @@
 + (void)httpDataRequestByGetMethod:(NSString *)urlString
                    paramDictionary:(NSDictionary *)paramDictionary
                     TimeOutSeconds:(NSInteger)timeOutSeconds
-                           request:(void (^)(BOOL, NSString *))requestFun;
+                           request:(void (^)(BOOL finish, NSString* data))requestFun;
 
 @end
 

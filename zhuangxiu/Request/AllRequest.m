@@ -35,6 +35,31 @@
 }
 
 
++ (void)requestGetNewListBySize:(NSInteger)npc
+                           Skip:(NSInteger)opc
+                           type:(NSString *)type
+                        request:(void(^)(NSArray *message,
+                                         NSString *errorMsg))request {
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setObject:[NSString stringWithFormat:@"%ld",npc] forKey:@"npc"];
+    [dic setObject:[NSString stringWithFormat:@"%ld",opc] forKey:@"opc"];
+    [dic setObject:type forKey:@"type"];
+    [dic setObject:@"387570" forKey:@"uid"];
+    [HttpHelper httpDataRequestByGetMethod:@"http://api.homer.app887.com/api/Articles.action" paramDictionary:dic TimeOutSeconds:120 request:^(BOOL finish, NSString *data) {
+        if (finish) {
+            if (data == nil) {
+                request(nil, @"请求失败");
+            } else {
+                NSDictionary* dic =[JsonDeal dealJson:data];
+                NSArray *arr = dic[@"root"][@"list"];
+                request(arr, nil);
+            }
+        } else {
+            request(nil, @"请求失败");
+        }
+    }];
+}
+
 /**
  登录
  

@@ -71,6 +71,14 @@
 		DAA08E59221C4AEC00E944FE /* HomeMode.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E58221C4AEC00E944FE /* HomeMode.m */; };
 		DAA08E5D221C4DB400E944FE /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E5C221C4DB400E944FE /* UserModel.m */; };
 		DAA08E60221C4E1400E944FE /* FenleiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E5F221C4E1400E944FE /* FenleiModel.m */; };
+		DAA08E64221D976100E944FE /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E63221D976100E944FE /* NewsViewController.m */; };
+		DAA08E67221D97DA00E944FE /* ClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E66221D97DA00E944FE /* ClassifyViewController.m */; };
+		DAA08E6A221D988300E944FE /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E69221D988300E944FE /* NewsView.m */; };
+		DAA08E74221D995700E944FE /* NewsHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E72221D995700E944FE /* NewsHTableViewCell.m */; };
+		DAA08E75221D995700E944FE /* NewsHTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA08E73221D995700E944FE /* NewsHTableViewCell.xib */; };
+		DAA08E79221D996700E944FE /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E77221D996700E944FE /* NewsTableViewCell.m */; };
+		DAA08E7A221D996700E944FE /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA08E78221D996700E944FE /* NewsTableViewCell.xib */; };
+		DAA08E7D221DA53A00E944FE /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E7C221DA53A00E944FE /* NewsModel.m */; };
 		DAB192582215AC1600239A40 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1924F2215AC1600239A40 /* HttpHelper.m */; };
 		DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192522215AC1600239A40 /* HttpHelpBase.m */; };
 		DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192542215AC1600239A40 /* NHFDownImages.m */; };
@@ -262,6 +270,20 @@
 		DAA08E5C221C4DB400E944FE /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		DAA08E5E221C4E1400E944FE /* FenleiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FenleiModel.h; sourceTree = "<group>"; };
 		DAA08E5F221C4E1400E944FE /* FenleiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FenleiModel.m; sourceTree = "<group>"; };
+		DAA08E62221D976100E944FE /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		DAA08E63221D976100E944FE /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		DAA08E65221D97DA00E944FE /* ClassifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyViewController.h; sourceTree = "<group>"; };
+		DAA08E66221D97DA00E944FE /* ClassifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyViewController.m; sourceTree = "<group>"; };
+		DAA08E68221D988300E944FE /* NewsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsView.h; sourceTree = "<group>"; };
+		DAA08E69221D988300E944FE /* NewsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsView.m; sourceTree = "<group>"; };
+		DAA08E71221D995700E944FE /* NewsHTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsHTableViewCell.h; sourceTree = "<group>"; };
+		DAA08E72221D995700E944FE /* NewsHTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsHTableViewCell.m; sourceTree = "<group>"; };
+		DAA08E73221D995700E944FE /* NewsHTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsHTableViewCell.xib; sourceTree = "<group>"; };
+		DAA08E76221D996700E944FE /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		DAA08E77221D996700E944FE /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		DAA08E78221D996700E944FE /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		DAA08E7B221DA53A00E944FE /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		DAA08E7C221DA53A00E944FE /* NewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		DAB1924C2215A7B900239A40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DAB1924D2215A8C600239A40 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		DAB1924F2215AC1600239A40 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
@@ -488,6 +510,7 @@
 		B08BD60F2213FD9E007C3D5F /* zhuangxiu */ = {
 			isa = PBXGroup;
 			children = (
+				DAA08E61221D973600E944FE /* News */,
 				B08BC311221A5CA4004266E9 /* Request */,
 				DAB1924A2215A36100239A40 /* lib */,
 				B00A1B5B2217E56200625235 /* Search */,
@@ -773,6 +796,27 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		DAA08E61221D973600E944FE /* News */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08E62221D976100E944FE /* NewsViewController.h */,
+				DAA08E63221D976100E944FE /* NewsViewController.m */,
+				DAA08E68221D988300E944FE /* NewsView.h */,
+				DAA08E69221D988300E944FE /* NewsView.m */,
+				DAA08E7B221DA53A00E944FE /* NewsModel.h */,
+				DAA08E7C221DA53A00E944FE /* NewsModel.m */,
+				DAA08E65221D97DA00E944FE /* ClassifyViewController.h */,
+				DAA08E66221D97DA00E944FE /* ClassifyViewController.m */,
+				DAA08E71221D995700E944FE /* NewsHTableViewCell.h */,
+				DAA08E72221D995700E944FE /* NewsHTableViewCell.m */,
+				DAA08E73221D995700E944FE /* NewsHTableViewCell.xib */,
+				DAA08E76221D996700E944FE /* NewsTableViewCell.h */,
+				DAA08E77221D996700E944FE /* NewsTableViewCell.m */,
+				DAA08E78221D996700E944FE /* NewsTableViewCell.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		DAB1924A2215A36100239A40 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1022,12 +1066,14 @@
 				DAA08E272219AB0400E944FE /* ACActionSheet.bundle in Resources */,
 				DAB1928B2216EE1400239A40 /* PicTableViewCell.xib in Resources */,
 				DAA08E54221C38C700E944FE /* ren.plist in Resources */,
+				DAA08E75221D995700E944FE /* NewsHTableViewCell.xib in Resources */,
 				B08BD61D2213FD9F007C3D5F /* LaunchScreen.storyboard in Resources */,
 				B08BD61A2213FD9F007C3D5F /* Assets.xcassets in Resources */,
 				DAA08E1D2219AB0400E944FE /* TOCropViewControllerLocalizable.strings in Resources */,
 				B08BD6182213FD9E007C3D5F /* Main.storyboard in Resources */,
 				DAA08E56221C3D1A00E944FE /* fenlei.plist in Resources */,
 				DAA08E51221C349B00E944FE /* shuju.plist in Resources */,
+				DAA08E7A221D996700E944FE /* NewsTableViewCell.xib in Resources */,
 				DAB192AD221995E700239A40 /* UserTopTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1097,6 +1143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00A1B6E2217E68100625235 /* JubuViewController.m in Sources */,
+				DAA08E74221D995700E944FE /* NewsHTableViewCell.m in Sources */,
 				DAA08E492219AFD700E944FE /* UIColor+Hex.m in Sources */,
 				DAA08E202219AB0400E944FE /* TOCropViewControllerTransitioning.m in Sources */,
 				DAB192AC221995E700239A40 /* UserTopTableViewCell.m in Sources */,
@@ -1109,11 +1156,13 @@
 				B00A1B742217ED4C00625235 /* MoreDropDownMenuRowCell.m in Sources */,
 				DAA08E4C221AF6D500E944FE /* HomeCollectionViewLayout.m in Sources */,
 				DAA08E3E2219AB2300E944FE /* UserHeaderTabViewCell.m in Sources */,
+				DAA08E6A221D988300E944FE /* NewsView.m in Sources */,
 				B00A1AE92215420500625235 /* BaseNavController.m in Sources */,
 				DAA08E452219AB3600E944FE /* UploadPicViewController.m in Sources */,
 				DAA08E212219AB0400E944FE /* TOCroppedImageAttributes.m in Sources */,
 				DAB192812215AC8B00239A40 /* AllInterfaceRequest.m in Sources */,
 				B00A1AEF2215429700625235 /* BaseView.m in Sources */,
+				DAA08E79221D996700E944FE /* NewsTableViewCell.m in Sources */,
 				B00A1AE6221541E000625235 /* BaseViewController.m in Sources */,
 				DAA08E1C2219AB0400E944FE /* UILabel+JJImagePicker.m in Sources */,
 				DAA08E59221C4AEC00E944FE /* HomeMode.m in Sources */,
@@ -1125,9 +1174,11 @@
 				DAA08E5D221C4DB400E944FE /* UserModel.m in Sources */,
 				B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */,
 				DAB192612215AC4A00239A40 /* JhlvShowAlertController.m in Sources */,
+				DAA08E7D221DA53A00E944FE /* NewsModel.m in Sources */,
 				B08BD6202213FD9F007C3D5F /* main.m in Sources */,
 				B00A1AEC2215428600625235 /* BaseTabBarController.m in Sources */,
 				DAB192992216F8BB00239A40 /* UserListViewController.m in Sources */,
+				DAA08E67221D97DA00E944FE /* ClassifyViewController.m in Sources */,
 				DAB192582215AC1600239A40 /* HttpHelper.m in Sources */,
 				DAB192772215AC5400239A40 /* NSDate+JKFormatter.m in Sources */,
 				DAB1927A2215AC5400239A40 /* NSDate+JKZeroDate.m in Sources */,
@@ -1141,6 +1192,7 @@
 				B08BC325221D4A72004266E9 /* DetailScrView.m in Sources */,
 				B00A1AF82215435500625235 /* HtmlViewController.m in Sources */,
 				B00A1B6B2217E67900625235 /* YanseViewController.m in Sources */,
+				DAA08E64221D976100E944FE /* NewsViewController.m in Sources */,
 				B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */,
 				DAA08E3C2219AB2300E944FE /* UserAddressTabViewCell.m in Sources */,
 				DAA08E3D2219AB2300E944FE /* UserNameTabViewCell.m in Sources */,
