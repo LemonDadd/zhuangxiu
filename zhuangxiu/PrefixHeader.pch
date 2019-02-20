@@ -48,6 +48,8 @@
 #import "UserInfoClass.h"
 #import "AllRequest.h"
 
+#import "JsonToDic.h"
+
 
 #endif
 

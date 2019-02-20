@@ -27,6 +27,8 @@
 		B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC313221A5CBB004266E9 /* AllRequest.m */; };
 		B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC316221A5D55004266E9 /* JsonDeal.m */; };
 		B08BC31C221A5F76004266E9 /* UserInfoClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC31B221A5F76004266E9 /* UserInfoClass.m */; };
+		B08BC322221CF5D1004266E9 /* JsonToDic.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC321221CF5D1004266E9 /* JsonToDic.m */; };
+		B08BC325221D4A72004266E9 /* DetailScrView.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC324221D4A72004266E9 /* DetailScrView.m */; };
 		B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6112213FD9E007C3D5F /* AppDelegate.m */; };
 		B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BD6142213FD9E007C3D5F /* ViewController.m */; };
 		B08BD6182213FD9E007C3D5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08BD6162213FD9E007C3D5F /* Main.storyboard */; };
@@ -157,6 +159,10 @@
 		B08BC31A221A5F76004266E9 /* UserInfoClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoClass.h; sourceTree = "<group>"; };
 		B08BC31B221A5F76004266E9 /* UserInfoClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoClass.m; sourceTree = "<group>"; };
 		B08BC31D221A5FE1004266E9 /* SNDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNDefines.h; sourceTree = "<group>"; };
+		B08BC320221CF5D1004266E9 /* JsonToDic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonToDic.h; sourceTree = "<group>"; };
+		B08BC321221CF5D1004266E9 /* JsonToDic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonToDic.m; sourceTree = "<group>"; };
+		B08BC323221D4A72004266E9 /* DetailScrView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailScrView.h; sourceTree = "<group>"; };
+		B08BC324221D4A72004266E9 /* DetailScrView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailScrView.m; sourceTree = "<group>"; };
 		B08BD60D2213FD9E007C3D5F /* zhuangxiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhuangxiu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08BD6102213FD9E007C3D5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B08BD6112213FD9E007C3D5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -508,6 +514,8 @@
 				B08BD61E2213FD9F007C3D5F /* Info.plist */,
 				DAA08E4D221C306700E944FE /* New Group */,
 				B08BD61F2213FD9F007C3D5F /* main.m */,
+				B08BC320221CF5D1004266E9 /* JsonToDic.h */,
+				B08BC321221CF5D1004266E9 /* JsonToDic.m */,
 			);
 			path = zhuangxiu;
 			sourceTree = "<group>";
@@ -845,6 +853,8 @@
 			children = (
 				DAB192932216F89E00239A40 /* DetailViewController.h */,
 				DAB192942216F89E00239A40 /* DetailViewController.m */,
+				B08BC323221D4A72004266E9 /* DetailScrView.h */,
+				B08BC324221D4A72004266E9 /* DetailScrView.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1128,6 +1138,7 @@
 				B00A1B5E2217E57500625235 /* SearchViewController.m in Sources */,
 				DAB1928A2216EE1400239A40 /* PicTableViewCell.m in Sources */,
 				DAB192912216F26900239A40 /* BaseTableView.m in Sources */,
+				B08BC325221D4A72004266E9 /* DetailScrView.m in Sources */,
 				B00A1AF82215435500625235 /* HtmlViewController.m in Sources */,
 				B00A1B6B2217E67900625235 /* YanseViewController.m in Sources */,
 				B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */,
@@ -1149,6 +1160,7 @@
 				B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */,
 				B00A1B682217E67000625235 /* FenggeViewController.m in Sources */,
 				DAA08E282219AB0400E944FE /* ACActionSheet.m in Sources */,
+				B08BC322221CF5D1004266E9 /* JsonToDic.m in Sources */,
 				B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */,
 				DAA08E1E2219AB0400E944FE /* TOActivityCroppedImageProvider.m in Sources */,
 				DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */,

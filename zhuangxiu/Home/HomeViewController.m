@@ -11,6 +11,8 @@
 #import "HomeCollectionViewCell.h"
 #import "HomeCollectionViewLayout.h"
 #import "HtmlViewController.h"
+#import "HomeMode.h"
+#import "DetailViewController.h"
 
 @interface HomeViewController ()<MoreDropDownMenuDataSource,MoreDropDownMenuDelegate,UICollectionViewDataSource,UICollectionViewDelegate,HomeCollectionViewLayoutDelegate>
 
@@ -19,7 +21,9 @@
 @property (nonatomic, strong) NSArray               *sorts;
 @property (nonatomic, strong) MoreDropDownMenu       *menu;
 @property (nonatomic, strong) UICollectionView      *col;
+@property (nonatomic, strong) NSArray *pArray;
 @property (nonatomic, strong) NSMutableArray *allResource;
+@property (nonatomic, assign) NSInteger page;
 
 @end
 
@@ -63,21 +67,10 @@
         make.top.equalTo(self.menu.mas_bottom);
     }];
     
-    
-    
-    kWeakSelf(self);
-    AVQuery *query = [AVQuery queryWithClassName:@"config"];
-    [query getObjectInBackgroundWithId:@"5c26182567f356005f420678" block:^(AVObject * _Nullable object, NSError * _Nullable error) {
-        BOOL panduan = [object[@"panduan"] boolValue];
-        if (panduan) {
-            [weakself gotoWebView:object[@"url"]];
-            
-        }
-    }];
-    
-    [AllRequest requestGetHomeListBySkip:0 request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
-        
-    }];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"shuju" ofType:@"plist"];
+    _pArray = [NSArray arrayWithContentsOfFile:path];
+    [self addHistoryData];
+    [self upPull];
 }
 
 - (void)gotoWebView:(NSString *)url {
@@ -94,9 +87,7 @@
 }
 
 
--(CGFloat)waterFlow:(HomeCollectionViewLayout *)flow heightForWidth:(CGFloat)width indexPath:(NSIndexPath *)index {
-    return  [self getCellHightByCollectionModel:nil andCellWidth:0];
-}
+
 
 #pragma mark - MoreDropDownMenuDataSource and MoreDropDownMenuDelegate
 - (NSInteger)numberOfColumnsInMenu:(MoreDropDownMenu *)menu{
@@ -142,7 +133,6 @@
     NSLog(@"点击了菜单");
 }
 
-
 /**
  *  刷新数据
  */
@@ -150,28 +140,57 @@
     
     kWeakSelf(self);
     _col.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        weakself.page = 0;
         [weakself reStartRequestData];
     }];
     // 马上进入刷新状态
     [_col.mj_header beginRefreshing];
 }
 
+- (void)upPull {
+    kWeakSelf(self);
+    _col.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        weakself.page++;
+        [weakself reStartRequestData];
+    }];
+}
+
 - (void)reStartRequestData {
     kWeakSelf(self);
-//    [_antiqueModelClass requestAntiqueRequest:^(NSString *errorMsg) {
-//        if (errorMsg == nil) {
-//            [weakself updateData];
-//        }else {
-//            [weakself.mainCollectionView .mj_header endRefreshing];
-//            [CustomView alertMessage:errorMsg view:weakself];
-//        }
-//    }];
+    [AllRequest requestGetHomeListBySkip:_page request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
+        NSString *str = weakself.pArray[weakself.page];
+        NSArray *arr = [JsonToDic dictionaryWithJsonString:str];
+        [weakself updateData:arr];
+        
+    }];
 }
 
 
-- (void)updateData {
-    [_col .mj_header endRefreshing];
-    [_col reloadData];
+
+
+
+- (void)updateData:(NSArray *)resourceData {
+    [_col.mj_header endRefreshing];
+    [_col.mj_footer endRefreshing];
+    [_col.mj_footer setHidden:false];
+    if (self.page == 0) {
+        [self.allResource removeAllObjects];
+        [self.allResource addObjectsFromArray:[resourceData copy]];
+        [_col reloadData];
+    } else {
+        [self.allResource addObjectsFromArray:[resourceData copy]];
+        if (self.page == 9) {
+            [_col.mj_footer setHidden:true];
+        }
+        [_col reloadData];
+       
+    }
+    
+}
+
+-(CGFloat)waterFlow:(HomeCollectionViewLayout *)flow heightForWidth:(CGFloat)width indexPath:(NSIndexPath *)index {
+    HomeMode *model =[HomeMode mj_objectWithKeyValues:self.allResource[index.row]];
+    return  [self getCellHightByCollectionModel:model andCellWidth:width];
 }
 
 //section
@@ -183,13 +202,16 @@
 //item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return _allResource.count;
+    return self.allResource.count;
 }
 
 //每个item
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCollectionViewCell *cell = [_col dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
+    HomeMode *model =[HomeMode mj_objectWithKeyValues:self.allResource[indexPath.row]];
+    [cell.image sd_setImageWithURL:[NSURL URLWithString:model.photo_img_m]];
+    cell.count.text = model.photo_fav_nums;
     [self.view layoutIfNeeded];
     return cell;
 }
@@ -203,7 +225,9 @@
 //选择某个Item
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    DetailViewController *vc= [DetailViewController new];
+    vc.indx = indexPath.row;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 -(NSMutableArray *)allResource {
     if (_allResource == nil) {
@@ -212,8 +236,9 @@
     return _allResource;
 }
 
--(CGFloat)getCellHightByCollectionModel:(id)model andCellWidth:(CGFloat)width{
-    return  100;
+-(CGFloat)getCellHightByCollectionModel:(HomeMode *)model andCellWidth:(CGFloat)width{
+    
+    return  [model.height floatValue]/[model.width integerValue]*width;
 }
 
 

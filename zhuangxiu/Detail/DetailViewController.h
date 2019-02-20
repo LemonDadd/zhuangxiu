@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailViewController : BaseViewController
 
+@property (nonatomic, assign)NSInteger indx;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

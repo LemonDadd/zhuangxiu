@@ -16,7 +16,7 @@
                                           NSString *errorMsg))request{
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [HttpHelper httpDataRequest:@"https://api.jiajuol.com/app/index.php" paramDictionary:dic request:^(BOOL finish, NSString *data) {
-        
+        request(nil,nil);
     }];
 }
 
