@@ -42,7 +42,8 @@
     _topView = [UIView new];
     [self.view addSubview:_topView];
     [_topView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self.view);
+        make.top.equalTo(@64);
+        make.left.right.equalTo(self.view);
         make.height.equalTo(@80);
     }];
     
