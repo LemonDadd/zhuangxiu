@@ -13,7 +13,7 @@
  *
  *  @return
  */
-#define MCOLOR 0x99897a
+#define MCOLOR 0xFDCE29
 
 /**
  *  线条的颜色

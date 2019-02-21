@@ -52,12 +52,20 @@
     
     // 设置文字的样式
     // 设置文字的样式
-    NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = kColorWithHex(BLACKCOLOR);
-    NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] = [UIColor redColor];
-    [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
-    [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
+    // 默认
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    attrs[NSForegroundColorAttributeName] = kColorWithHex(BLACKCOLOR);
+    
+    // 选中
+    NSMutableDictionary *attrSelected = [NSMutableDictionary dictionary];
+    attrSelected[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    attrSelected[NSForegroundColorAttributeName] = kColorWithHex(MCOLOR);
+    
+    
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
+    [item setTitleTextAttributes:attrSelected forState:UIControlStateSelected];
     
     // 先给外面传进来的小控制器 包装 一个导航控制器
     BaseNavController *nav = [[BaseNavController alloc] initWithRootViewController:childVc];

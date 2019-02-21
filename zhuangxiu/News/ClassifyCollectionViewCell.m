@@ -20,9 +20,16 @@
             make.edges.equalTo(self);
         }];
         
+        UIView *v = [UIView new];
+        v.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
+        [self addSubview:v];
+        [v mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
+        
         _title = [UILabel new];
         _title.textAlignment = NSTextAlignmentCenter;
-        _title.font = [UIFont fontByName:@"" fontSize:22];
+        _title.font = [UIFont fontByName:@"" fontSize:25];
         _title.textColor = [UIColor whiteColor];
         //_title.text = @"【铜器】";
         [self addSubview:_title];

@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong)UICollectionView *mainCollectionView;
 @property (nonatomic, strong)NSArray *array;
+@property (nonatomic, strong)NSArray *picArray;;
 
 @end
 
@@ -39,6 +40,8 @@
         make.edges.equalTo(self.view);
     }];
     _array = @[@"家居设计",@"家饰搭配",@"装修指南",@"装修风水"];
+    _picArray = @[@"jiaju",@"jiashi",@"zhuangxiu",@"fengshui"];
+    
     
 //    [_tab registerNib:[UINib nibWithNibName:NSStringFromClass([NewsTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"NewsTableViewCell"];
 //    [_tab registerNib:[UINib nibWithNibName:NSStringFromClass([NewsHTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"NewsHTableViewCell"];
@@ -68,6 +71,7 @@
 {
     ClassifyCollectionViewCell *cell = [_mainCollectionView dequeueReusableCellWithReuseIdentifier:@"ClassifyCollectionViewCell" forIndexPath:indexPath];
     cell.title.text =_array[indexPath.row];
+    cell.image.image = [UIImage imageNamed:_picArray[indexPath.row]];
     return cell;
 }
 

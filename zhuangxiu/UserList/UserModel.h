@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HomeMode.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *user_imgfile;
 @property (nonatomic, copy)NSString *user_imgfile_l;
 @property (nonatomic, copy)NSString *favorite_time;
+@property (nonatomic, strong)HomeMode *model;
 
 @end
 

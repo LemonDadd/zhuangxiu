@@ -84,6 +84,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="kan" destination="vCe-EP-Nv3" id="IAd-cX-3b4"/>
+                <outlet property="name" destination="oFl-m6-Gol" id="Lvs-HL-rqq"/>
+                <outlet property="time" destination="hL0-4B-jXP" id="qXK-FT-xUM"/>
+                <outlet property="topImage" destination="xlu-Ww-boU" id="rhQ-he-crK"/>
+                <outlet property="userImage" destination="Shd-2P-FgP" id="J5f-lH-7ca"/>
+            </connections>
             <point key="canvasLocation" x="20.800000000000001" y="141.67916041979012"/>
         </tableViewCell>
     </objects>
