@@ -8,9 +8,17 @@
 
 #import "BaseViewController.h"
 
+@protocol ClassifyViewControllerDelgate <NSObject>
+
+- (void)classifyViewControllerdidClick:(NSString *)tip;
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ClassifyViewController : BaseViewController
+
+@property (nonatomic, weak)id<ClassifyViewControllerDelgate>delegate;
 
 @end
 

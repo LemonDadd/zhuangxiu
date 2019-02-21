@@ -10,6 +10,7 @@
 #import "NewsHTableViewCell.h"
 #import "NewsTableViewCell.h"
 #import "NewsModel.h"
+#import "HtmlViewController.h"
 @interface NewsView()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)BaseTableView *tab;
@@ -128,7 +129,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NewsModel *model = [NewsModel mj_objectWithKeyValues:self.allResource[indexPath.section]];
+    HtmlViewController *vc= [HtmlViewController new];
+    vc.url = model.url;
+    [self.viewController.navigationController pushViewController:vc animated:YES];
 }
 
 

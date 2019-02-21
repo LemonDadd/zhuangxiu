@@ -8,7 +8,8 @@
 
 #import "NewsViewController.h"
 #import "NewsView.h"
-@interface NewsViewController ()
+#import "ClassifyViewController.h"
+@interface NewsViewController ()<ClassifyViewControllerDelgate>
 
 @property (nonatomic, strong)NewsView *news;
 
@@ -19,12 +20,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"家居设计";
+    
     _news = [NewsView new];
     _news.indx =0;
     [self.view addSubview:_news];
     [_news mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(right)];
+}
+
+- (void)right {
+    ClassifyViewController *vc = [ClassifyViewController new];
+    vc.delegate =self;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)classifyViewControllerdidClick:(NSString *)tip {
+    NSInteger indx = 0;
+    self.title = tip;
+    if ([tip isEqualToString:@"家居设计"]) {
+        indx = 0;
+    }
+    if ([tip isEqualToString:@"家饰搭配"]) {
+        indx = 1;
+    }
+    if ([tip isEqualToString:@"装修指南"]) {
+        indx = 2;
+    }
+    if ([tip isEqualToString:@"装修风水"]) {
+        indx = 3;
+    }
+    
+    _news.indx= indx;
 }
 
 /*

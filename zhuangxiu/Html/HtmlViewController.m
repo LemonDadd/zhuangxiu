@@ -9,7 +9,7 @@
 #import "HtmlViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface HtmlViewController ()
+@interface HtmlViewController ()<WKNavigationDelegate>
 @property (nonatomic, strong)UIView *bottomView;
 @property (nonatomic, strong)WKWebView *web;
 @end
@@ -24,31 +24,40 @@
     _bottomView = [UIView new];
     _bottomView.backgroundColor =[UIColor colorWithHexString:@"0xd8d8d8"];
     [self.view addSubview:_bottomView];
-    [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self.view);
-        make.height.equalTo(@44);
-    }];
     
-    
-    NSArray *images = @[@"zuo",@"you",@"shuaxin",@"zhuye"];
-    NSMutableArray *btns = [NSMutableArray new];
-    for (int i=0; i<images.count; i++) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
-        [_bottomView addSubview:btn];
-        [btns addObject:btn];
-        btn.tag = i;
-        [btn addTarget:self action:@selector(btnSeleted:) forControlEvents:UIControlEventTouchUpInside];
+    if (self.showBottom) {
+        [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(self.view);
+            make.height.equalTo(@44);
+        }];
+        
+        NSArray *images = @[@"zuo",@"you",@"shuaxin",@"zhuye"];
+        NSMutableArray *btns = [NSMutableArray new];
+        for (int i=0; i<images.count; i++) {
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [btn setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
+            [_bottomView addSubview:btn];
+            [btns addObject:btn];
+            btn.tag = i;
+            [btn addTarget:self action:@selector(btnSeleted:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
+        [btns mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:20 leadSpacing:20 tailSpacing:20];
+        [btns mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.equalTo(self.bottomView);
+        }];
+    } else {
+        [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(self.view);
+            make.height.equalTo(@0);
+        }];
     }
     
-    [btns mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:20 leadSpacing:20 tailSpacing:20];
-    [btns mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.equalTo(self.bottomView);
-    }];
     
     
     
     _web = [WKWebView new];
+    _web.navigationDelegate = self;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
     _web.scrollView.bounces = NO;
     [_web loadRequest:request];
@@ -76,14 +85,35 @@
     }
 }
 
-/*
-#pragma mark - Navigation
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    NSString *path = [navigationAction.request.URL.absoluteString stringByRemovingPercentEncoding];
+    if ([path hasPrefix:@"unsafe:com.hpyshark.homer://detail"]) {
+        NSArray *arr = [path componentsSeparatedByString:@"?"];
+        HtmlViewController *vc= [HtmlViewController new];
+        vc.url = [NSString stringWithFormat:@"http://api.homer.app887.com/article.html?%@",arr.lastObject];
+        [self.navigationController pushViewController:vc animated:YES];
+        decisionHandler(WKNavigationActionPolicyCancel);
+    } else if ([path hasPrefix:@"unsafe:com.hpyshark.homer://share"]){
+        NSLog(@"分享:%@",path);
+        //type:3wx  2pyq  1weibo
+        decisionHandler(WKNavigationActionPolicyCancel);
+    }else {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+    
+    NSLog(@"%@",path);
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

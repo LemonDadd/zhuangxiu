@@ -25,11 +25,10 @@
 {
     self = [super init];
     if (self) {
-        _tab = [[BaseTableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tab = [[BaseTableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tab.backgroundColor = kColorWithHex(0xf9f9f9);
         _tab.delegate =self;
         _tab.dataSource =self;
-        _tab.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:_tab];
         [self setExtraCellLineHidden:_tab];
         [_tab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,6 +48,17 @@
     [tableView setTableFooterView:view];
 }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 1) {
+        return 10;
+    }
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;

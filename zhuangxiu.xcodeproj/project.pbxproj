@@ -24,6 +24,9 @@
 		B00A1B752217ED4C00625235 /* MoreDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B722217ED4C00625235 /* MoreDropDownMenu.m */; };
 		B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B772217ED6000625235 /* NSArray+ZMAdd.m */; };
 		B00A1B882217FFD700625235 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */; };
+		B038EFCB221E909B00D3AB67 /* ClassifyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B038EFCA221E909B00D3AB67 /* ClassifyCollectionViewCell.m */; };
+		B038EFCF221E99DA00D3AB67 /* UserListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B038EFCD221E99DA00D3AB67 /* UserListTableViewCell.m */; };
+		B038EFD0221E99DA00D3AB67 /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */; };
 		B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC313221A5CBB004266E9 /* AllRequest.m */; };
 		B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC316221A5D55004266E9 /* JsonDeal.m */; };
 		B08BC31C221A5F76004266E9 /* UserInfoClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC31B221A5F76004266E9 /* UserInfoClass.m */; };
@@ -160,6 +163,11 @@
 		B00A1B782217ED6000625235 /* NSArray+ZMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZMAdd.h"; sourceTree = "<group>"; };
 		B00A1B862217FFD700625235 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		B038EFC9221E909B00D3AB67 /* ClassifyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyCollectionViewCell.h; sourceTree = "<group>"; };
+		B038EFCA221E909B00D3AB67 /* ClassifyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyCollectionViewCell.m; sourceTree = "<group>"; };
+		B038EFCC221E99DA00D3AB67 /* UserListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListTableViewCell.h; sourceTree = "<group>"; };
+		B038EFCD221E99DA00D3AB67 /* UserListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListTableViewCell.m; sourceTree = "<group>"; };
+		B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
 		B08BC312221A5CBB004266E9 /* AllRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllRequest.h; sourceTree = "<group>"; };
 		B08BC313221A5CBB004266E9 /* AllRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllRequest.m; sourceTree = "<group>"; };
 		B08BC316221A5D55004266E9 /* JsonDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonDeal.m; sourceTree = "<group>"; };
@@ -807,6 +815,8 @@
 				DAA08E7C221DA53A00E944FE /* NewsModel.m */,
 				DAA08E65221D97DA00E944FE /* ClassifyViewController.h */,
 				DAA08E66221D97DA00E944FE /* ClassifyViewController.m */,
+				B038EFC9221E909B00D3AB67 /* ClassifyCollectionViewCell.h */,
+				B038EFCA221E909B00D3AB67 /* ClassifyCollectionViewCell.m */,
 				DAA08E71221D995700E944FE /* NewsHTableViewCell.h */,
 				DAA08E72221D995700E944FE /* NewsHTableViewCell.m */,
 				DAA08E73221D995700E944FE /* NewsHTableViewCell.xib */,
@@ -908,6 +918,9 @@
 			children = (
 				DAB192972216F8BB00239A40 /* UserListViewController.h */,
 				DAB192982216F8BB00239A40 /* UserListViewController.m */,
+				B038EFCC221E99DA00D3AB67 /* UserListTableViewCell.h */,
+				B038EFCD221E99DA00D3AB67 /* UserListTableViewCell.m */,
+				B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */,
 				DAA08E5B221C4DB400E944FE /* UserModel.h */,
 				DAA08E5C221C4DB400E944FE /* UserModel.m */,
 			);
@@ -1065,6 +1078,7 @@
 			files = (
 				DAA08E272219AB0400E944FE /* ACActionSheet.bundle in Resources */,
 				DAB1928B2216EE1400239A40 /* PicTableViewCell.xib in Resources */,
+				B038EFD0221E99DA00D3AB67 /* UserListTableViewCell.xib in Resources */,
 				DAA08E54221C38C700E944FE /* ren.plist in Resources */,
 				DAA08E75221D995700E944FE /* NewsHTableViewCell.xib in Resources */,
 				B08BD61D2213FD9F007C3D5F /* LaunchScreen.storyboard in Resources */,
@@ -1206,6 +1220,7 @@
 				DAA08DE62219AAB500E944FE /* UserSettingViewController.m in Sources */,
 				DAB1925B2215AC1600239A40 /* NHFUpLoadImages.m in Sources */,
 				DAB192A82219957B00239A40 /* UserView.m in Sources */,
+				B038EFCB221E909B00D3AB67 /* ClassifyCollectionViewCell.m in Sources */,
 				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,
 				DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */,
 				DAB192782215AC5400239A40 /* NSDate+JKUtilities.m in Sources */,
@@ -1224,6 +1239,7 @@
 				DAA08E3F2219AB2300E944FE /* UserPhoneTabViewCell.m in Sources */,
 				DAB192622215AC4A00239A40 /* CustomView.m in Sources */,
 				DAA08E222219AB0400E944FE /* TOCropViewController.m in Sources */,
+				B038EFCF221E99DA00D3AB67 /* UserListTableViewCell.m in Sources */,
 				DAA08E3B2219AB2300E944FE /* UserShopImageTabViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
