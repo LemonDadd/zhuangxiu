@@ -22,16 +22,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     HomeViewController *home = [HomeViewController new];
-    [self addChildVc:home title:@"首页" image:@"home_icon" selectedImage:@"home_icon_true"];
+    [self addChildVc:home title:@"首页" image:@"首页 (1)" selectedImage:@"首页"];
     
     PicViewController *pic = [PicViewController new];
-    [self addChildVc:pic title:@"动态" image:@"zhdl_icon" selectedImage:@"zhdl_icon_true"];
+    [self addChildVc:pic title:@"动态" image:@"动态" selectedImage:@"动态 (1)"];
     
     NewsViewController *html = [NewsViewController new];
-    [self addChildVc:html title:@"资讯" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
+    [self addChildVc:html title:@"资讯" image:@"资讯 (1)" selectedImage:@"资讯"];
     
     UserViewController *user = [UserViewController new];
-    [self addChildVc:user title:@"我的" image:@"mine_icon" selectedImage:@"mine_icon_true"];
+    [self addChildVc:user title:@"我的" image:@"我的" selectedImage:@"我的 (1)"];
 }
 
 - (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage

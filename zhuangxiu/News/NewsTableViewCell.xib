@@ -21,6 +21,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CP9-sn-Qxj">
                         <rect key="frame" x="15" y="15" width="105" height="70"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="CP9-sn-Qxj" secondAttribute="height" multiplier="1.5:1" id="UWe-gi-feT"/>
                             <constraint firstAttribute="height" constant="70" id="epj-rZ-qa4"/>
@@ -32,7 +33,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNl-ME-mwA">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoucang-2" translatesAutoresizingMaskIntoConstraints="NO" id="gNl-ME-mwA">
                         <rect key="frame" x="128" y="65" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Tk7-Lx-sKa"/>
@@ -45,7 +46,7 @@
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3J-r8-5WN">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yanjing" translatesAutoresizingMaskIntoConstraints="NO" id="G3J-r8-5WN">
                         <rect key="frame" x="189" y="65" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Dpp-J3-spj"/>
@@ -86,4 +87,8 @@
             <point key="canvasLocation" x="140.80000000000001" y="176.31184407796104"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="shoucang-2" width="32" height="32"/>
+        <image name="yanjing" width="32" height="32"/>
+    </resources>
 </document>

@@ -19,14 +19,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="258.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePA-fS-c8v">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wode" translatesAutoresizingMaskIntoConstraints="NO" id="ePA-fS-c8v">
                         <rect key="frame" x="0.0" y="0.0" width="361" height="180.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ePA-fS-c8v" secondAttribute="height" multiplier="2:1" id="l25-RG-feI"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-Qz-CSm">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="默认" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-Qz-CSm">
                         <rect key="frame" x="140.5" y="50.5" width="80" height="80"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="fJ1-JL-vpn"/>
                             <constraint firstAttribute="height" constant="80" id="mWZ-xv-ItU"/>
@@ -51,7 +52,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bg" destination="ePA-fS-c8v" id="O8q-ZY-dcw"/>
+                <outlet property="user" destination="eMG-41-3Jv" id="YjG-Mb-RAB"/>
+                <outlet property="userImg" destination="lw8-Qz-CSm" id="x5u-Q4-iL6"/>
+            </connections>
             <point key="canvasLocation" x="170.40000000000001" y="232.53373313343329"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="wode" width="460.79998779296875" height="197.75999450683594"/>
+        <image name="默认" width="200" height="200"/>
+    </resources>
 </document>

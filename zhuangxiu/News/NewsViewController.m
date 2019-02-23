@@ -21,8 +21,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"家居设计";
-    
     _news = [NewsView new];
     _news.indx =0;
     [self.view addSubview:_news];
@@ -30,7 +28,7 @@
         make.edges.equalTo(self.view);
     }];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(right)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"leimupinleifenleileibie"] style:UIBarButtonItemStylePlain target:self action:@selector(right)];
 }
 
 - (void)right {
