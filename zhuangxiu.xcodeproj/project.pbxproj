@@ -82,6 +82,8 @@
 		DAA08E79221D996700E944FE /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E77221D996700E944FE /* NewsTableViewCell.m */; };
 		DAA08E7A221D996700E944FE /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA08E78221D996700E944FE /* NewsTableViewCell.xib */; };
 		DAA08E7D221DA53A00E944FE /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E7C221DA53A00E944FE /* NewsModel.m */; };
+		DAA08EAD2222C60F00E944FE /* DetailTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EAC2222C60F00E944FE /* DetailTopView.m */; };
+		DAA08EB02222C61F00E944FE /* DetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EAF2222C61F00E944FE /* DetailBottomView.m */; };
 		DAB192582215AC1600239A40 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1924F2215AC1600239A40 /* HttpHelper.m */; };
 		DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192522215AC1600239A40 /* HttpHelpBase.m */; };
 		DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192542215AC1600239A40 /* NHFDownImages.m */; };
@@ -292,6 +294,10 @@
 		DAA08E78221D996700E944FE /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		DAA08E7B221DA53A00E944FE /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		DAA08E7C221DA53A00E944FE /* NewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
+		DAA08EAB2222C60F00E944FE /* DetailTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTopView.h; sourceTree = "<group>"; };
+		DAA08EAC2222C60F00E944FE /* DetailTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTopView.m; sourceTree = "<group>"; };
+		DAA08EAE2222C61F00E944FE /* DetailBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailBottomView.h; sourceTree = "<group>"; };
+		DAA08EAF2222C61F00E944FE /* DetailBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailBottomView.m; sourceTree = "<group>"; };
 		DAB1924C2215A7B900239A40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DAB1924D2215A8C600239A40 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		DAB1924F2215AC1600239A40 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
@@ -909,6 +915,10 @@
 				DAB192942216F89E00239A40 /* DetailViewController.m */,
 				B08BC323221D4A72004266E9 /* DetailScrView.h */,
 				B08BC324221D4A72004266E9 /* DetailScrView.m */,
+				DAA08EAB2222C60F00E944FE /* DetailTopView.h */,
+				DAA08EAC2222C60F00E944FE /* DetailTopView.m */,
+				DAA08EAE2222C61F00E944FE /* DetailBottomView.h */,
+				DAA08EAF2222C61F00E944FE /* DetailBottomView.m */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -1173,6 +1183,7 @@
 				DAA08E6A221D988300E944FE /* NewsView.m in Sources */,
 				B00A1AE92215420500625235 /* BaseNavController.m in Sources */,
 				DAA08E452219AB3600E944FE /* UploadPicViewController.m in Sources */,
+				DAA08EAD2222C60F00E944FE /* DetailTopView.m in Sources */,
 				DAA08E212219AB0400E944FE /* TOCroppedImageAttributes.m in Sources */,
 				DAB192812215AC8B00239A40 /* AllInterfaceRequest.m in Sources */,
 				B00A1AEF2215429700625235 /* BaseView.m in Sources */,
@@ -1224,6 +1235,7 @@
 				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,
 				DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */,
 				DAB192782215AC5400239A40 /* NSDate+JKUtilities.m in Sources */,
+				DAA08EB02222C61F00E944FE /* DetailBottomView.m in Sources */,
 				B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */,
 				B00A1B682217E67000625235 /* FenggeViewController.m in Sources */,
 				DAA08E282219AB0400E944FE /* ACActionSheet.m in Sources */,

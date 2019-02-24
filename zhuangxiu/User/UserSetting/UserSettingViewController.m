@@ -32,6 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title =@"设置";
+    
     _tab = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     _tab.delegate =self;
     _tab.dataSource =self;
@@ -73,7 +76,7 @@
 #pragma mark -tabviewDelgate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -114,14 +117,6 @@
         return cell;
     }
     
-    if (indexPath.section == 3) {
-        UserAddressTabViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserAddressTabViewCell"];
-        if (cell == nil) {
-            cell = [[UserAddressTabViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MsgTableViewCell"];
-        }
-        return cell;
-    }
-    
     
     return [UITableViewCell new];
     
@@ -141,11 +136,6 @@
         UserSetTextViewController *vc= [UserSetTextViewController new];
         vc.delegate =self;
         vc.isNick = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    if (indexPath.section == 3) {
-        UserSetTextViewController *vc= [UserSetTextViewController new];
-        vc.delegate =self;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

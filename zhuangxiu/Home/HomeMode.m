@@ -11,3 +11,7 @@
 @implementation HomeMode
 
 @end
+
+@implementation SubjectMode
+
+@end

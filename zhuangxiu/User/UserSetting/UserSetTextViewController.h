@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UserSetTextViewController : BaseViewController
 
 @property (nonatomic, assign)BOOL isNick;
-@property (nonatomic, copy)id<UserSetTextViewControllerDelegate>delegate;
+@property (nonatomic, weak)id<UserSetTextViewControllerDelegate>delegate;
 
 @end
 

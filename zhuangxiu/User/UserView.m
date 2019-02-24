@@ -12,6 +12,8 @@
 #import "YijianViewController.h"
 #import "ShoucangViewController.h"
 #import "HtmlViewController.h"
+#import "UserSettingViewController.h"
+
 @interface UserView ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong)UITableView *tab;
@@ -37,7 +39,7 @@
         }];
         
         [_tab registerNib:[UINib nibWithNibName:NSStringFromClass([UserTopTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"UserTopTableViewCell"];
-        _userArray = @[@"我的收藏",@"意见反馈",@"关于我们",@"给评分",@"分享",@"更多服务",@"清除缓存"];
+        _userArray = @[@"我的收藏",@"意见反馈",@"关于我们",@"给评分",@"更多服务",@"清除缓存"];
     }
     return self;
 }
@@ -90,9 +92,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
-        
+        UserSettingViewController *vc = [UserSettingViewController new];
+        [self.viewController.navigationController pushViewController:vc animated:YES];
     } else {
         if (indexPath.row == 0) {
             ShoucangViewController *vc = [ShoucangViewController new];
@@ -104,16 +107,15 @@
             GuanyuViewController *vc = [GuanyuViewController new];
             [self.viewController.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row ==3){
-            ShoucangViewController *vc = [ShoucangViewController new];
-            [self.viewController.navigationController pushViewController:vc animated:YES];
+            NSString *str = [NSString stringWithFormat:  @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=123"];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{UIApplicationOpenURLOptionsSourceApplicationKey : @YES} completionHandler:^(BOOL success) {
+                
+            }];
         } else if (indexPath.row ==4){
-            ShoucangViewController *vc = [ShoucangViewController new];
-            [self.viewController.navigationController pushViewController:vc animated:YES];
-        } else if (indexPath.row ==5){
             HtmlViewController *vc = [HtmlViewController new];
             vc.url = @"";
             [self.viewController.navigationController pushViewController:vc animated:YES];
-        } else if (indexPath.row ==6){
+        } else if (indexPath.row ==5){
            //q清除缓存
             //清除缓存
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"缓存大小为%@,确定要清理缓存吗？",[self getCache]] preferredStyle:UIAlertControllerStyleAlert];
