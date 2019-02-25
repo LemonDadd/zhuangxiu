@@ -84,6 +84,16 @@
 		DAA08E7D221DA53A00E944FE /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08E7C221DA53A00E944FE /* NewsModel.m */; };
 		DAA08EAD2222C60F00E944FE /* DetailTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EAC2222C60F00E944FE /* DetailTopView.m */; };
 		DAA08EB02222C61F00E944FE /* DetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EAF2222C61F00E944FE /* DetailBottomView.m */; };
+		DAA08EB4222424F400E944FE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EB3222424F400E944FE /* LoginViewController.m */; };
+		DAA08EB72224251C00E944FE /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EB62224251C00E944FE /* LoginView.m */; };
+		DAA08EBA2224254800E944FE /* LogTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EB92224254800E944FE /* LogTextView.m */; };
+		DAA08EBF222427FD00E944FE /* WangjiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EBE222427FD00E944FE /* WangjiViewController.m */; };
+		DAA08EC32224281300E944FE /* ZhuceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EC22224281300E944FE /* ZhuceViewController.m */; };
+		DAA08EC72224289D00E944FE /* LoginViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EC62224289D00E944FE /* LoginViewModelClass.m */; };
+		DAA08ECA22242F2000E944FE /* ZhuceView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EC922242F2000E944FE /* ZhuceView.m */; };
+		DAA08ECE22242F7200E944FE /* RegisterViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08ECD22242F7200E944FE /* RegisterViewModelClass.m */; };
+		DAA08ED12224301500E944FE /* WangjiView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08ED02224301500E944FE /* WangjiView.m */; };
+		DAA08EDC2224325600E944FE /* ForGetViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EDA2224325500E944FE /* ForGetViewModelClass.m */; };
 		DAB192582215AC1600239A40 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1924F2215AC1600239A40 /* HttpHelper.m */; };
 		DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192522215AC1600239A40 /* HttpHelpBase.m */; };
 		DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192542215AC1600239A40 /* NHFDownImages.m */; };
@@ -298,6 +308,26 @@
 		DAA08EAC2222C60F00E944FE /* DetailTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTopView.m; sourceTree = "<group>"; };
 		DAA08EAE2222C61F00E944FE /* DetailBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailBottomView.h; sourceTree = "<group>"; };
 		DAA08EAF2222C61F00E944FE /* DetailBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailBottomView.m; sourceTree = "<group>"; };
+		DAA08EB2222424F400E944FE /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DAA08EB3222424F400E944FE /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DAA08EB52224251C00E944FE /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		DAA08EB62224251C00E944FE /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		DAA08EB82224254800E944FE /* LogTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogTextView.h; sourceTree = "<group>"; };
+		DAA08EB92224254800E944FE /* LogTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogTextView.m; sourceTree = "<group>"; };
+		DAA08EBD222427FD00E944FE /* WangjiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WangjiViewController.h; sourceTree = "<group>"; };
+		DAA08EBE222427FD00E944FE /* WangjiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WangjiViewController.m; sourceTree = "<group>"; };
+		DAA08EC12224281300E944FE /* ZhuceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuceViewController.h; sourceTree = "<group>"; };
+		DAA08EC22224281300E944FE /* ZhuceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuceViewController.m; sourceTree = "<group>"; };
+		DAA08EC52224289D00E944FE /* LoginViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModelClass.h; sourceTree = "<group>"; };
+		DAA08EC62224289D00E944FE /* LoginViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModelClass.m; sourceTree = "<group>"; };
+		DAA08EC822242F2000E944FE /* ZhuceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuceView.h; sourceTree = "<group>"; };
+		DAA08EC922242F2000E944FE /* ZhuceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuceView.m; sourceTree = "<group>"; };
+		DAA08ECC22242F7200E944FE /* RegisterViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModelClass.h; sourceTree = "<group>"; };
+		DAA08ECD22242F7200E944FE /* RegisterViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModelClass.m; sourceTree = "<group>"; };
+		DAA08ECF2224301500E944FE /* WangjiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WangjiView.h; sourceTree = "<group>"; };
+		DAA08ED02224301500E944FE /* WangjiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WangjiView.m; sourceTree = "<group>"; };
+		DAA08EDA2224325500E944FE /* ForGetViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForGetViewModelClass.m; sourceTree = "<group>"; };
+		DAA08EDB2224325500E944FE /* ForGetViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForGetViewModelClass.h; sourceTree = "<group>"; };
 		DAB1924C2215A7B900239A40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DAB1924D2215A8C600239A40 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		DAB1924F2215AC1600239A40 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
@@ -524,6 +554,7 @@
 		B08BD60F2213FD9E007C3D5F /* zhuangxiu */ = {
 			isa = PBXGroup;
 			children = (
+				DAA08EB1222424CC00E944FE /* LoginViewController */,
 				DAA08E61221D973600E944FE /* News */,
 				B08BC311221A5CA4004266E9 /* Request */,
 				DAB1924A2215A36100239A40 /* lib */,
@@ -831,6 +862,73 @@
 				DAA08E78221D996700E944FE /* NewsTableViewCell.xib */,
 			);
 			path = News;
+			sourceTree = "<group>";
+		};
+		DAA08EB1222424CC00E944FE /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08EC02224280200E944FE /* ZhuceViewController */,
+				DAA08EBC222427E300E944FE /* WangjiViewController */,
+				DAA08EB2222424F400E944FE /* LoginViewController.h */,
+				DAA08EB3222424F400E944FE /* LoginViewController.m */,
+				DAA08EB52224251C00E944FE /* LoginView.h */,
+				DAA08EB62224251C00E944FE /* LoginView.m */,
+				DAA08EB82224254800E944FE /* LogTextView.h */,
+				DAA08EB92224254800E944FE /* LogTextView.m */,
+				DAA08EC42224289D00E944FE /* LoginViewModelClass */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		DAA08EBC222427E300E944FE /* WangjiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08ED92224325500E944FE /* ForGetViewModelClass */,
+				DAA08EBD222427FD00E944FE /* WangjiViewController.h */,
+				DAA08EBE222427FD00E944FE /* WangjiViewController.m */,
+				DAA08ECF2224301500E944FE /* WangjiView.h */,
+				DAA08ED02224301500E944FE /* WangjiView.m */,
+			);
+			path = WangjiViewController;
+			sourceTree = "<group>";
+		};
+		DAA08EC02224280200E944FE /* ZhuceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08ECB22242F7200E944FE /* RegisterViewModelClass */,
+				DAA08EC12224281300E944FE /* ZhuceViewController.h */,
+				DAA08EC22224281300E944FE /* ZhuceViewController.m */,
+				DAA08EC822242F2000E944FE /* ZhuceView.h */,
+				DAA08EC922242F2000E944FE /* ZhuceView.m */,
+			);
+			path = ZhuceViewController;
+			sourceTree = "<group>";
+		};
+		DAA08EC42224289D00E944FE /* LoginViewModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08EC52224289D00E944FE /* LoginViewModelClass.h */,
+				DAA08EC62224289D00E944FE /* LoginViewModelClass.m */,
+			);
+			path = LoginViewModelClass;
+			sourceTree = "<group>";
+		};
+		DAA08ECB22242F7200E944FE /* RegisterViewModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08ECC22242F7200E944FE /* RegisterViewModelClass.h */,
+				DAA08ECD22242F7200E944FE /* RegisterViewModelClass.m */,
+			);
+			path = RegisterViewModelClass;
+			sourceTree = "<group>";
+		};
+		DAA08ED92224325500E944FE /* ForGetViewModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08EDA2224325500E944FE /* ForGetViewModelClass.m */,
+				DAA08EDB2224325500E944FE /* ForGetViewModelClass.h */,
+			);
+			path = ForGetViewModelClass;
 			sourceTree = "<group>";
 		};
 		DAB1924A2215A36100239A40 /* lib */ = {
@@ -1177,6 +1275,7 @@
 				B00A1B752217ED4C00625235 /* MoreDropDownMenu.m in Sources */,
 				B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */,
 				DAB1927E2215AC5D00239A40 /* UIView+Extension.m in Sources */,
+				DAA08EDC2224325600E944FE /* ForGetViewModelClass.m in Sources */,
 				B00A1B742217ED4C00625235 /* MoreDropDownMenuRowCell.m in Sources */,
 				DAA08E4C221AF6D500E944FE /* HomeCollectionViewLayout.m in Sources */,
 				DAA08E3E2219AB2300E944FE /* UserHeaderTabViewCell.m in Sources */,
@@ -1186,6 +1285,7 @@
 				DAA08EAD2222C60F00E944FE /* DetailTopView.m in Sources */,
 				DAA08E212219AB0400E944FE /* TOCroppedImageAttributes.m in Sources */,
 				DAB192812215AC8B00239A40 /* AllInterfaceRequest.m in Sources */,
+				DAA08ECA22242F2000E944FE /* ZhuceView.m in Sources */,
 				B00A1AEF2215429700625235 /* BaseView.m in Sources */,
 				DAA08E79221D996700E944FE /* NewsTableViewCell.m in Sources */,
 				B00A1AE6221541E000625235 /* BaseViewController.m in Sources */,
@@ -1196,6 +1296,7 @@
 				DAA08E242219AB0400E944FE /* TOCropView.m in Sources */,
 				DAB192952216F89E00239A40 /* DetailViewController.m in Sources */,
 				DAA08E232219AB0400E944FE /* TOCropScrollView.m in Sources */,
+				DAA08EBA2224254800E944FE /* LogTextView.m in Sources */,
 				DAA08E5D221C4DB400E944FE /* UserModel.m in Sources */,
 				B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */,
 				DAB192612215AC4A00239A40 /* JhlvShowAlertController.m in Sources */,
@@ -1219,17 +1320,23 @@
 				B00A1B6B2217E67900625235 /* YanseViewController.m in Sources */,
 				DAA08E64221D976100E944FE /* NewsViewController.m in Sources */,
 				B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */,
+				DAA08ECE22242F7200E944FE /* RegisterViewModelClass.m in Sources */,
 				DAA08E3C2219AB2300E944FE /* UserAddressTabViewCell.m in Sources */,
 				DAA08E3D2219AB2300E944FE /* UserNameTabViewCell.m in Sources */,
 				DAA08E1B2219AB0400E944FE /* JJImagePicker.m in Sources */,
 				B08BC31C221A5F76004266E9 /* UserInfoClass.m in Sources */,
+				DAA08EC72224289D00E944FE /* LoginViewModelClass.m in Sources */,
+				DAA08EC32224281300E944FE /* ZhuceViewController.m in Sources */,
 				DAA08E1F2219AB0400E944FE /* UIImage+CropRotate.m in Sources */,
 				DAA08DDC2219A23600E944FE /* GuanyuViewController.m in Sources */,
+				DAA08EB72224251C00E944FE /* LoginView.m in Sources */,
 				DAA08E262219AB0400E944FE /* TOCropToolbar.m in Sources */,
+				DAA08ED12224301500E944FE /* WangjiView.m in Sources */,
 				B00A1B882217FFD700625235 /* HomeCollectionViewCell.m in Sources */,
 				B00A1B652217E66700625235 /* KongjianViewController.m in Sources */,
 				DAA08DE62219AAB500E944FE /* UserSettingViewController.m in Sources */,
 				DAB1925B2215AC1600239A40 /* NHFUpLoadImages.m in Sources */,
+				DAA08EB4222424F400E944FE /* LoginViewController.m in Sources */,
 				DAB192A82219957B00239A40 /* UserView.m in Sources */,
 				B038EFCB221E909B00D3AB67 /* ClassifyCollectionViewCell.m in Sources */,
 				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,
@@ -1243,6 +1350,7 @@
 				B08BD6122213FD9E007C3D5F /* AppDelegate.m in Sources */,
 				DAA08E1E2219AB0400E944FE /* TOActivityCroppedImageProvider.m in Sources */,
 				DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */,
+				DAA08EBF222427FD00E944FE /* WangjiViewController.m in Sources */,
 				B00A1AF2221542DE00625235 /* HomeViewController.m in Sources */,
 				DAB1927B2215AC5400239A40 /* NSDate+JKCupertinoYankee.m in Sources */,
 				DAB192752215AC5400239A40 /* NSDate+JKExtension.m in Sources */,

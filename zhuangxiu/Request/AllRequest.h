@@ -36,6 +36,18 @@ NS_ASSUME_NONNULL_BEGIN
                                               NSString *errorMsg))request;
 
 /**
+ 发送验证码
+ 
+ @param mobile 手机号
+ @param request 返回
+ */
++ (void)requestsendValidCodeByMobile:(NSString *)mobile
+                             request:(void(^)(NSString *message,
+                                              BOOL success,
+                                              NSString *errorMsg,
+                                              BOOL error))request;
+
+/**
  登录
  
  @param userName 用户名
@@ -86,6 +98,36 @@ NS_ASSUME_NONNULL_BEGIN
                                               BOOL success,
                                               NSString *errorMsg,
                                               BOOL error))request;
+
+/**
+ 重新绑定手机
+ 
+ @param mobile 手机号
+ @param validCode 验证码
+ @param validid 验证码Id
+ @param request 返回
+ */
++ (void)requestUpdateMobileByMobile:(NSString *)mobile
+                          validCode:(NSString *)validCode
+                            validid:(NSString *)validid
+                            request:(void(^)(BOOL message,
+                                             BOOL success,
+                                             NSString *errorMsg,
+                                             BOOL error))request;
+
+/**
+ 修改密码
+ 
+ @param newPassword 新密码
+ @param oldPassword 旧密码
+ @param request 返回
+ */
++ (void)requestUpdatePasswordByNewPassword:(NSString *)newPassword
+                               oldPassword:(NSString *)oldPassword
+                                   request:(void(^)(BOOL message,
+                                                    BOOL success,
+                                                    NSString *errorMsg,
+                                                    BOOL error))request;
 
 @end
 

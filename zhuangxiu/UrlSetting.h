@@ -27,4 +27,75 @@
 
 #define BaseUrl(api_IP, lastUrl) ([NSString stringWithFormat:@"%@%@", (api_IP), (lastUrl)])
 
+/**
+ *  发送验证码
+ *
+ *  @param Api_IP
+ *  @param @"api/common/sendValidCode"
+ *
+ *  @return
+ */
+#define SendValidCodeBaseUrl BaseUrl(Api_IP, @"api/common/sendValidCode")
+
+/**
+ *  上传图片
+ *
+ *  @param Api_IP
+ *  @param @"api/common/upload"
+ *
+ *  @return
+ */
+#define UploadBaseUrl BaseUrl(Api_IP, @"api/common/upload")
+
+/**
+ *  登录接口
+ *
+ *  @param Api_IP
+ *  @param @"api/user/passwordLogin"
+ *
+ *  @return
+ */
+#define LoginBaseUrl BaseUrl(Api_IP, @"api/user/passwordLogin")
+
+/**
+ *  注册接口
+ *
+ *  @param Api_IP
+ *  @param @"api/user/reg"
+ *
+ *  @return
+ */
+#define UserRegBaseUrl BaseUrl(Api_IP, @"api/user/reg")
+
+/**
+ *  重置密码接口
+ *
+ *  @param Api_IP
+ *  @param @"api/user/resetPassword"
+ *
+ *  @return
+ */
+#define ResetPasswordBaseUrl BaseUrl(Api_IP, @"api/user/resetPassword")
+
+/**
+ *  修改绑定手机
+ *
+ *  @param Api_IP
+ *  @param @"api/user/updateMobile"
+ *
+ *  @return
+ */
+#define UpdateMobileBaseUrl BaseUrl(Api_IP, @"api/user/updateMobile")
+
+/**
+ *  修改密码
+ *
+ *  @param Api_IP
+ *  @param @"api/user/updatePassword"
+ *
+ *  @return
+ */
+#define UpdatePasswordBaseUrl BaseUrl(Api_IP, @"api/user/updatePassword")
+
+
 #endif /* UrlSetting_h */

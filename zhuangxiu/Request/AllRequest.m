@@ -9,6 +9,8 @@
 
 #import "AllRequest.h"
 
+#define ErrorMessage @"数据请求失败,请检查您的网络"
+
 @implementation AllRequest
 
 + (void)requestGetHomeListBySkip:(NSInteger)skip
@@ -64,6 +66,38 @@
 }
 
 /**
+ 发送验证码
+ 
+ @param mobile 手机号
+ @param request 返回
+ */
++ (void)requestsendValidCodeByMobile:(NSString *)mobile
+                             request:(void(^)(NSString *message,
+                                              BOOL success,
+                                              NSString *errorMsg,
+                                              BOOL error))request {
+    NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
+    [paramDic setObject:mobile forKey:@"mobile"];
+    [HttpHelper httpDataRequest:SendValidCodeBaseUrl paramDictionary:paramDic TimeOutSeconds:120  request:^(BOOL finish, NSString *data) {
+        if (finish) {
+            if (data == nil) {
+                request(nil, false, ErrorMessage, true);
+            } else {
+                NSDictionary* dic =[JsonDeal dealJson:data];
+                NSInteger Code = [[dic objectForKey:@"code"] integerValue];
+                if (Code == 1) {
+                    request(dic[@"data"], true, nil, false);
+                } else {
+                    request(nil, false, dic[@"message"], true);
+                }
+            }
+        } else {
+            request(nil, false, data, true);
+        }
+    }];
+}
+
+/**
  登录
  
  @param userName 用户名
@@ -76,7 +110,27 @@
                                         BOOL success,
                                         NSString *errorMsg,
                                         BOOL error))request {
-    
+    NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
+    [paramDic setObject:userName forKey:@"mobile"];
+    [paramDic setObject:passwd forKey:@"password"];
+    [HttpHelper httpDataRequest:LoginBaseUrl paramDictionary:paramDic TimeOutSeconds:120  request:^(BOOL finish, NSString *data) {
+        if (finish) {
+            if (data == nil) {
+                request(nil, false, ErrorMessage, true);
+            } else {
+                NSDictionary* dic =[JsonDeal dealJson:data];
+                NSInteger Code = [[dic objectForKey:@"code"] integerValue];
+                if (Code == 1) {
+                    UserInfoClass *userInfoClass = [UserInfoClass mj_objectWithKeyValues:dic[@"data"]];
+                    request(userInfoClass, true, nil, false);
+                } else {
+                    request(nil, false, dic[@"message"], true);
+                }
+            }
+        } else {
+            request(nil, false, data, true);
+        }
+    }];
 }
 
 /**
@@ -98,7 +152,30 @@
                                           BOOL success,
                                           NSString *errorMsg,
                                           BOOL error))request {
-    
+    NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
+    [paramDic setObject:userName forKey:@"username"];
+    [paramDic setObject:passwd forKey:@"password"];
+    [paramDic setObject:mobile forKey:@"mobile"];
+    [paramDic setObject:validCode forKey:@"validcode"];
+    [paramDic setObject:validid forKey:@"id"];
+    [HttpHelper httpDataRequest:UserRegBaseUrl paramDictionary:paramDic TimeOutSeconds:120 request:^(BOOL finish,  NSString *data) {
+        if (finish) {
+            if (data == nil) {
+                request(nil, false, ErrorMessage, true);
+            } else {
+                NSDictionary* dic =[JsonDeal dealJson:data];
+                NSInteger Code = [[dic objectForKey:@"code"] integerValue];
+                if (Code == 1) {
+                    UserInfoClass *userInfoClass = [UserInfoClass mj_objectWithKeyValues:dic[@"data"]];
+                    request(userInfoClass, true, nil, false);
+                } else {
+                    request(nil, false, dic[@"message"], true);
+                }
+            }
+        } else {
+            request(nil, false, data, true);
+        }
+    }];
 }
 
 /**
@@ -118,7 +195,66 @@
                                               BOOL success,
                                               NSString *errorMsg,
                                               BOOL error))request {
-    
+    NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
+    [paramDic setObject:passwd forKey:@"passwd"];
+    [paramDic setObject:mobile forKey:@"mobile"];
+    [paramDic setObject:validCode forKey:@"validCode"];
+    [paramDic setObject:validid forKey:@"id"];
+    [HttpHelper httpDataRequest:ResetPasswordBaseUrl paramDictionary:paramDic  TimeOutSeconds:120 request:^(BOOL finish, NSString *data) {
+        if (finish) {
+            if (data == nil) {
+                request(false, false, ErrorMessage, true);
+            } else {
+                NSDictionary* dic =[JsonDeal dealJson:data];
+                NSInteger Code = [[dic objectForKey:@"code"] integerValue];
+                if (Code == 1) {
+                    request([dic[@"data"] boolValue], true, nil, false);
+                } else {
+                    request(false, false, dic[@"message"], true);
+                }
+            }
+        } else {
+            request(false, false, data, true);
+        }
+    }];
+}
+
+/**
+ 重新绑定手机
+ 
+ @param mobile 手机号
+ @param validCode 验证码
+ @param validid 验证码Id
+ @param request 返回
+ */
++ (void)requestUpdateMobileByMobile:(NSString *)mobile
+                          validCode:(NSString *)validCode
+                            validid:(NSString *)validid
+                            request:(void(^)(BOOL message,
+                                             BOOL success,
+                                             NSString *errorMsg,
+                                             BOOL error))request {
+    NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
+    [paramDic setObject:mobile forKey:@"mobile"];
+    [paramDic setObject:validCode forKey:@"validCode"];
+    [paramDic setObject:validid forKey:@"id"];
+    [HttpHelper httpDataRequest:UpdateMobileBaseUrl paramDictionary:paramDic TimeOutSeconds:120 request:^(BOOL finish,  NSString *data) {
+        if (finish) {
+            if (data == nil) {
+                request(false, false, ErrorMessage, true);
+            } else {
+                NSDictionary* dic =[JsonDeal dealJson:data];
+                NSInteger Code = [[dic objectForKey:@"code"] integerValue];
+                if (Code == 1) {
+                    request([dic[@"data"] boolValue], true, nil, false);
+                } else {
+                    request(false, false, dic[@"message"], true);
+                }
+            }
+        } else {
+            request(false, false, data, true);
+        }
+    }];
 }
 
 @end
