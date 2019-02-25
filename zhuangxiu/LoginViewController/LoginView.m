@@ -19,6 +19,8 @@
         
         CGFloat both = 10;
         
+        kWeakSelf(self);
+        
         _bgImageView = [UIImageView new];
         _bgImageView.image = [UIImage imageNamed:@"login_bg"];
         [self addSubview:_bgImageView];
@@ -53,7 +55,7 @@
         _accView.textField.placeholder =@"请输入用户名或手机号";
         [self addSubview:_accView];
         [_accView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self->_titlelabel.mas_bottom).offset(kHeight(5*both));
+            make.top.equalTo(weakself.titlelabel.mas_bottom).offset(kHeight(5*both));
             make.centerX.equalTo(self);
             make.left.equalTo(self).offset(kWidth(5*both));
             make.right.equalTo(self).offset(kWidth(-5*both));
@@ -66,8 +68,8 @@
         _passWordView.textField.secureTextEntry = YES;
         [self addSubview:_passWordView];
         [_passWordView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.height.equalTo(self->_accView);
-            make.top.equalTo(self->_accView.mas_bottom).offset(both);
+            make.left.right.height.equalTo(weakself.accView);
+            make.top.equalTo(weakself.accView.mas_bottom).offset(both);
         }];
         
         _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];

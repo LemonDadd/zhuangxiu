@@ -1,16 +1,16 @@
 //
-//  YijianViewController.h
+//  GuanyuView.h
 //  zhuangxiu
 //
 //  Created by 关云秀 on 2019/2/25.
 //  Copyright © 2019 TestProject. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YijianViewController : BaseViewController
+@interface GuanyuView : BaseView
 
 @end
 

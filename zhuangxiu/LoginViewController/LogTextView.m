@@ -31,15 +31,15 @@
         [_titleView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.equalTo(self);
             make.width.mas_equalTo(width);
-            make.bottom.equalTo(_lineView.mas_top);
+            make.bottom.equalTo(self->_lineView.mas_top);
         }];
         
         _textField = [UITextField new];
         _textField.font = [UIFont fontWithName:@"" size:16];
         [self addSubview:_textField];
         [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.equalTo(_titleView);
-            make.left.equalTo(_titleView.mas_right);
+            make.top.bottom.equalTo(self->_titleView);
+            make.left.equalTo(self->_titleView.mas_right);
             make.right.equalTo(self);
         }];
         

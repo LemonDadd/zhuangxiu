@@ -574,7 +574,7 @@
     for (int i = 0; i < _numOfMenu; i++) {
         if (i != tapIndex) {
             [self animateIndicator:_indicators[i] Forward:NO complete:^{
-                [self animateTitle:_titles[i] show:NO complete:^{
+                [self animateTitle:self->_titles[i] show:NO complete:^{
                     
                 }];
             }];
@@ -583,7 +583,7 @@
     
     if (tapIndex == _currentSelectedMenudIndex && _show) {
         [self animateIdicator:_indicators[_currentSelectedMenudIndex] background:_backGroundView tableView:_leftCollectionView title:_titles[_currentSelectedMenudIndex] forward:NO complecte:^{
-            _currentSelectedMenudIndex = tapIndex;
+            self->_currentSelectedMenudIndex = tapIndex;
             self.show = NO;
         }];
     } else {
@@ -628,7 +628,7 @@
 }
 
 #pragma mark - animation method
-- (void)animateIndicator:(id)indicator Forward:(BOOL)forward complete:(void(^)())complete {
+- (void)animateIndicator:(id)indicator Forward:(BOOL)forward complete:(void(^)(void))complete {
     if (self.indicatorIsImageView) {
         [self animateIndicatorImageView:(UIImageView *)indicator Forward:forward complete:complete];
     }else {
@@ -636,7 +636,7 @@
     }
 }
 
-- (void)animateIndicatorShapeLayer:(CAShapeLayer *)indicator Forward:(BOOL)forward complete:(void(^)())complete{
+- (void)animateIndicatorShapeLayer:(CAShapeLayer *)indicator Forward:(BOOL)forward complete:(void(^)(void))complete{
     [CATransaction begin];
     [CATransaction setAnimationDuration:0.25];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithControlPoints:0.4 :0.0 :0.2 :1.0]];
@@ -664,7 +664,7 @@
     complete();
 }
 
-- (void)animateIndicatorImageView:(UIImageView *)indicator Forward:(BOOL)forward complete:(void(^)())complete {
+- (void)animateIndicatorImageView:(UIImageView *)indicator Forward:(BOOL)forward complete:(void(^)(void))complete {
     NSInteger tapedIndex = indicator.tag;
     BOOL canTransform = YES;
     if (self.indicatorAnimates && self.indicatorAnimates.count > tapedIndex) {
@@ -679,7 +679,7 @@
     complete();
 }
 
-- (void)animateBackGroundView:(UIView *)view show:(BOOL)show complete:(void(^)())complete {
+- (void)animateBackGroundView:(UIView *)view show:(BOOL)show complete:(void(^)(void))complete {
     if (show) {
         [self.superview addSubview:view];
         [view.superview addSubview:self];
@@ -696,7 +696,7 @@
     complete();
 }
 
-- (void)animateTableView:(UICollectionView *)tableView show:(BOOL)show complete:(void(^)())complete {
+- (void)animateTableView:(UICollectionView *)tableView show:(BOOL)show complete:(void(^)(void))complete {
     
     BOOL haveItems = NO;
     
@@ -730,29 +730,29 @@
         
         [UIView animateWithDuration:0.2 animations:^{
             if (haveItems) {
-                _leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, _dropDownViewWidth/2, tableViewHeight);
+                self->_leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, self->_dropDownViewWidth/2, tableViewHeight);
             } else {
-                _leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, _dropDownViewWidth, tableViewHeight);
+                self->_leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, self->_dropDownViewWidth, tableViewHeight);
             }
-            _buttomImageView.frame = CGRectMake(self.origin.x, CGRectGetMaxY(_leftCollectionView.frame), _dropDownViewWidth, 0.5);
+            self->_buttomImageView.frame = CGRectMake(self.origin.x, CGRectGetMaxY(self->_leftCollectionView.frame), self->_dropDownViewWidth, 0.5);
         }];
     } else {
         [UIView animateWithDuration:0.2 animations:^{
             if (haveItems) {
-                _leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, _dropDownViewWidth/2, 0);
+                self->_leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, self->_dropDownViewWidth/2, 0);
             } else {
-                _leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, _dropDownViewWidth, 0);
+                self->_leftCollectionView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, self->_dropDownViewWidth, 0);
             }
-            _buttomImageView.frame = CGRectMake(self.origin.x, CGRectGetMaxY(_leftCollectionView.frame), _dropDownViewWidth, 0.5);
+            self->_buttomImageView.frame = CGRectMake(self.origin.x, CGRectGetMaxY(self->_leftCollectionView.frame), self->_dropDownViewWidth, 0.5);
         } completion:^(BOOL finished) {
-            [_leftCollectionView removeFromSuperview];
-            [_buttomImageView removeFromSuperview];
+            [self->_leftCollectionView removeFromSuperview];
+            [self->_buttomImageView removeFromSuperview];
         }];
     }
     complete();
 }
 
-- (void)animateTitle:(CATextLayer *)title show:(BOOL)show complete:(void(^)())complete {
+- (void)animateTitle:(CATextLayer *)title show:(BOOL)show complete:(void(^)(void))complete {
     CGSize size = [self calculateTitleSizeWithString:title.string];
     CGFloat sizeWidth = (size.width < (self.frame.size.width / _numOfMenu) - 25) ? size.width : self.frame.size.width / _numOfMenu - 25;
     title.bounds = CGRectMake(0, 0, sizeWidth, size.height);
@@ -764,7 +764,7 @@
     complete();
 }
 
-- (void)animateIdicator:(id)indicator background:(UIView *)background tableView:(UICollectionView *)tableView title:(CATextLayer *)title forward:(BOOL)forward complecte:(void(^)())complete{
+- (void)animateIdicator:(id)indicator background:(UIView *)background tableView:(UICollectionView *)tableView title:(CATextLayer *)title forward:(BOOL)forward complecte:(void(^)(void))complete{
     if (self.indicatorAlignType == MoreIndicatorAlignTypeCloseToTitle) {
         [self layoutIndicator:indicator withTitle:title];
     }

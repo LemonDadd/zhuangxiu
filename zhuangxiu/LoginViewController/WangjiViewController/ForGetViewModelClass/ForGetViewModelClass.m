@@ -16,7 +16,7 @@
                              validid:(NSString *)validid
                              request:(void(^)(NSString *errorMsg))request {
     [AllRequest requestResetPasswordBypasswd:passwd mobile:mobile validCode:validCode validid:validid request:^(BOOL message, BOOL success, NSString *errorMsg, BOOL error) {
-        [AllInterfaceRequest requestsendValidCodeByMobile:mobile request:^(NSString *message, BOOL success, NSString *errorMsg, BOOL error) {
+        [AllRequest requestsendValidCodeByMobile:mobile request:^(NSString *message, BOOL success, NSString *errorMsg, BOOL error) {
             if (success && !error) {
                 request(nil);
             } else {
