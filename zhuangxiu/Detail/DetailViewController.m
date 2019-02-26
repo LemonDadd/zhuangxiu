@@ -114,15 +114,14 @@
     [self.view addSubview:_bottomView];
     [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
-        make.height.equalTo(@40);
     }];
     
    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self->_scrView setContentOffset:CGPointMake(self->_indx*SCREEN_WIDTH,0) animated:false];
         HomeMode *model =[HomeMode mj_objectWithKeyValues:self.picArray[self->_indx]];
-        self->_topView.name.text = model.subject_info.subject_name;
-        self->_topView.detailLabel.text = model.photo_des;
+        self.bottomView.name.text = model.subject_info.subject_name;
+        self.bottomView.detailLabel.text = model.photo_des;
         [self.view layoutIfNeeded];
     });
     
@@ -138,8 +137,8 @@
     NSInteger leftIndex = x/SCROLLVIEW_WIDTH;
        NSLog(@"%ld",leftIndex);
      HomeMode *model =[HomeMode mj_objectWithKeyValues:self.picArray[leftIndex]];
-    _topView.name.text = model.subject_info.subject_name;
-    _topView.detailLabel.text = model.photo_des;
+    _bottomView.name.text = model.subject_info.subject_name;
+    _bottomView.detailLabel.text = model.photo_des;
     
     //这里的left和right是区分拖动中可见的两个视图
     DetailScrView * leftView = [scrollView viewWithTag:(leftIndex + BaseTag)];

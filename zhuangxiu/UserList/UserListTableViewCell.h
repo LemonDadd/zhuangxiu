@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UserListTableViewCell : UITableViewCell
 
+@property (nonatomic, weak)IBOutlet UIImageView *leftImg;
+@property (nonatomic, weak)IBOutlet UILabel *name;
+
 @end
 
 NS_ASSUME_NONNULL_END

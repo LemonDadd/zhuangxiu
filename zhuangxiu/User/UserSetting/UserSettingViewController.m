@@ -17,6 +17,7 @@
 #import "UploadPicViewController.h"
 #import "ACActionSheet.h"
 #import "JJImagePicker.h"
+#import "UpdatePassViewController.h"
 
 @interface UserSettingViewController ()<UITableViewDelegate,UITableViewDataSource,ACActionSheetDelegate,UserSetTextViewControllerDelegate>
 
@@ -50,9 +51,26 @@
 }
 
 - (void)setExtraCellLineHidden:(UITableView *)tableView {
-    UIView *view = [UIView new];
-    view.backgroundColor = [UIColor whiteColor];
-    [tableView setTableFooterView:view];
+    UIView *footer = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 80)];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundColor:kColorWithHex(MCOLOR)];
+    [btn setTitle:@"退出" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(tuichu) forControlEvents:UIControlEventTouchUpInside];
+    btn.layer.masksToBounds = YES;
+    btn.layer.cornerRadius = 5.f;
+    [footer addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(footer);
+        make.left.equalTo(@45);
+        make.right.equalTo(@-45);
+        make.height.equalTo(@40);
+    }];
+    _tab.tableFooterView = footer;
+}
+
+- (void)tuichu {
+    [[UserInfoClass getUserInfoClass]clearUserInfoClass];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)loadData {
@@ -117,6 +135,16 @@
         return cell;
     }
     
+    if (indexPath.section == 3) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
+        cell.textLabel.text = @"修改密码";
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        return cell;
+    }
+    
     
     return [UITableViewCell new];
     
@@ -136,6 +164,10 @@
         UserSetTextViewController *vc= [UserSetTextViewController new];
         vc.delegate =self;
         vc.isNick = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.section == 3) {
+        UpdatePassViewController *vc= [UpdatePassViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

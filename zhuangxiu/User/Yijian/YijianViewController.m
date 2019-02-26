@@ -24,7 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
+    self.title = @"意见反馈";
+    
     _textView =[[UITextView alloc]init];
     _textView.layer.masksToBounds = YES;
     _textView.layer.cornerRadius = 5;
@@ -60,9 +61,9 @@
     [self.view addSubview:_phoneLabel];
     [_phoneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.textView.mas_bottom).offset(30);
-        make.centerX.equalTo(self);
-        make.left.equalTo(self).offset(kWidth(10));
-        make.right.equalTo(self).offset(kWidth(-10));
+        make.centerX.equalTo(self.view);
+        make.left.equalTo(self.view).offset(kWidth(10));
+        make.right.equalTo(self.view).offset(kWidth(-10));
         make.height.mas_equalTo(kHeight(50));
     }];
     

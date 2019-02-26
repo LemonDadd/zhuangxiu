@@ -7,13 +7,15 @@
 //
 
 #import "BaseView.h"
+#import "HomeMode.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailTopView : BaseView
 
-@property (nonatomic, strong)UILabel *name;
-@property (nonatomic, strong)UILabel *detailLabel;
+@property (nonatomic, strong)UIButton *shoucangButton;
+@property (nonatomic, strong)UIView *contentV;
+@property (nonatomic, strong)HomeMode *model;
 
 @end
 

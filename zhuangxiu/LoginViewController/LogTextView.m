@@ -23,7 +23,7 @@
             make.height.equalTo(@1);
         }];
         
-        CGFloat width = [UILabel labelConstrainedToSize:@"手机号" font:[UIFont fontWithName:@"" size:18]].width;
+        CGFloat width = [UILabel labelConstrainedToSize:@"手机号" font:[UIFont systemFontOfSize:18]].width;
         
         _titleView = [UILabel new];
         _titleView.font =  [UIFont fontWithName:@"" size:18];

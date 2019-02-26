@@ -27,6 +27,7 @@
 		B038EFCB221E909B00D3AB67 /* ClassifyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B038EFCA221E909B00D3AB67 /* ClassifyCollectionViewCell.m */; };
 		B038EFCF221E99DA00D3AB67 /* UserListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B038EFCD221E99DA00D3AB67 /* UserListTableViewCell.m */; };
 		B038EFD0221E99DA00D3AB67 /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */; };
+		B038F02122251E8800D3AB67 /* UpdatePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B038F02022251E8800D3AB67 /* UpdatePassViewController.m */; };
 		B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC313221A5CBB004266E9 /* AllRequest.m */; };
 		B08BC318221A5D55004266E9 /* JsonDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC316221A5D55004266E9 /* JsonDeal.m */; };
 		B08BC31C221A5F76004266E9 /* UserInfoClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B08BC31B221A5F76004266E9 /* UserInfoClass.m */; };
@@ -181,6 +182,8 @@
 		B038EFCC221E99DA00D3AB67 /* UserListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListTableViewCell.h; sourceTree = "<group>"; };
 		B038EFCD221E99DA00D3AB67 /* UserListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListTableViewCell.m; sourceTree = "<group>"; };
 		B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
+		B038F01F22251E8800D3AB67 /* UpdatePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePassViewController.h; sourceTree = "<group>"; };
+		B038F02022251E8800D3AB67 /* UpdatePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePassViewController.m; sourceTree = "<group>"; };
 		B08BC312221A5CBB004266E9 /* AllRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllRequest.h; sourceTree = "<group>"; };
 		B08BC313221A5CBB004266E9 /* AllRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllRequest.m; sourceTree = "<group>"; };
 		B08BC316221A5D55004266E9 /* JsonDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonDeal.m; sourceTree = "<group>"; };
@@ -505,6 +508,15 @@
 			path = tool;
 			sourceTree = "<group>";
 		};
+		B038F01E22251E8800D3AB67 /* UpdatePassViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B038F01F22251E8800D3AB67 /* UpdatePassViewController.h */,
+				B038F02022251E8800D3AB67 /* UpdatePassViewController.m */,
+			);
+			path = UpdatePassViewController;
+			sourceTree = "<group>";
+		};
 		B08BC311221A5CA4004266E9 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +703,7 @@
 		DAA08DE32219AAA400E944FE /* UserSetting */ = {
 			isa = PBXGroup;
 			children = (
+				B038F01E22251E8800D3AB67 /* UpdatePassViewController */,
 				DAA08E422219AB3500E944FE /* UploadPicViewController.h */,
 				DAA08E432219AB3600E944FE /* UploadPicViewController.m */,
 				DAA08E412219AB3500E944FE /* UserSetTextViewController.h */,
@@ -1347,6 +1360,7 @@
 				B038EFCB221E909B00D3AB67 /* ClassifyCollectionViewCell.m in Sources */,
 				DAB192792215AC5400239A40 /* NSDate+JKReporting.m in Sources */,
 				DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */,
+				B038F02122251E8800D3AB67 /* UpdatePassViewController.m in Sources */,
 				DAB192782215AC5400239A40 /* NSDate+JKUtilities.m in Sources */,
 				DAA08EB02222C61F00E944FE /* DetailBottomView.m in Sources */,
 				B08BC314221A5CBB004266E9 /* AllRequest.m in Sources */,

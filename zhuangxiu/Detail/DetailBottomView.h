@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailBottomView : BaseView
 
+@property (nonatomic, strong)UILabel *name;
+@property (nonatomic, strong)UILabel *detailLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

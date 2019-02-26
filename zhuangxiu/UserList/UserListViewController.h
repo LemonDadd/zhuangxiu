@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UserListViewController : BaseViewController
 
+@property (nonatomic, strong)NSArray *listArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

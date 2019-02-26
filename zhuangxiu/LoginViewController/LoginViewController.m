@@ -7,8 +7,11 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginView.h"
 
 @interface LoginViewController ()
+
+@property (nonatomic, strong)LoginView *login;
 
 @end
 
@@ -17,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _login = [LoginView new];
+    [self.view addSubview:_login];
+    [_login mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 /*

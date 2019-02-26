@@ -48,9 +48,11 @@
     [_col mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    _col.ly_emptyView = [LYEmptyView emptyViewWithImageStr:@"暂无数据"
+                                                  titleStr:@""
+                                                 detailStr:@""];
     
     [self addHistoryData];
-    [self upPull];
 }
 
 
@@ -80,10 +82,7 @@
 - (void)reStartRequestData {
     kWeakSelf(self);
     [AllRequest requestGetHomeListBySkip:_page request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
-        NSString *str = weakself.pArray[weakself.page];
-        NSArray *arr = [JsonToDic dictionaryWithJsonString:str];
-        [weakself updateData:arr];
-        
+        [weakself updateData:[self getShoucang]];
     }];
 }
 

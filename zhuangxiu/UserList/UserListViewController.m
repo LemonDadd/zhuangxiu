@@ -13,9 +13,6 @@
 @interface UserListViewController  ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong)BaseTableView *tab;
-@property (nonatomic, strong)NSMutableArray *allResource;
-@property (nonatomic, assign)NSInteger page;
-@property (nonatomic, assign)NSInteger pageSize;
 
 @end
 
@@ -39,8 +36,6 @@
     
     
     [_tab registerNib:[UINib nibWithNibName:NSStringFromClass([UserListTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"UserListTableViewCell"];
-    [self addHistoryData];
-    [self upPull];
     
 }
 
@@ -50,47 +45,9 @@
     [tableView setTableFooterView:view];
 }
 
-/**
- *  刷新数据
- */
-- (void)addHistoryData{
-    
-    kWeakSelf(self);
-    _tab.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        weakself.page = 0;
-        [weakself reStartRequestData];
-    }];
-    
-}
-
-- (void)upPull {
-    kWeakSelf(self);
-    _tab.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        weakself.page++;
-        [weakself reStartRequestData];
-    }];
-}
-
-- (void)reStartRequestData {
-    kWeakSelf(self);
-//    [AllRequest requestGetNewListBySize:_page Skip:_pageSize type:_type request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
-//        [weakself updateData:message];
-//    }];
-}
-
-- (void)updateData:(NSArray *)resourceData {
-    [_tab.mj_header endRefreshing];
-    [_tab.mj_footer endRefreshing];
-    if (self.page == 0) {
-        [self.allResource removeAllObjects];
-    }
-    [self.allResource addObjectsFromArray:[resourceData copy]];
-    [_tab reloadData];
-    
-}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.allResource.count;
+    return _listArray.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -105,8 +62,10 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UserModel *model = [UserModel mj_objectWithKeyValues:self.allResource[indexPath.section]];
+    UserModel *model = [UserModel mj_objectWithKeyValues:_listArray[indexPath.section]];
     UserListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserListTableViewCell"];
+    cell.name.text = model.user_nickname;
+    [cell.leftImg sd_setImageWithURL:[NSURL URLWithString:model.user_imgfile_l]];
     return cell;
 }
 
@@ -114,12 +73,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
--(NSMutableArray *)allResource {
-    if (_allResource == nil) {
-        _allResource = [NSMutableArray array];
-    }
-    return _allResource;
-}
 
 
 @end

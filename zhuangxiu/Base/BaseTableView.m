@@ -17,6 +17,9 @@
         self.estimatedRowHeight = 200;
         self.estimatedSectionHeaderHeight = 0;
         self.estimatedSectionFooterHeight = 0;
+        self.ly_emptyView = [LYEmptyView emptyViewWithImageStr:@"暂无数据"
+                                                                titleStr:@""
+                                                               detailStr:@""];
     }
     return self;
 }

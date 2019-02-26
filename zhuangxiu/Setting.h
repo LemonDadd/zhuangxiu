@@ -135,4 +135,6 @@ shouldPrevent = NO; \
 #define KUnSelectBorderColor    [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1]
 #define KButtonColor            [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]
 
+#define ShouCang @"shoucang"
+
 #endif /* Setting_h */

@@ -13,6 +13,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.leftImg.layer.masksToBounds = YES;
+    self.leftImg.layer.cornerRadius = 20.f;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

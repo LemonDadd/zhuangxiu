@@ -7,6 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "LoginViewController.h"
+#import "BaseNavController.h"
 
 @interface BaseViewController ()
 
@@ -18,6 +20,32 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (void)saveShouCang:(HomeMode *)model {
+    NSArray *list = [[NSUserDefaults standardUserDefaults]objectForKey: ShouCang];
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:list];
+    [arr addObject:model];
+    NSArray *save = [NSArray arrayWithArray:arr];
+    [[NSUserDefaults standardUserDefaults]setObject:save forKey:ShouCang];
+    
+}
+
+
+- (NSArray *)getShoucang {
+    NSArray *list = [[NSUserDefaults standardUserDefaults]objectForKey: ShouCang];
+    return list;
+}
+
+- (void)gotoLoginViewController {
+    LoginViewController *login = [LoginViewController new];
+    BaseNavController *navi = [[BaseNavController  alloc]initWithRootViewController:login];
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 /*

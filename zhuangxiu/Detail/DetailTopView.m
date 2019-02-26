@@ -7,10 +7,12 @@
 //
 
 #import "DetailTopView.h"
+#import "UserModel.h"
+#import "UserListViewController.h"
 
 @interface DetailTopView ()
 
-@property (nonatomic, strong)UIView *contentView;
+@property (nonatomic, strong)NSArray *userList;
 
 @end
 
@@ -21,35 +23,85 @@
     self = [super init];
     if (self) {
     
-        _name = [UILabel new];
-        _name.font = [UIFont systemFontOfSize:16];
-        [self addSubview:_name];
-        [_name mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.equalTo(@10);
-            make.right.equalTo(self).offset(-10);
+        _shoucangButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self addSubview:_shoucangButton];
+        [_shoucangButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(@-10);
+            make.center.equalTo(self);
+            make.height.width.equalTo(@20);
         }];
         
-        _detailLabel = [UILabel new];
-        _detailLabel.numberOfLines = 2;
-        _detailLabel.textColor =kColorWithHex(GRAYCOLOR);
-        _detailLabel.font = [UIFont systemFontOfSize:14];
-        [self addSubview:_detailLabel];
-        [_detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.name);
-            make.top.equalTo(self.name.mas_bottom).offset(5);
-        }];
-        
-        _contentView = [UIView new];
-        [self addSubview:_contentView];
-        [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.name);
-            make.top.equalTo(self.detailLabel.mas_bottom).offset(5);
-            make.height.equalTo(@40);
-            make.bottom.equalTo(self).offset(-10);
+        _contentV = [UIView new];
+        [self addSubview:_contentV];
+        [_contentV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@10);
+            make.centerY.equalTo(self.shoucangButton);
+            make.height.equalTo(@30);
+            make.right.equalTo(self.shoucangButton.mas_left).offset(-10);
         }];
         
     }
     return self;
+}
+
+- (void)setModel:(HomeMode *)model {
+
+    
+    for (UIView *v in _contentV.subviews) {
+        [v  removeFromSuperview];
+    }
+    NSString *upath = [[NSBundle mainBundle] pathForResource:@"ren" ofType:@"plist"];
+    NSArray *uArray = [NSArray arrayWithContentsOfFile:upath];
+    
+    NSMutableArray *list = [NSMutableArray array];
+    for (int i=0; i<[model.photo_fav_nums integerValue]; i++) {
+        int x = arc4random() % uArray.count;
+        [list addObject:uArray[x]];
+    }
+    
+    _userList = [NSArray arrayWithArray:list];
+    
+    NSInteger count =list.count >5?5:list.count;
+    
+    UIImageView *last = nil;
+    for (int i=0; i<count; i++) {
+        UIImageView *img = [UIImageView new];
+        UserModel *user = [UserModel mj_objectWithKeyValues:list[i]];
+        [img sd_setImageWithURL:[NSURL URLWithString:user.user_imgfile]];
+        img.layer.masksToBounds = YES;
+        img.layer.cornerRadius = 15.f;
+        [_contentV addSubview:img];
+        if (last == nil) {
+            [img mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.top.bottom.equalTo(self.contentV);
+                make.width.equalTo(img.mas_height);
+            }];
+        } else {
+            [img mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.bottom.width.equalTo(img);
+                make.left.equalTo(img.mas_right).offset(5);
+            }];
+        }
+        last = img;
+    }
+    
+    if (count == 5) {
+        UIButton *btn = [UIButton new];
+        [btn setImage:[UIImage imageNamed:@"gengduo"] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(more) forControlEvents:UIControlEventTouchUpInside];
+        [_contentV addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.width.equalTo(last);
+            make.left.equalTo(last.mas_right).offset(5);
+        }];
+    }
+    
+}
+
+- (void)more {
+    UserListViewController *vc= [UserListViewController new];
+    vc.listArray = _userList;
+    [self.viewController.navigationController pushViewController:vc animated:YES];
 }
 
 @end

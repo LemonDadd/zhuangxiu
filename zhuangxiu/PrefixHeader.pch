@@ -52,6 +52,8 @@
 
 #import "CustomView.h"
 
+#import "LYEmptyView.h"
+
 
 #endif
 

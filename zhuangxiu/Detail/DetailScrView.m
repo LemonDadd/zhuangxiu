@@ -15,6 +15,7 @@
     if (self = [super init]) {
         
         self.clipsToBounds = YES;
+        
         _imageView = [[UIImageView alloc] init];
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_imageView];

@@ -13,6 +13,7 @@
 #import "ShoucangViewController.h"
 #import "HtmlViewController.h"
 #import "UserSettingViewController.h"
+#import "LoginViewController.h"
 
 @interface UserView ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -39,7 +40,7 @@
         }];
         
         [_tab registerNib:[UINib nibWithNibName:NSStringFromClass([UserTopTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"UserTopTableViewCell"];
-        _userArray = @[@"我的收藏",@"意见反馈",@"关于我们",@"给评分",@"更多服务",@"清除缓存"];
+        _userArray = @[@"我的收藏",@"意见反馈",@"关于我们",@"给评分",@"更多服务",@"清除缓存",@"设置"];
     }
     return self;
 }
@@ -76,6 +77,10 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         UserTopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserTopTableViewCell"];
+        if ([UserInfoClass getUserInfoClass]) {
+            [cell.userImg sd_setImageWithURL:[NSURL URLWithString:[UserInfoClass getUserInfoClass].photo]];
+            cell.user.text =[UserInfoClass getUserInfoClass].username;
+        }
         return cell;
     } else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -94,12 +99,22 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
-        UserSettingViewController *vc = [UserSettingViewController new];
-        [self.viewController.navigationController pushViewController:vc animated:YES];
+        if ([UserInfoClass getUserInfoClass]) {
+            UserSettingViewController *vc = [UserSettingViewController new];
+            [self.viewController.navigationController pushViewController:vc animated:YES];
+        } else {
+            LoginViewController*vc = [LoginViewController new];
+            [self.viewController.navigationController pushViewController:vc animated:YES];
+        }
     } else {
         if (indexPath.row == 0) {
-            ShoucangViewController *vc = [ShoucangViewController new];
-            [self.viewController.navigationController pushViewController:vc animated:YES];
+            if ([UserInfoClass getUserInfoClass]) {
+                ShoucangViewController *vc = [ShoucangViewController new];
+                [self.viewController.navigationController pushViewController:vc animated:YES];
+            } else {
+                LoginViewController*vc = [LoginViewController new];
+                [self.viewController.navigationController pushViewController:vc animated:YES];
+            }
         } else if (indexPath.row ==1){
             YijianViewController *vc = [YijianViewController new];
             [self.viewController.navigationController pushViewController:vc animated:YES];
@@ -134,6 +149,8 @@
             
             
             [self.viewController presentViewController:alertController animated:YES completion:nil];
+        } else if (indexPath.row ==6){
+           
         }
     }
     
@@ -157,6 +174,11 @@
         sizeText = [NSString stringWithFormat:@"%lluB", size];
     }
     return sizeText;
+}
+
+
+- (void)reloadData {
+    [_tab reloadData];
 }
 
 @end
