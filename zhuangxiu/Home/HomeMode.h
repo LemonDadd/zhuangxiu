@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *is_recommended;
 @property (nonatomic, copy) NSString *recommend_algorithm;
 @property (nonatomic, copy) NSString *is_jiatu_processed;
+@property (nonatomic, strong)NSArray *userList;
+@property (nonatomic, assign)BOOL shoucang;
 
 @end
 

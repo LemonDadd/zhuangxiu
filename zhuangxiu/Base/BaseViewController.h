@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BaseViewController : UIViewController
 
 - (void)saveShouCang:(HomeMode *)model;
+- (void)deleteShouCang:(HomeMode *)model;
 - (NSArray *)getShoucang;
 
 @end

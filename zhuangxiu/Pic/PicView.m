@@ -100,7 +100,8 @@
             return;
         }
         NSMutableArray *obj = [NSMutableArray array];
-        NSArray *arr = weakself.userArray[weakself.page];
+        int n = arc4random() % weakself.userArray.count;
+        NSArray *arr = weakself.userArray[n];
         for (NSDictionary *dic in arr) {
             UserModel *user = [UserModel mj_objectWithKeyValues:dic];
             int x = arc4random() % weakself.picArray.count;
@@ -151,7 +152,7 @@
     cell.name.text = user.user_nickname;
     cell.time.text = user.favorite_time;
     [cell.topImage sd_setImageWithURL:[NSURL URLWithString:user.model.photo_img_l]];
-    cell.kan.text = user.model.photo_fav_nums;
+    cell.kan.text = user.model.photo_fav_nums.length?user.model.photo_fav_nums:@"0";
     return cell;
 }
 
@@ -167,7 +168,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DetailViewController *vc= [DetailViewController new];
-    vc.indx = indexPath.row;
+     UserModel *user = self.allResource[indexPath.section];
+    vc.list =@[user.model];
     [self.viewController.navigationController pushViewController:vc animated:YES];
 }
 -(NSMutableArray *)allResource {

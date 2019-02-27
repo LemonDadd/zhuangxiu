@@ -33,9 +33,22 @@
     [arr addObject:model];
     NSArray *save = [NSArray arrayWithArray:arr];
     [[NSUserDefaults standardUserDefaults]setObject:save forKey:ShouCang];
-    
 }
 
+
+- (void)deleteShouCang:(HomeMode *)model {
+    NSArray *list = [[NSUserDefaults standardUserDefaults]objectForKey: ShouCang];
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:list];
+    [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        HomeMode *o = obj;
+        if ([model.photo_id  isEqualToString:o.photo_id]) {
+            [arr removeObject:obj];
+            *stop = YES;
+        }
+    }];
+    NSArray *save = [NSArray arrayWithArray:arr];
+    [[NSUserDefaults standardUserDefaults]setObject:save forKey:ShouCang];
+}
 
 - (NSArray *)getShoucang {
     NSArray *list = [[NSUserDefaults standardUserDefaults]objectForKey: ShouCang];

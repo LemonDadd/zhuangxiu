@@ -1579,7 +1579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4C4BBJ8J25;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
@@ -1599,7 +1599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4C4BBJ8J25;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;

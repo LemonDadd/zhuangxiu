@@ -45,13 +45,6 @@
     
     self.title = @"图片详情";
     
-    _rightItem = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_rightItem setImage:[UIImage imageNamed:@"收藏1"] forState:UIControlStateNormal];
-    [_rightItem setImage:[UIImage imageNamed:@"已收藏1"] forState:UIControlStateSelected];
-    [_rightItem addTarget:self action:@selector(right:) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_rightItem];
-    
     
     
     _scrView = [UIScrollView new];
@@ -61,7 +54,7 @@
     _scrView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:_scrView];
     [_scrView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@100);
+        make.top.equalTo(@64);
         make.bottom.equalTo(@-100);
         make.left.right.equalTo(self.view);
     }];
@@ -74,15 +67,15 @@
         make.height.equalTo(self.scrView);
     }];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"shuju" ofType:@"plist"];
-    NSArray *arr = [NSArray arrayWithContentsOfFile:path];
-    for (NSString *str in arr) {
-        NSArray *list = [JsonToDic dictionaryWithJsonString:str];
-        [self.picArray addObjectsFromArray:list];
-    }
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"shuju" ofType:@"plist"];
+//    NSArray *arr = [NSArray arrayWithContentsOfFile:path];
+//    for (NSString *str in arr) {
+//        NSArray *list = [JsonToDic dictionaryWithJsonString:str];
+//        [self.picArray addObjectsFromArray:list];
+//    }
     UIView *lastV = nil;
-    for (int i=0; i<self.picArray.count;i++) {
-        HomeMode *model =[HomeMode mj_objectWithKeyValues:self.picArray[i]];
+    for (int i=0; i<self.list.count;i++) {
+        HomeMode *model =self.list[i];
         DetailScrView * view = [[DetailScrView alloc] init];
         [view.imageView sd_setImageWithURL:[NSURL URLWithString:model.photo_img_l]];
         [_contentView addSubview:view];
@@ -98,16 +91,19 @@
         }];
         lastV = view;
     }
-    [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(lastV);
-    }];
+    if (lastV) {
+        [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(lastV);
+        }];
+    }
+  
     
     _topView = [DetailTopView new];
-    _topView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
     [self.view addSubview:_topView];
     [_topView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@64);
+        make.top.equalTo(self.contentView);
         make.left.right.equalTo(self.view);
+        make.height.equalTo(@60);
     }];
     
     _bottomView = [DetailBottomView new];
@@ -119,9 +115,10 @@
    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self->_scrView setContentOffset:CGPointMake(self->_indx*SCREEN_WIDTH,0) animated:false];
-        HomeMode *model =[HomeMode mj_objectWithKeyValues:self.picArray[self->_indx]];
+        HomeMode *model =self.list[self->_indx];
         self.bottomView.name.text = model.subject_info.subject_name;
         self.bottomView.detailLabel.text = model.photo_des;
+        [self.topView setModel:model];
         [self.view layoutIfNeeded];
     });
     
@@ -136,10 +133,10 @@
     
     NSInteger leftIndex = x/SCROLLVIEW_WIDTH;
        NSLog(@"%ld",leftIndex);
-     HomeMode *model =[HomeMode mj_objectWithKeyValues:self.picArray[leftIndex]];
+     HomeMode *model =self.list[leftIndex];
     _bottomView.name.text = model.subject_info.subject_name;
     _bottomView.detailLabel.text = model.photo_des;
-    
+    [self.topView setModel:model];
     //这里的left和right是区分拖动中可见的两个视图
     DetailScrView * leftView = [scrollView viewWithTag:(leftIndex + BaseTag)];
     DetailScrView * rightView = [scrollView viewWithTag:(leftIndex + 1 + BaseTag)];
