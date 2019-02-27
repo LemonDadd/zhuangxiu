@@ -13,6 +13,7 @@
 #import "HtmlViewController.h"
 #import "HomeMode.h"
 #import "DetailViewController.h"
+#import "FenleiModel.h"
 
 @interface HomeViewController ()<MoreDropDownMenuDataSource,MoreDropDownMenuDelegate,UICollectionViewDataSource,UICollectionViewDelegate,HomeCollectionViewLayoutDelegate>
 
@@ -25,6 +26,13 @@
 @property (nonatomic, strong) NSMutableArray *allResource;
 @property (nonatomic, assign) NSInteger page;
 
+
+@property (nonatomic, assign)NSInteger tip;
+@property (nonatomic, assign)NSInteger tip1;
+@property (nonatomic, assign)NSInteger tip2;
+@property (nonatomic, assign)NSInteger tip3;
+@property (nonatomic, assign)NSInteger luan;
+
 @end
 
 @implementation HomeViewController
@@ -32,7 +40,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.cates = @[@"空间",@"风格",@"颜色",@"局部"];
+    
+    _tip = _tip1 = _tip2 = _tip3 = 0;
+    
+    NSString *fenlei = [[NSBundle mainBundle] pathForResource:@"fenlei" ofType:@"plist"];
+    self.cates = [NSArray arrayWithContentsOfFile:fenlei];
     
     _menu = [[MoreDropDownMenu alloc] initWithOrigin:CGPointMake(0,64) andHeight:49.5];
     _menu.delegate = self;
@@ -80,14 +92,9 @@
     [UIApplication sharedApplication].delegate.window.rootViewController = vc;
 }
 
-
 - (void)dismiss{
-    //self.classifys = @[@"美食",@"今日新单",@"电影"];
     [_menu hideMenu];
 }
-
-
-
 
 #pragma mark - MoreDropDownMenuDataSource and MoreDropDownMenuDelegate
 - (NSInteger)numberOfColumnsInMenu:(MoreDropDownMenu *)menu{
@@ -95,34 +102,51 @@
 }
 
 - (NSInteger)menu:(MoreDropDownMenu *)menu numberOfRowsInColumn:(NSInteger)column{
-    if (column == 0) {
-        return self.cates.count;
-    }else if (column == 1){
-        return self.states.count;
-    }else {
-        return self.sorts.count;
-    }
+    FenleiModel *model  = [FenleiModel mj_objectWithKeyValues:self.cates[column]];
+    return model.condition_list.count;
 }
 
 - (NSString *)menu:(MoreDropDownMenu *)menu titleForRowAtIndexPath:(MoreIndexPath *)indexPath{
-    return self.cates[indexPath.column];
+    FenleiModel *model  = [FenleiModel mj_objectWithKeyValues:self.cates[indexPath.column]];
+    ConditionListModel *list =[ConditionListModel mj_objectWithKeyValues:model.condition_list[indexPath.row]];
+    return list.name;
+//    return model.group_name;
+}
+
+// 新增 detailText ,right text
+- (NSString *)menu:(MoreDropDownMenu *)menu detailTextForRowAtIndexPath:(MoreIndexPath *)indexPath {
+     FenleiModel *model  = [FenleiModel mj_objectWithKeyValues:self.cates[indexPath.column]];
+    
+    ConditionListModel *list =[ConditionListModel mj_objectWithKeyValues:model.condition_list[indexPath.row]];
+    return list.name;
 }
 - (NSArray *)menu:(MoreDropDownMenu *)menu arrayForRowAtIndexPath:(MoreIndexPath *)indexPath{
-    if (indexPath.column == 0) {
-        return self.cates;
-    } else if (indexPath.column == 1){
-        return self.states;
-    } else {
-        return self.sorts;
-    }
+    FenleiModel *model  = [FenleiModel mj_objectWithKeyValues:self.cates[indexPath.column]];
+    return model.condition_list;
 }
 
 - (void)menu:(MoreDropDownMenu *)menu didSelectRowAtIndexPath:(MoreIndexPath *)indexPath{
-    if (indexPath.item >= 0) {
-        NSLog(@"点击了 %ld - %ld - %ld 项目",indexPath.column,indexPath.row,indexPath.item);
-    }else {
         NSLog(@"点击了 %ld - %ld 项目",indexPath.column,indexPath.row);
+    
+    if (indexPath.column == 0) {
+        _tip = indexPath.row;
     }
+    if (indexPath.column == 1) {
+        _tip1 = indexPath.row;
+    }
+    if (indexPath.column == 2) {
+        _tip2 = indexPath.row;
+    }
+    if (indexPath.column == 3) {
+        _tip3 = indexPath.row;
+    }
+    if (_tip  == 0&& _tip1== 0 && _tip2== 0 && _tip3== 0) {
+        _luan = NO;
+    } else {
+        _luan = YES;
+    }
+    [self.col.mj_header beginRefreshing];
+    
 }
 
 - (void)didTapMenu:(MoreDropDownMenu *)menu{
@@ -160,7 +184,40 @@
     [AllRequest requestGetHomeListBySkip:_page request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
         NSString *str = weakself.pArray[weakself.page];
         NSArray *arr = [JsonToDic dictionaryWithJsonString:str];
-        [weakself updateData:arr];
+        NSMutableArray *ma = [NSMutableArray array];
+        
+        
+        if (self->_luan == YES) {
+            for (int i=0; i<arr.count; i++) {
+                int x = arc4random() % arr.count;
+                HomeMode *model =[HomeMode mj_objectWithKeyValues:arr[x]];
+                NSString *upath = [[NSBundle mainBundle] pathForResource:@"ren" ofType:@"plist"];
+                NSArray *uArray = [NSArray arrayWithContentsOfFile:upath];
+                
+                NSMutableArray *list = [NSMutableArray array];
+                for (int i=0; i<[model.photo_fav_nums integerValue]; i++) {
+                    int x = arc4random() % uArray.count;
+                    [list addObject:uArray[x]];
+                }
+                model.userList = [NSArray arrayWithArray:list];
+                [ma addObject:model];
+            }
+        } else {
+            for ( NSDictionary *dic in arr) {
+                HomeMode *model =[HomeMode mj_objectWithKeyValues:dic];
+                NSString *upath = [[NSBundle mainBundle] pathForResource:@"ren" ofType:@"plist"];
+                NSArray *uArray = [NSArray arrayWithContentsOfFile:upath];
+                
+                NSMutableArray *list = [NSMutableArray array];
+                for (int i=0; i<[model.photo_fav_nums integerValue]; i++) {
+                    int x = arc4random() % uArray.count;
+                    [list addObject:uArray[x]];
+                }
+                model.userList = [NSArray arrayWithArray:list];
+                [ma addObject:model];
+            }
+        }
+        [weakself updateData:[ma copy]];
         
     }];
 }
@@ -189,7 +246,7 @@
 }
 
 -(CGFloat)waterFlow:(HomeCollectionViewLayout *)flow heightForWidth:(CGFloat)width indexPath:(NSIndexPath *)index {
-    HomeMode *model =[HomeMode mj_objectWithKeyValues:self.allResource[index.row]];
+    HomeMode *model =self.allResource[index.row];
     return  [self getCellHightByCollectionModel:model andCellWidth:width];
 }
 
@@ -209,7 +266,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCollectionViewCell *cell = [_col dequeueReusableCellWithReuseIdentifier:@"HomeCollectionViewCell" forIndexPath:indexPath];
-    HomeMode *model =[HomeMode mj_objectWithKeyValues:self.allResource[indexPath.row]];
+    HomeMode *model =self.allResource[indexPath.row];
     [cell.image sd_setImageWithURL:[NSURL URLWithString:model.photo_img_m]];
     cell.count.text = model.photo_fav_nums;
     [self.view layoutIfNeeded];
@@ -227,6 +284,7 @@
 {
     DetailViewController *vc= [DetailViewController new];
     vc.indx = indexPath.row;
+    vc.list = [self.allResource copy];
     [self.navigationController pushViewController:vc animated:YES];
 }
 -(NSMutableArray *)allResource {

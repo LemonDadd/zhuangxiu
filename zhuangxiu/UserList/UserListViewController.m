@@ -23,15 +23,14 @@
     // Do any additional setup after loading the view.
     
     self.title = @"用户列表";
-    _tab = [[BaseTableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    _tab = [[BaseTableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     _tab.backgroundColor = kColorWithHex(0xf9f9f9);
     _tab.delegate =self;
     _tab.dataSource =self;
     [self.view addSubview:_tab];
     [self setExtraCellLineHidden:_tab];
     [_tab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.right.left.equalTo(self);
-        make.bottom.equalTo(self).offset(-[DeviceInfo ScreenNavgationBarHeight]);
+        make.edges.equalTo(self.view);
     }];
     
     
@@ -54,12 +53,6 @@
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return CGFLOAT_MIN;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 8;
-}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UserModel *model = [UserModel mj_objectWithKeyValues:_listArray[indexPath.section]];

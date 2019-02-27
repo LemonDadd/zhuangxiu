@@ -9,6 +9,7 @@
 #import "DetailTopView.h"
 #import "UserModel.h"
 #import "UserListViewController.h"
+#import "BaseViewController.h"
 
 @interface DetailTopView ()
 
@@ -22,8 +23,10 @@
 {
     self = [super init];
     if (self) {
-    
+         self.backgroundColor = [UIColor colorWithWhite:0 alpha:.6];
+        
         _shoucangButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shoucangButton addTarget:self action:@selector(shoucang:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_shoucangButton];
         [_shoucangButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(@-10);
@@ -44,29 +47,45 @@
     return self;
 }
 
+- (void)shoucang:(UIButton *)sender {
+    _model.shoucang = !_model.shoucang;
+    [self setbuttonImage];
+}
+
+- (void)setbuttonImage {
+    if (_model.shoucang) {
+        [_shoucangButton setImage:[UIImage imageNamed:@"xihuan-3"] forState:UIControlStateNormal];
+        [(BaseViewController *)self.viewController saveShouCang:_model];
+    } else {
+         [_shoucangButton setImage:[UIImage imageNamed:@"xihuan-2"] forState:UIControlStateNormal];
+         [(BaseViewController *)self.viewController deleteShouCang:_model];
+    }
+}
+
 - (void)setModel:(HomeMode *)model {
 
-    
+    _model = model;
+    [self setbuttonImage];
     for (UIView *v in _contentV.subviews) {
         [v  removeFromSuperview];
     }
-    NSString *upath = [[NSBundle mainBundle] pathForResource:@"ren" ofType:@"plist"];
-    NSArray *uArray = [NSArray arrayWithContentsOfFile:upath];
+//    NSString *upath = [[NSBundle mainBundle] pathForResource:@"ren" ofType:@"plist"];
+//    NSArray *uArray = [NSArray arrayWithContentsOfFile:upath];
+//    
+//    NSMutableArray *list = [NSMutableArray array];
+//    for (int i=0; i<[model.photo_fav_nums integerValue]; i++) {
+//        int x = arc4random() % uArray.count;
+//        [list addObject:uArray[x]];
+//    }
+//    
+//    _userList = [NSArray arrayWithArray:list];
     
-    NSMutableArray *list = [NSMutableArray array];
-    for (int i=0; i<[model.photo_fav_nums integerValue]; i++) {
-        int x = arc4random() % uArray.count;
-        [list addObject:uArray[x]];
-    }
-    
-    _userList = [NSArray arrayWithArray:list];
-    
-    NSInteger count =list.count >5?5:list.count;
+    NSInteger count =model.userList.count >5?5:model.userList.count;
     
     UIImageView *last = nil;
     for (int i=0; i<count; i++) {
         UIImageView *img = [UIImageView new];
-        UserModel *user = [UserModel mj_objectWithKeyValues:list[i]];
+        UserModel *user = [UserModel mj_objectWithKeyValues:model.userList[i]];
         [img sd_setImageWithURL:[NSURL URLWithString:user.user_imgfile]];
         img.layer.masksToBounds = YES;
         img.layer.cornerRadius = 15.f;
@@ -78,8 +97,8 @@
             }];
         } else {
             [img mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.bottom.width.equalTo(img);
-                make.left.equalTo(img.mas_right).offset(5);
+                make.top.bottom.width.equalTo(last);
+                make.left.equalTo(last.mas_right).offset(5);
             }];
         }
         last = img;
@@ -87,7 +106,7 @@
     
     if (count == 5) {
         UIButton *btn = [UIButton new];
-        [btn setImage:[UIImage imageNamed:@"gengduo"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"gengduo-2"] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(more) forControlEvents:UIControlEventTouchUpInside];
         [_contentV addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -100,7 +119,7 @@
 
 - (void)more {
     UserListViewController *vc= [UserListViewController new];
-    vc.listArray = _userList;
+    vc.listArray = _model.userList;
     [self.viewController.navigationController pushViewController:vc animated:YES];
 }
 
