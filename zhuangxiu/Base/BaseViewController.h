@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)saveShouCang:(HomeMode *)model;
 - (void)deleteShouCang:(HomeMode *)model;
 - (NSArray *)getShoucang;
+- (void)gotoLoginViewController;
 
 @end
 

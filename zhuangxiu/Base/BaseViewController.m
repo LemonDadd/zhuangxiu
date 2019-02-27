@@ -28,9 +28,10 @@
 
 
 - (void)saveShouCang:(HomeMode *)model {
+    NSDictionary *dic = [model mj_JSONObject];
     NSArray *list = [[NSUserDefaults standardUserDefaults]objectForKey: ShouCang];
     NSMutableArray *arr = [NSMutableArray arrayWithArray:list];
-    [arr addObject:model];
+    [arr addObject:dic];
     NSArray *save = [NSArray arrayWithArray:arr];
     [[NSUserDefaults standardUserDefaults]setObject:save forKey:ShouCang];
 }
@@ -40,7 +41,7 @@
     NSArray *list = [[NSUserDefaults standardUserDefaults]objectForKey: ShouCang];
     NSMutableArray *arr = [NSMutableArray arrayWithArray:list];
     [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        HomeMode *o = obj;
+        HomeMode *o = [HomeMode mj_objectWithKeyValues:obj];
         if ([model.photo_id  isEqualToString:o.photo_id]) {
             [arr removeObject:obj];
             *stop = YES;

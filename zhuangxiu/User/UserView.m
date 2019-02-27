@@ -14,6 +14,7 @@
 #import "HtmlViewController.h"
 #import "UserSettingViewController.h"
 #import "LoginViewController.h"
+#import "BaseViewController.h"
 
 @interface UserView ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -78,7 +79,7 @@
     if (indexPath.section == 0) {
         UserTopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserTopTableViewCell"];
         if ([UserInfoClass getUserInfoClass]) {
-            [cell.userImg sd_setImageWithURL:[NSURL URLWithString:[UserInfoClass getUserInfoClass].photo]];
+            [cell.userImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",PhotoBase,[UserInfoClass getUserInfoClass].photo]] placeholderImage:[UIImage imageNamed:@"默认"]];
             cell.user.text =[UserInfoClass getUserInfoClass].username;
         }
         return cell;
@@ -103,8 +104,7 @@
             UserSettingViewController *vc = [UserSettingViewController new];
             [self.viewController.navigationController pushViewController:vc animated:YES];
         } else {
-            LoginViewController*vc = [LoginViewController new];
-            [self.viewController.navigationController pushViewController:vc animated:YES];
+            [(BaseViewController *)self.viewController  gotoLoginViewController];
         }
     } else {
         if (indexPath.row == 0) {
@@ -112,23 +112,28 @@
                 ShoucangViewController *vc = [ShoucangViewController new];
                 [self.viewController.navigationController pushViewController:vc animated:YES];
             } else {
-                LoginViewController*vc = [LoginViewController new];
-                [self.viewController.navigationController pushViewController:vc animated:YES];
+                [(BaseViewController *)self.viewController  gotoLoginViewController];
             }
         } else if (indexPath.row ==1){
-            YijianViewController *vc = [YijianViewController new];
-            [self.viewController.navigationController pushViewController:vc animated:YES];
+            if ([UserInfoClass getUserInfoClass]) {
+                YijianViewController *vc = [YijianViewController new];
+                [self.viewController.navigationController pushViewController:vc animated:YES];
+            } else {
+                [(BaseViewController *)self.viewController  gotoLoginViewController];
+            }
+            
         } else if (indexPath.row ==2){
             GuanyuViewController *vc = [GuanyuViewController new];
             [self.viewController.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row ==3){
             NSString *str = [NSString stringWithFormat:  @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=123"];
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{UIApplicationOpenURLOptionsSourceApplicationKey : @YES} completionHandler:^(BOOL success) {
-                
-            }];
+            [[UIApplication  sharedApplication] openURL:[NSURL URLWithString:str]];
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{UIApplicationOpenURLOptionsSourceApplicationKey : @YES} completionHandler:^(BOOL success) {
+//
+//            }];
         } else if (indexPath.row ==4){
             HtmlViewController *vc = [HtmlViewController new];
-            vc.url = @"";
+            vc.url = @"http://m.to8to.com/sz/zb/index2.html?ptag=30141_2_12_340&appversion=2.0&uid=0&channel=appstore&systemversion=12.1.4&t8t_device_id=DECFD2E7-DE9D-4B05-B1AC-6ED7AEE9C4B6&appostype=2&version=2.5&to8to_token=&appid=47&idfa=4221FAF8-3134-4DB5-8E6F-3F5DC8AEFAFF";
             [self.viewController.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row ==5){
            //q清除缓存
@@ -150,7 +155,8 @@
             
             [self.viewController presentViewController:alertController animated:YES completion:nil];
         } else if (indexPath.row ==6){
-           
+            UserSettingViewController *vc = [UserSettingViewController new];
+            [self.viewController.navigationController pushViewController:vc animated:YES];
         }
     }
     

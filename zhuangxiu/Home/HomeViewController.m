@@ -51,14 +51,6 @@
     _menu.dataSource = self;
     //当下拉菜单收回时的回调，用于网络请求新的数据
     [self.view addSubview:_menu];
-    _menu.finishedBlock=^(MoreIndexPath *indexPath){
-        if (indexPath.item >= 0) {
-            NSLog(@"收起:点击了 %ld - %ld - %ld 项目",indexPath.column,indexPath.row,indexPath.item);
-        }else {
-            NSLog(@"收起:点击了 %ld - %ld 项目",indexPath.column,indexPath.row);
-        }
-    };
-    [_menu selectIndexPath:[MoreIndexPath indexPathWithCol:1 row:1]];
     HomeCollectionViewLayout *flowLayout = [[HomeCollectionViewLayout alloc] init];
     flowLayout.columns = 2;
     flowLayout.columMargin =10;
