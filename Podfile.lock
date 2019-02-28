@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AVOSCloud (11.4.9)
+  - BHURLHelper (1.0.0)
   - DeviceInfo (0.0.1)
   - IQKeyboardManager (6.2.0)
   - JCore (1.2.6)
@@ -41,10 +42,20 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
+  - UMengUShare/Core (6.4.8.2):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.8.2)
+  - UMengUShare/Social/ReducedSina (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.4.8.2):
+    - UMengUShare/Core
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - AVOSCloud
+  - BHURLHelper (~> 1.0.0)
   - DeviceInfo
   - IQKeyboardManager
   - JPush
@@ -62,11 +73,15 @@ DEPENDENCIES:
   - RealReachability
   - SDCycleScrollView
   - SDWebImage (~> 4.0)
+  - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/UI
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - AVOSCloud
+    - BHURLHelper
     - DeviceInfo
     - IQKeyboardManager
     - JCore
@@ -85,10 +100,12 @@ SPEC REPOS:
     - RealReachability
     - SDCycleScrollView
     - SDWebImage
+    - UMengUShare
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AVOSCloud: 1ad969db6e24c41ae1788d68698255d853883069
+  BHURLHelper: a13c8809d19a40cf76c170b6c4d9e33f1fdaf5a0
   DeviceInfo: c08f7838a365cdf95fa56dbb881e07013a098d95
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
@@ -107,7 +124,8 @@ SPEC CHECKSUMS:
   RealReachability: eae9c58d2db52fadd8e1cba4b5d4c028454fbc47
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
 
-PODFILE CHECKSUM: d0a83a7de9d1742505b918de851db075333b8218
+PODFILE CHECKSUM: 25e939c6319eaaa1fba6c88e224ceb0df56baf37
 
 COCOAPODS: 1.5.0
