@@ -54,6 +54,8 @@
 
 #import "LYEmptyView.h"
 
+#import "HtmlViewController.h"
+
 
 #endif
 

@@ -21,6 +21,7 @@
         }];
         
         _shouc = [UIImageView new];
+        _shouc.image = [UIImage imageNamed:@"shoucang-2"];
         [self addSubview:_shouc];
         [_shouc mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.image).offset(-10);

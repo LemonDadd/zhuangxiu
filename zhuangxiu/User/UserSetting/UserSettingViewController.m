@@ -94,7 +94,7 @@
 #pragma mark -tabviewDelgate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -115,6 +115,7 @@
         if (cell == nil) {
             cell = [[UserHeaderTabViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UserHeaderTabViewCell"];
         }
+        [cell.imageV sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",PhotoBase,[UserInfoClass getUserInfoClass].photo]] placeholderImage:[UIImage imageNamed:@"默认"]];
         return cell;
     }
     if (indexPath.section == 1) {
@@ -122,7 +123,7 @@
         if (cell == nil) {
             cell = [[UserNameTabViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UserNameTabViewCell"];
         }
-        cell.name.text =@"esc";
+        cell.name.text =[UserInfoClass getUserInfoClass].username;
         return cell;
     }
     
@@ -131,7 +132,7 @@
         if (cell == nil) {
             cell = [[UserPhoneTabViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UserPhoneTabViewCell"];
         }
-        cell.phone.text =@"15211111111";
+        cell.phone.text =[UserInfoClass getUserInfoClass].mobile;
         return cell;
     }
     
@@ -167,7 +168,8 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     if (indexPath.section == 3) {
-        UpdatePassViewController *vc= [UpdatePassViewController new];
+        UIStoryboard *main=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UpdatePassViewController *vc =[main instantiateViewControllerWithIdentifier:@"UpdatePassViewController"];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

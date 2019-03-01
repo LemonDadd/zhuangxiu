@@ -8,6 +8,8 @@
 
 #import "HtmlViewController.h"
 #import <WebKit/WebKit.h>
+#import <UShareUI/UShareUI.h>
+#import "NSString+BHURLHelper.h"
 
 @interface HtmlViewController ()<WKNavigationDelegate>
 @property (nonatomic, strong)UIView *bottomView;
@@ -96,6 +98,16 @@
     } else if ([path hasPrefix:@"unsafe:com.hpyshark.homer://share"]){
         NSLog(@"分享:%@",path);
         //type:3wx  2pyq  1weibo
+        if ([path containsString:@"&type=3"]) {
+            [self shareWebPageToPlatformType:UMSocialPlatformType_WechatSession url:path];
+        }
+        if ([path containsString:@"&type=2"]) {
+            [self shareWebPageToPlatformType:UMSocialPlatformType_WechatTimeLine url:path];
+        }
+        if ([path containsString:@"&type=1"]) {
+            [self shareWebPageToPlatformType:UMSocialPlatformType_Sina url:path];
+        }
+        
         decisionHandler(WKNavigationActionPolicyCancel);
     }else {
         decisionHandler(WKNavigationActionPolicyAllow);
@@ -103,6 +115,30 @@
     
     NSLog(@"%@",path);
 
+}
+
+
+- (void)shareWebPageToPlatformType:(UMSocialPlatformType)platformType url:(NSString *)url
+{
+    
+    NSDictionary *dict =  [url parseURLParameters];
+    
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    //创建网页内容对象
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:dict[@"title"] descr:@"" thumImage:[UIImage imageNamed:@"icon"]];
+    //设置网页地址
+    shareObject.webpageUrl =[NSString stringWithFormat:@"http://api.homer.app887.com/article.html?id=%@&type=%ld",dict[@"url"],(long)platformType];
+    //分享消息对象设置分享内容对象
+    messageObject.shareObject = shareObject;
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+        if (error) {
+            NSLog(@"************Share fail with error %@*********",error);
+        }else{
+            NSLog(@"response data is %@",data);
+        }
+    }];
 }
 
 

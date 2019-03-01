@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong)NSArray *userList;
 
+
 @end
 
 @implementation DetailTopView
@@ -30,7 +31,17 @@
         [self addSubview:_shoucangButton];
         [_shoucangButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(@-10);
-            make.center.equalTo(self);
+            make.centerY.equalTo(self);
+            make.height.width.equalTo(@20);
+        }];
+        
+        UIButton *sheji = [UIButton buttonWithType:UIButtonTypeCustom];
+        [sheji setImage:[UIImage imageNamed:@"sheji"] forState:UIControlStateNormal];
+        [sheji addTarget:self action:@selector(sheji) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:sheji];
+        [sheji mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.shoucangButton.mas_left).offset(-8);
+            make.centerY.equalTo(self);
             make.height.width.equalTo(@20);
         }];
         
@@ -40,7 +51,7 @@
             make.left.equalTo(@10);
             make.centerY.equalTo(self.shoucangButton);
             make.height.equalTo(@30);
-            make.right.equalTo(self.shoucangButton.mas_left).offset(-10);
+            make.right.equalTo(sheji.mas_left).offset(-10);
         }];
         
     }
@@ -60,6 +71,13 @@
          [_shoucangButton setImage:[UIImage imageNamed:@"xihuan-2"] forState:UIControlStateNormal];
          [(BaseViewController *)self.viewController deleteShouCang:_model];
     }
+}
+
+
+- (void)sheji {
+    HtmlViewController *vc = [HtmlViewController new];
+    vc.url = @"http://m.to8to.com/sz/zb/index2.html?ptag=30141_2_12_340&appversion=2.0&uid=0&channel=appstore&systemversion=12.1.4&t8t_device_id=DECFD2E7-DE9D-4B05-B1AC-6ED7AEE9C4B6&appostype=2&version=2.5&to8to_token=&appid=47&idfa=4221FAF8-3134-4DB5-8E6F-3F5DC8AEFAFF";
+    [self.viewController.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)setModel:(HomeMode *)model {

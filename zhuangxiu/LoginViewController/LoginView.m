@@ -94,7 +94,7 @@
         zhuce.text = @"注册";
         [self addSubview:zhuce];
         [zhuce mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self->_loginBtn);
+            make.left.equalTo(self->_loginBtn);
             make.top.equalTo(self->_loginBtn.mas_bottom);
         }];
         

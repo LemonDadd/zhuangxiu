@@ -96,6 +96,7 @@
 		DAA08EDC2224325600E944FE /* ForGetViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EDA2224325500E944FE /* ForGetViewModelClass.m */; };
 		DAA08EDF222434E200E944FE /* GuanyuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EDE222434E200E944FE /* GuanyuView.m */; };
 		DAA08EE2222437BA00E944FE /* YijianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EE1222437BA00E944FE /* YijianViewController.m */; };
+		DAA08EE6222845C700E944FE /* AppDelegate+ShareInit.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA08EE5222845C700E944FE /* AppDelegate+ShareInit.m */; };
 		DAB192582215AC1600239A40 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB1924F2215AC1600239A40 /* HttpHelper.m */; };
 		DAB192592215AC1600239A40 /* HttpHelpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192522215AC1600239A40 /* HttpHelpBase.m */; };
 		DAB1925A2215AC1600239A40 /* NHFDownImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB192542215AC1600239A40 /* NHFDownImages.m */; };
@@ -334,6 +335,8 @@
 		DAA08EDE222434E200E944FE /* GuanyuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuanyuView.m; sourceTree = "<group>"; };
 		DAA08EE0222437BA00E944FE /* YijianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YijianViewController.h; sourceTree = "<group>"; };
 		DAA08EE1222437BA00E944FE /* YijianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YijianViewController.m; sourceTree = "<group>"; };
+		DAA08EE4222845C700E944FE /* AppDelegate+ShareInit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShareInit.h"; sourceTree = "<group>"; };
+		DAA08EE5222845C700E944FE /* AppDelegate+ShareInit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShareInit.m"; sourceTree = "<group>"; };
 		DAB1924C2215A7B900239A40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DAB1924D2215A8C600239A40 /* Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		DAB1924F2215AC1600239A40 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
@@ -569,6 +572,7 @@
 		B08BD60F2213FD9E007C3D5F /* zhuangxiu */ = {
 			isa = PBXGroup;
 			children = (
+				DAA08EE3222845C700E944FE /* AppDelegate+ShareInit */,
 				DAA08EB1222424CC00E944FE /* LoginViewController */,
 				DAA08E61221D973600E944FE /* News */,
 				B08BC311221A5CA4004266E9 /* Request */,
@@ -947,6 +951,15 @@
 			path = ForGetViewModelClass;
 			sourceTree = "<group>";
 		};
+		DAA08EE3222845C700E944FE /* AppDelegate+ShareInit */ = {
+			isa = PBXGroup;
+			children = (
+				DAA08EE4222845C700E944FE /* AppDelegate+ShareInit.h */,
+				DAA08EE5222845C700E944FE /* AppDelegate+ShareInit.m */,
+			);
+			path = "AppDelegate+ShareInit";
+			sourceTree = "<group>";
+		};
 		DAB1924A2215A36100239A40 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1245,12 +1258,16 @@
 				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1294,6 +1311,7 @@
 				B08BD6152213FD9E007C3D5F /* ViewController.m in Sources */,
 				DAB1927E2215AC5D00239A40 /* UIView+Extension.m in Sources */,
 				DAA08EDC2224325600E944FE /* ForGetViewModelClass.m in Sources */,
+				DAA08EE6222845C700E944FE /* AppDelegate+ShareInit.m in Sources */,
 				B00A1B742217ED4C00625235 /* MoreDropDownMenuRowCell.m in Sources */,
 				DAA08E4C221AF6D500E944FE /* HomeCollectionViewLayout.m in Sources */,
 				DAA08E3E2219AB2300E944FE /* UserHeaderTabViewCell.m in Sources */,
@@ -1579,7 +1597,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8D2PV5J5YR;
+				DEVELOPMENT_TEAM = 52HKCP4F62;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
@@ -1588,7 +1606,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mafan.zhuangxiu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fx.helandou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1600,7 +1618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8D2PV5J5YR;
+				DEVELOPMENT_TEAM = 52HKCP4F62;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
@@ -1609,7 +1627,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mafan.zhuangxiu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fx.helandou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
