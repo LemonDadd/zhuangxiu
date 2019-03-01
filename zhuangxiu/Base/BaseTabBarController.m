@@ -32,6 +32,7 @@
     
     UserViewController *user = [UserViewController new];
     [self addChildVc:user title:@"我的" image:@"我的" selectedImage:@"我的 (1)"];
+    [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
 }
 
 - (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
@@ -41,6 +42,7 @@
     
     // 设置子控制器的图片
     childVc.tabBarItem.image = [UIImage imageNamed:image];
+    
     if (kSystemVersion >= 7.0) {
         childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         childVc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

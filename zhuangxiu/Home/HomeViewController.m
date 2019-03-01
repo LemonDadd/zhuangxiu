@@ -41,12 +41,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.edgesForExtendedLayout =UIRectEdgeNone;
+    
+    
     _tip = _tip1 = _tip2 = _tip3 = 0;
     
     NSString *fenlei = [[NSBundle mainBundle] pathForResource:@"fenlei" ofType:@"plist"];
     self.cates = [NSArray arrayWithContentsOfFile:fenlei];
     
-    _menu = [[MoreDropDownMenu alloc] initWithOrigin:CGPointMake(0,64) andHeight:49.5];
+    _menu = [[MoreDropDownMenu alloc] initWithOrigin:CGPointMake(0,0) andHeight:49.5];
     _menu.delegate = self;
     _menu.dataSource = self;
     //当下拉菜单收回时的回调，用于网络请求新的数据

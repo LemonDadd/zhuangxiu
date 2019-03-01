@@ -29,7 +29,7 @@
         }];
         
         _logoImageView = [UIImageView new];
-        _logoImageView.image = [UIImage imageNamed:@"icon_logo"];
+        _logoImageView.image = [UIImage imageNamed:@"logo_icon"];
         _logoImageView.backgroundColor = [UIColor whiteColor];
         _logoImageView.layer.masksToBounds = YES;
         _logoImageView.layer.cornerRadius = kWidth(47.f) ;
@@ -43,7 +43,9 @@
         _titlelabel =[UILabel new];
         _titlelabel.font = [UIFont fontWithName:@"" size:18];
         _titlelabel.textColor = kColorWithHex(BLACKCOLOR);
-        _titlelabel.text = @"太原市博物馆";
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        CFShow((__bridge CFTypeRef)(infoDictionary));
+        _titlelabel.text = [infoDictionary objectForKey:@"CFBundleDisplayName"];
         [self addSubview:_titlelabel];
         [_titlelabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);

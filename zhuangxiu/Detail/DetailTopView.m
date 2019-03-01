@@ -35,12 +35,22 @@
             make.height.width.equalTo(@20);
         }];
         
+        UIButton *fenxiang = [UIButton buttonWithType:UIButtonTypeCustom];
+        [fenxiang setImage:[UIImage imageNamed:@"fenxiang"] forState:UIControlStateNormal];
+        [fenxiang addTarget:self action:@selector(fenxiang) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:fenxiang];
+        [fenxiang mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.shoucangButton.mas_left).offset(-8);
+            make.centerY.equalTo(self);
+            make.height.width.equalTo(@20);
+        }];
+        
         UIButton *sheji = [UIButton buttonWithType:UIButtonTypeCustom];
         [sheji setImage:[UIImage imageNamed:@"sheji"] forState:UIControlStateNormal];
         [sheji addTarget:self action:@selector(sheji) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:sheji];
         [sheji mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.shoucangButton.mas_left).offset(-8);
+            make.right.equalTo(fenxiang.mas_left).offset(-8);
             make.centerY.equalTo(self);
             make.height.width.equalTo(@20);
         }];
@@ -56,6 +66,10 @@
         
     }
     return self;
+}
+
+- (void)fenxiang {
+    
 }
 
 - (void)shoucang:(UIButton *)sender {

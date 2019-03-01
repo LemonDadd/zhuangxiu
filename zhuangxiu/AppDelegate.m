@@ -29,11 +29,9 @@
     
     BaseTabBarController *vc =[[BaseTabBarController alloc]init];
     self.window.rootViewController = vc;
-    
     //分享
     [self ShareInit];
     [self.window makeKeyAndVisible];
-    self.window.frame = [[UIScreen mainScreen] bounds];
     
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     if (@available(iOS 12.0, *)) {

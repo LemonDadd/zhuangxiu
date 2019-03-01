@@ -185,6 +185,7 @@
 		B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
 		B038F01F22251E8800D3AB67 /* UpdatePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePassViewController.h; sourceTree = "<group>"; };
 		B038F02022251E8800D3AB67 /* UpdatePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePassViewController.m; sourceTree = "<group>"; };
+		B038F02222291CAB00D3AB67 /* zhuangxiu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = zhuangxiu.entitlements; sourceTree = "<group>"; };
 		B08BC312221A5CBB004266E9 /* AllRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllRequest.h; sourceTree = "<group>"; };
 		B08BC313221A5CBB004266E9 /* AllRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllRequest.m; sourceTree = "<group>"; };
 		B08BC316221A5D55004266E9 /* JsonDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonDeal.m; sourceTree = "<group>"; };
@@ -572,6 +573,7 @@
 		B08BD60F2213FD9E007C3D5F /* zhuangxiu */ = {
 			isa = PBXGroup;
 			children = (
+				B038F02222291CAB00D3AB67 /* zhuangxiu.entitlements */,
 				DAA08EE3222845C700E944FE /* AppDelegate+ShareInit */,
 				DAA08EB1222424CC00E944FE /* LoginViewController */,
 				DAA08E61221D973600E944FE /* News */,
@@ -1162,6 +1164,11 @@
 				TargetAttributes = {
 					B08BD60C2213FD9E007C3D5F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					B08BD6242213FD9F007C3D5F = {
 						CreatedOnToolsVersion = 10.1;
@@ -1596,8 +1603,9 @@
 			baseConfigurationReference = BF85FD24863FC9F17598AAF2 /* Pods-zhuangxiu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52HKCP4F62;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
@@ -1608,7 +1616,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fx.helandou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1617,8 +1625,9 @@
 			baseConfigurationReference = F2E37FF899FBD4F29332BA78 /* Pods-zhuangxiu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52HKCP4F62;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/zhuangxiu/PrefixHeader.pch";
 				INFOPLIST_FILE = zhuangxiu/Info.plist;
@@ -1629,7 +1638,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fx.helandou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
