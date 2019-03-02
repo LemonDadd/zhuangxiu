@@ -126,7 +126,7 @@
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     //创建网页内容对象
-    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:dict[@"title"] descr:@"" thumImage:[UIImage imageNamed:@"icon"]];
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:dict[@"title"] descr:@"" thumImage:[UIImage imageNamed:@"logo_icon"]];
     //设置网页地址
     shareObject.webpageUrl =[NSString stringWithFormat:@"http://api.homer.app887.com/article.html?id=%@&type=%ld",dict[@"url"],(long)platformType];
     //分享消息对象设置分享内容对象

@@ -9,10 +9,12 @@
 #import "UploadPicViewController.h"
 #import "ACActionSheet.h"
 #import "JJImagePicker.h"
+#import "UserModelClass.h"
 
 @interface UploadPicViewController ()<ACActionSheetDelegate>
 
 @property (nonatomic, strong)UIImageView *pic;
+@property (nonatomic, strong)UserModelClass *modelClass;
 
 @end
 
@@ -26,6 +28,7 @@
     self.view.backgroundColor = [UIColor blackColor];
     
     _pic = [UIImageView new];
+    [_pic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",PhotoBase,[UserInfoClass getUserInfoClass].photo]] placeholderImage:[UIImage imageNamed:@"默认"]];
     [self.view addSubview:_pic];
     [_pic mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.view);
@@ -41,18 +44,46 @@
 - (void)actionSheet:(ACActionSheet *)actionSheet didClickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
         [[JJImagePicker sharedInstance] showImagePickerWithType:JJImagePickerTypeCamera InViewController:self didFinished:^(JJImagePicker *picker, UIImage *image) {
-            self.pic.image = image;
+            
+            [self uploadImage:image];
         }];
     }
     if (buttonIndex == 1) {
         [[JJImagePicker sharedInstance] showImagePickerWithType:JJImagePickerTypePhoto InViewController:self didFinished:^(JJImagePicker *picker, UIImage *image) {
-            self.pic.image = image;
+            [self uploadImage:image];
         }];
     }
     
     if (buttonIndex == 2) {
+         [self imageToString:self.pic.image];
+    }
+}
+
+
+-(void)imageTopicSave:(UIImage *)image{
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image: didFinishSavingWithError: contextInfo:), nil);
+}
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
+    if (error == nil) {
         
     }
+    else{
+        ///图片未能保存到本地
+    }
+}
+
+
+- (void)uploadImage:(UIImage *)img {
+    [[CustomView getInstancetype]showWaitView:@"正在上传..." byView:self.view];
+    [self.modelClass updatePhotoImagesByImags:img Request:^(NSString *errorMsg) {
+        [[CustomView getInstancetype]closeHUD];
+        if (errorMsg == nil) {
+            [UserInfoClass saveUserHeadImagePath:self->_modelClass.photoStr];
+            [self->_pic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",PhotoBase,[UserInfoClass getUserInfoClass].photo]] placeholderImage:[UIImage imageNamed:@"默认"]];
+        }else {
+            [CustomView alertMessage:errorMsg view:self.view];
+        }
+    }];
 }
 
 - (void)save {

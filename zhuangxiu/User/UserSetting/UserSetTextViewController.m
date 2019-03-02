@@ -59,7 +59,13 @@
 }
 
 - (void)rightBarButtonItemClick {
-   
+    if (self.textField.text.length == 0) {
+        [CustomView alertMessage:@"请输入昵称" view:self.view];
+        return;
+    }
+    [UserInfoClass getUserInfoClass].username = self.textField.text;
+    [[UserInfoClass getUserInfoClass] saveUserInfoClass];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

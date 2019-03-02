@@ -97,5 +97,15 @@
  */
 #define UpdatePasswordBaseUrl BaseUrl(Api_IP, @"api/user/updatePassword")
 
+/**
+ *  修改头像
+ *
+ *  @param Api_IP
+ *  @param @"api/user/updatePhoto"
+ *
+ *  @return
+ */
+#define UpdatePhotoBaseUrl BaseUrl(Api_IP, @"api/user/updatePhoto")
+
 
 #endif /* UrlSetting_h */

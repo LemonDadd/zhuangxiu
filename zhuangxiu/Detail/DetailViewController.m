@@ -54,7 +54,7 @@
     _scrView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:_scrView];
     [_scrView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@64);
+        make.top.equalTo(@0);
         make.bottom.equalTo(@-100);
         make.left.right.equalTo(self.view);
     }];

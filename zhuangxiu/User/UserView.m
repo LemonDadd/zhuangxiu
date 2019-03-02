@@ -41,7 +41,7 @@
         }];
         
         [_tab registerNib:[UINib nibWithNibName:NSStringFromClass([UserTopTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"UserTopTableViewCell"];
-        _userArray = @[@"我的收藏",@"意见反馈",@"关于我们",@"给评分",@"更多服务",@"清除缓存",@"设置"];
+        _userArray = @[@"我的收藏",@"意见反馈",@"关于我们",@"去评分",@"更多服务",@"清除缓存"];
     }
     return self;
 }
@@ -133,7 +133,7 @@
 //            }];
         } else if (indexPath.row ==4){
             HtmlViewController *vc = [HtmlViewController new];
-            vc.url = @"http://m.to8to.com/sz/zb/index2.html?ptag=30141_2_12_340&appversion=2.0&uid=0&channel=appstore&systemversion=12.1.4&t8t_device_id=DECFD2E7-DE9D-4B05-B1AC-6ED7AEE9C4B6&appostype=2&version=2.5&to8to_token=&appid=47&idfa=4221FAF8-3134-4DB5-8E6F-3F5DC8AEFAFF";
+            vc.url = @"https://m.to8to.com/tubatu/decorateStyle.html?ptag=2_1_1_2324";
             [self.viewController.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row ==5){
            //q清除缓存

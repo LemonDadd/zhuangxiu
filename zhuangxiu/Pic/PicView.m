@@ -110,6 +110,17 @@
             int y = arc4random() % p.count;
             HomeMode *h = [HomeMode mj_objectWithKeyValues:p[y]];
             user.model =h;
+            
+            NSString *upath = [[NSBundle mainBundle] pathForResource:@"ren" ofType:@"plist"];
+            NSArray *uArray = [NSArray arrayWithContentsOfFile:upath];
+            
+            NSMutableArray *list = [NSMutableArray array];
+            for (int i=0; i<[user.model.photo_fav_nums integerValue]; i++) {
+                int x = arc4random() % uArray.count;
+                [list addObject:uArray[x]];
+            }
+            user.model.userList = [NSArray arrayWithArray:list];
+            
             [obj addObject:user];
             
         }
@@ -168,7 +179,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DetailViewController *vc= [DetailViewController new];
-     UserModel *user = self.allResource[indexPath.section];
+    UserModel *user = self.allResource[indexPath.section];
     vc.list =@[user.model];
     [self.viewController.navigationController pushViewController:vc animated:YES];
 }

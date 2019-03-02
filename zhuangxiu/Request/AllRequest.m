@@ -8,6 +8,7 @@
 //
 
 #import "AllRequest.h"
+#import "NHFUpLoadImages.h"
 
 #define ErrorMessage @"数据请求失败,请检查您的网络"
 
@@ -253,6 +254,61 @@
             }
         } else {
             request(false, false, data, true);
+        }
+    }];
+}
+
+/**
+ 修改头像
+ 
+ @param photo url
+ @param request 头像地址
+ */
++ (void)requestUpdatePhotoByPhoto:(NSString *)photo
+                          request:(void(^)(NSString *message,
+                                           BOOL success,
+                                           NSString *errorMsg,
+                                           BOOL error))request {
+    NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
+    [paramDic setObject:photo forKey:@"photo"];
+    [HttpHelper httpDataRequest:UpdatePhotoBaseUrl paramDictionary:paramDic TimeOutSeconds:120 request:^(BOOL finish,  NSString *data) {
+        if (finish) {
+            if (data == nil) {
+                request(nil, false, ErrorMessage, true);
+            } else {
+                NSDictionary* dic =[JsonDeal dealJson:data];
+                NSInteger Code = [[dic objectForKey:@"code"] integerValue];
+                if (Code == 1) {
+                    request(dic[@"data"], true, nil, false);
+                } else {
+                    request(nil, false, dic[@"message"], true);
+                }
+            }
+        } else {
+            request(nil, false, data, true);
+        }
+    }];
+}
+
+
++ (void)uploadImagesByImags:(NSArray *)imgs
+                  ImagNames:(NSArray *)imagenames
+                    Request:(void(^)(NSString *message,
+                                     NSString *errorMsg))request {
+    [[NHFUpLoadImages defaultManager]uploadMutableImageByUrlString:UploadBaseUrl params:nil images:imgs imageNames:imagenames process:^(CGFloat process) {
+        
+    } request:^(NSString *message, BOOL success, NSString *errorMsg, BOOL error) {
+        if (success && !error) {
+            NSDictionary* dic =[JsonDeal dealJson:message];
+            NSInteger Code = [[dic objectForKey:@"code"] integerValue];
+            if (Code == 1) {
+                NSArray *arr =dic[@"data"];
+                request(arr.firstObject,nil);
+            } else {
+                request(nil,dic[@"message"]);
+            }
+        }else {
+            request(nil,errorMsg);
         }
     }];
 }

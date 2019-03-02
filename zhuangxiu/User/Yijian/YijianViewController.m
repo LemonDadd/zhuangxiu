@@ -37,7 +37,7 @@
     [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@10);
         make.right.equalTo(@-10);
-        make.top.equalTo(@80);
+        make.top.equalTo(@20);
         make.height.equalTo(@150);
     }];
     
@@ -85,7 +85,19 @@
 
 -(void)saveAction
 {
-    NSLog(@"------------->意见反馈");
+    
+    if (!_textView.text.length) {
+        [CustomView alertMessage:@"请输入您的宝贵意见" view:self.view];
+        return;
+    }
+    [[CustomView getInstancetype]showWaitView:@"请稍后.." byView:self.view];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[CustomView getInstancetype]closeHUD];
+        [self.navigationController popViewControllerAnimated:YES];
+    });
+    
+    
+    
 }
 -(void)textViewDidBeginEditing:(UITextView *)textView
 {

@@ -30,6 +30,14 @@
 
 @implementation UserSettingViewController
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (_tab) {
+       [_tab reloadData];
+    }
+   
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

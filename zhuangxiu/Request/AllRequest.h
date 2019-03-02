@@ -129,6 +129,18 @@ NS_ASSUME_NONNULL_BEGIN
                                                     NSString *errorMsg,
                                                     BOOL error))request;
 
+
++ (void)requestUpdatePhotoByPhoto:(NSString *)photo
+                          request:(void(^)(NSString *message,
+                                           BOOL success,
+                                           NSString *errorMsg,
+                                           BOOL error))request;
+
++ (void)uploadImagesByImags:(NSArray *)imgs
+                  ImagNames:(NSArray *)imagenames
+                    Request:(void(^)(NSString *message,
+                                     NSString *errorMsg))request;
+
 @end
 
 NS_ASSUME_NONNULL_END

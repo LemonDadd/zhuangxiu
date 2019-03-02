@@ -24,6 +24,8 @@
 		B00A1B752217ED4C00625235 /* MoreDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B722217ED4C00625235 /* MoreDropDownMenu.m */; };
 		B00A1B792217ED6000625235 /* NSArray+ZMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B772217ED6000625235 /* NSArray+ZMAdd.m */; };
 		B00A1B882217FFD700625235 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */; };
+		B0240B7D222A200200DE2FEE /* UserModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B0240B7C222A200200DE2FEE /* UserModelClass.m */; };
+		B0240B96222A68CB00DE2FEE /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0240B95222A68CB00DE2FEE /* UserDetailViewController.m */; };
 		B038EFCB221E909B00D3AB67 /* ClassifyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B038EFCA221E909B00D3AB67 /* ClassifyCollectionViewCell.m */; };
 		B038EFCF221E99DA00D3AB67 /* UserListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B038EFCD221E99DA00D3AB67 /* UserListTableViewCell.m */; };
 		B038EFD0221E99DA00D3AB67 /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */; };
@@ -178,6 +180,10 @@
 		B00A1B782217ED6000625235 /* NSArray+ZMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZMAdd.h"; sourceTree = "<group>"; };
 		B00A1B862217FFD700625235 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		B00A1B872217FFD700625235 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		B0240B7B222A200200DE2FEE /* UserModelClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModelClass.h; sourceTree = "<group>"; };
+		B0240B7C222A200200DE2FEE /* UserModelClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModelClass.m; sourceTree = "<group>"; };
+		B0240B94222A68CB00DE2FEE /* UserDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		B0240B95222A68CB00DE2FEE /* UserDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
 		B038EFC9221E909B00D3AB67 /* ClassifyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyCollectionViewCell.h; sourceTree = "<group>"; };
 		B038EFCA221E909B00D3AB67 /* ClassifyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyCollectionViewCell.m; sourceTree = "<group>"; };
 		B038EFCC221E99DA00D3AB67 /* UserListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListTableViewCell.h; sourceTree = "<group>"; };
@@ -722,6 +728,8 @@
 				DAA08E382219AB2300E944FE /* UserShopTabViewCell */,
 				DAA08DE42219AAB500E944FE /* UserSettingViewController.h */,
 				DAA08DE52219AAB500E944FE /* UserSettingViewController.m */,
+				B0240B7B222A200200DE2FEE /* UserModelClass.h */,
+				B0240B7C222A200200DE2FEE /* UserModelClass.m */,
 			);
 			path = UserSetting;
 			sourceTree = "<group>";
@@ -1062,6 +1070,8 @@
 				B038EFCE221E99DA00D3AB67 /* UserListTableViewCell.xib */,
 				DAA08E5B221C4DB400E944FE /* UserModel.h */,
 				DAA08E5C221C4DB400E944FE /* UserModel.m */,
+				B0240B94222A68CB00DE2FEE /* UserDetailViewController.h */,
+				B0240B95222A68CB00DE2FEE /* UserDetailViewController.m */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -1310,6 +1320,7 @@
 				DAA08E74221D995700E944FE /* NewsHTableViewCell.m in Sources */,
 				DAA08E492219AFD700E944FE /* UIColor+Hex.m in Sources */,
 				DAA08E202219AB0400E944FE /* TOCropViewControllerTransitioning.m in Sources */,
+				B0240B96222A68CB00DE2FEE /* UserDetailViewController.m in Sources */,
 				DAB192AC221995E700239A40 /* UserTopTableViewCell.m in Sources */,
 				DAB1928E2216F1E700239A40 /* PicView.m in Sources */,
 				DAB192742215AC5400239A40 /* NSDate+JKLunarCalendar.m in Sources */,
@@ -1351,6 +1362,7 @@
 				DAB192582215AC1600239A40 /* HttpHelper.m in Sources */,
 				DAB192772215AC5400239A40 /* NSDate+JKFormatter.m in Sources */,
 				DAB1927A2215AC5400239A40 /* NSDate+JKZeroDate.m in Sources */,
+				B0240B7D222A200200DE2FEE /* UserModelClass.m in Sources */,
 				B00A1AFB2215435E00625235 /* UserViewController.m in Sources */,
 				DAB192762215AC5400239A40 /* NSDate+JKInternetDateTime.m in Sources */,
 				DAA08E462219AB3600E944FE /* UserSetTextViewController.m in Sources */,
